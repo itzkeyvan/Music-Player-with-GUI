@@ -1,6 +1,5 @@
 package controller;
 
-import exceptions.InvalidFormatException;
 import model.Album;
 import model.DataBase;
 import model.audio.Music;
@@ -37,7 +36,8 @@ public abstract class ArtistController
     public void setArtist(Artist artist) {
         this.artist = artist;
     }
-    public String signUp(String userName, String password, String firstAndLastName, String email, String phoneNumber, Date birthDate, String biography, ArtistType artistType) throws InvalidFormatException {
+    public String signUp(String userName, String password, String firstAndLastName, String email, String phoneNumber, Date birthDate, String biography, ArtistType artistType)
+    {
         for(UserAccount user: DataBase.getDataBase().getUsersList())
         {
             if (user.getUserName().equals(userName))
@@ -52,11 +52,11 @@ public abstract class ArtistController
         Pattern passwordPattern=Pattern.compile("(?=^.{8,}$)((?=.*\\d)|(?=.*\\W+))(?![.\\n])(?=.*[A-Z])(?=.*[a-z]).*$");
         Matcher passwordMatcher=passwordPattern.matcher(password);
         if(!emailMatcher.matches())
-            throw new InvalidFormatException("Invalid email format.");
+            return "Invalid email.";
         if(!phoneNumberMatcher.matches())
-            throw new InvalidFormatException("Invalid phone number format.");
+            return "Invalid phone number.";
         if (!passwordMatcher.matches())
-            throw new InvalidFormatException("Weak password.");
+            return "The entered password must be at least 8 characters long, have one lowercase and one uppercase letter and one number or a special character.";
         if(artistType==ArtistType.SINGER)
         {
             Singer singer = new Singer(userName, password, firstAndLastName, email, phoneNumber, birthDate, biography);

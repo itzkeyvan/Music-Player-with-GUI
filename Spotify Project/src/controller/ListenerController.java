@@ -1,8 +1,5 @@
 package controller;
 
-import exceptions.FreeAccountLimitException;
-import exceptions.InvalidFormatException;
-import exceptions.LackOfCreditException;
 import model.*;
 import model.audio.*;
 import model.userAccount.*;
@@ -43,7 +40,8 @@ public class ListenerController
         this.listener = listener;
     }
     //-----------------
-    public String signUp(String userName, String password, String firstAndLastName, String email, String phoneNumber, Date birthDate) throws InvalidFormatException {
+    public String signUp(String userName, String password, String firstAndLastName, String email, String phoneNumber, Date birthDate)
+    {
         for(UserAccount user:DataBase.getDataBase().getUsersList())
         {
             if (user.getUserName().equals(userName))
@@ -58,11 +56,11 @@ public class ListenerController
         Pattern passwordPattern=Pattern.compile("(?=^.{8,}$)((?=.*\\d)|(?=.*\\W+))(?![.\\n])(?=.*[A-Z])(?=.*[a-z]).*$");
         Matcher passwordMatcher=passwordPattern.matcher(password);
         if(!emailMatcher.matches())
-            throw new InvalidFormatException("Invalid email format.");
+            return "Invalid email.";
         if(!phoneNumberMatcher.matches())
-            throw new InvalidFormatException("Invalid phone number format.");
+            return "Invalid phone number.";
         if (!passwordMatcher.matches())
-            throw new InvalidFormatException("Weak password.");
+            return "The entered password must be at least 8 characters long, have one lowercase and one uppercase letter and one number or a special character.";
         FreeListener listener=new FreeListener(userName,password,firstAndLastName,email,phoneNumber,birthDate);
         logIn(listener);
         setListenerController(listenerController);
@@ -92,14 +90,16 @@ public class ListenerController
         listener=(Listener)user;
         return "Logged-in as listener.";
     }
-    public String newPlayList(String playlistName) throws FreeAccountLimitException {
+    public String newPlayList(String playlistName)
+    {
         if(listener.getSubscriptionExpirationDate()==null&&listener.getPlaylistsList().size()==FreeListener.getCreatingPlaylistsLimit())
-            throw new FreeAccountLimitException();
+            return "Free users can't create more than 3 playlists.";
         Playlist playList=new Playlist(playlistName,listener.getFirstAndLastName());
         listener.getPlaylistsList().add(playList);
         return "Playlist successfully created.";
     }
-    public String addAudioToPlaylist(String playlistName,int audioID) throws FreeAccountLimitException {
+    public String addAudioToPlaylist(String playlistName,int audioID)
+    {
         for(Playlist playlist:listener.getPlaylistsList())
             if(playlist.getPlaylistName().equals(playlistName))
                 for(Audio audio:playlist.getAudiosList())
@@ -109,7 +109,7 @@ public class ListenerController
             if(playlist.getPlaylistName().equals(playlistName))
             {
                 if((listener.getSubscriptionExpirationDate()==null&&playlist.getAudiosList().size()==FreeListener.getAddingMusicsToPlaylistLimit()))
-                    throw new FreeAccountLimitException();
+                    return "Free users can't add more than 10 audios to a playlist.";
                 for (Audio audio : DataBase.getDataBase().getAudiosList())
                     if (audio.getAudioID() == audioID)
                     {
@@ -178,17 +178,31 @@ public class ListenerController
         else
             return result.toString();
     }
-    public String sortAudios()
+    public String sortAudios(String sortType)
     {
-    ArrayList<Audio> al=DataBase.getDataBase().getAudiosList();
-        for(int i=0;i<al.size()-1;i++)
-            for(int j=0;j<al.size()-1-i;j++)
-                if(al.get(j).compareTo(al.get(j+1))<0)
-                {
-                    Audio temp=al.get(j);
-                    al.set(j,al.get(j+1));
-                    al.set(j+1,temp);
-                }
+        ArrayList<Audio> al=DataBase.getDataBase().getAudiosList();
+        if(sortType.equalsIgnoreCase("P"))
+        {
+            for(int i=0;i<al.size()-1;i++)
+                for(int j=0;j<al.size()-1-i;j++)
+                    if(al.get(j).getNumberOfPlays()<al.get(j+1).getNumberOfPlays())
+                    {
+                        Audio temp=al.get(j);
+                        al.set(j,al.get(j+1));
+                        al.set(j+1,temp);
+                    }
+        }
+        else //sortType=='L'||sortType=='l'
+        {
+            for(int i=0;i<al.size()-1;i++)
+                for(int j=0;j<al.size()-1-i;j++)
+                    if(al.get(j).getNumberOfLikes()<al.get(j+1).getNumberOfLikes())
+                    {
+                        Audio temp=al.get(j);
+                        al.set(j,al.get(j+1));
+                        al.set(j+1,temp);
+                    }
+        }
         StringBuilder result=new StringBuilder();
         for(Audio audio:al)
         {
@@ -414,7 +428,8 @@ public class ListenerController
         }
         return "Suggestions:\n\n"+sb;
     }
-    public String buyOrRenewSubscription(PremiumPlans premiumPlan) throws LackOfCreditException {
+    public String buyOrRenewSubscription(PremiumPlans premiumPlan)
+    {
         if(listener.getAccountCredit()>=premiumPlan.getPlanPrice())
         {
             Calendar calendar = Calendar.getInstance();
@@ -440,7 +455,7 @@ public class ListenerController
             }
         }
         else
-            throw new LackOfCreditException();
+            return "Your credit isn't enough to purchase this plan.";
     }
     public String increaseAccountCredit(int value)
     {
@@ -484,3 +499,5 @@ public class ListenerController
         listener=null;
     }
 }
+
+

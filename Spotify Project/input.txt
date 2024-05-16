@@ -1,0 +1,93 @@
+Signup -S -robert_jones -R0bertJ0n3s -Robert Jones -robertjones@example.com -09345678901 -1988-09-30 -I love coding!
+NewAlbum -love
+Publish -M -Song1 -Rock -Love is in the air -https://rockmusic.com/song1 -cover1 -Robert Jones_love
+Publish -M -Song2 -Pop -Dance with me -https://popmusic.com/song2 -cover2 -Robert Jones_love
+Publish -M -Song3 -Jazz -Happy -https://popmusic.com/song3 -cover3 -Robert Jones_love
+Logout
+Signup -P -sarahBrown -S@r@h1234 -Sarah Brown -sarahbrown@example.com -09456789012 -1992-03-20 -Coffee lover ☕
+Publish -P -Song16 -Society -Voices of unity -https://societymusic.com/song16 -cover16
+Publish -P -Song17 -InterView -Celebrity insights -https://interviewmusic.com/song17 -cover17
+Publish -P -Song18 -Country -Meditation -https://interviewmusic.com/song18 -cover18
+Logout
+Signup -S -david_miller -Dav1dM!ll3r -David Miller -davidmiller@example.com -09567890123 -1987-11-10 -Tech enthusiast
+Logout
+Signup -P -laura_wilson -L@uraW1ls0n -Laura Wilson -laurawilson@example.com -09678901234 -1995-07-25 -Music is life 🎵
+Logout
+Signup -S -michael_clark -M1ch@3lCl@rk -Michael Clark -michaelclark@example.com -09789012345 -1989-12-05 -Sports fan
+NewAlbum -Scorpion
+Publish -M -Song4 -Rap -Survival -https://popmusic.com/song4 -cover4 -Michael Clark_Scorpion
+Publish -M -Song5 -Rap -Nonstop -https://popmusic.com/song5 -cover5 -Michael Clark_Scorpion
+Publish -M -Song6 -HipHop -God's plan -https://popmusic.com/song6 -cover6 -Michael Clark_Scorpion
+Publish -M -Song7 -Jazz -Talk Up -https://popmusic.com/song7 -cover7 -Michael Clark_Scorpion
+Logout
+Signup -P -emily_thomas -3milyT!@456 -Emily Thomas -emilythomas@example.com -09890123456 -1993-02-15 -Bookworm 📚
+Logout
+Signup -L -johnsmith -P@ssw0rd -John Smith -johnsmith@example.com -09121234567 -1990-01-01
+FavoriteGenres -Rock,Pop,Jazz,HipHop
+Logout
+Signup -L -alicesmith -Password123! -Alice Smith -alicesmith@email.com -09987987654 -1985-05-15
+FavoriteGenres -Country,TrueCrime,Society,InterView
+GetPremium -30
+Logout
+Login -dadasd -efwp93
+Signup -L -adminuser -Admin@123 -Admin User -adminuser@admin.com -09095553333 -1975-12-31
+FavoriteGenres -Pop,HipHop,Country,TrueCrime
+GetPremium -60
+NewPlaylist -Favourites
+Add -Favourites -4
+Add -Favourites -2
+Add -Favourites -6
+Add -Favourites -3
+Play -6
+Like -6
+Play -6
+Play -1
+Play -2
+Follow -robert_jones
+Follow -david_miller
+Filter -A -Robert Jones
+Logout
+Login -johnsmith -P@ssw0rd
+NewPlaylist -fighter
+Add -fighter -1
+Add -fighter -2
+Add -fighter -3
+NewPlaylist -Rap
+Add -Rap -3
+Add -Rap -5
+Add -Rap -4
+Play -1
+Play -3
+Play -2
+Like -1
+Like -4
+Follow -robert_jones
+Follow -sarahBrown
+Follow -emily_thomas
+Report -robert_jones -pooor
+Report -david_miller -bad words
+Logout
+Login -robert_jones -R0bertJ0n3s
+AccountInfo
+CalculateEarnings
+Followers
+Logout
+Login -johnsmith -P@ssw0rd
+GetSuggestions
+Filter -G -pop
+Filter -D -02-05-2024
+Sort -P
+GetPremium -180
+showAccountInfo
+Logout
+Login -alicesmith -Password123!
+ShowPremium
+ShowPremium
+ShowPremium
+GetPremium -60 
+ShowPremium
+Logout
+Login -itzKeyvan -Keyvan05
+Reports
+Statistics
+Logout

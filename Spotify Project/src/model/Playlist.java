@@ -1,21 +1,21 @@
 package model;
 import model.audio.Audio;
+import model.audio.Music;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
-public class Playlist implements Iterable<Audio>
+public class Playlist
 {
     private String playlistID;
     private String playlistName;
     private String playlistCreatorName;
-    private ArrayList<Audio> audiosList =new ArrayList<Audio>();
     public Playlist(String playlistName,String playlistCreatorName)
     {
         this.playlistName=playlistName;
         this.playlistCreatorName=playlistCreatorName;
         this.playlistID=playlistCreatorName+"_"+playlistName;
     }
+    private ArrayList<Audio> audiosList =new ArrayList<Audio>();
     public void setAudiosList(ArrayList<Audio> audiosList) {
         this.audiosList = audiosList;
     }
@@ -47,12 +47,6 @@ public class Playlist implements Iterable<Audio>
     public void setPlaylistID(String playlistID) {
         this.playlistID = playlistID;
     }
-
-    @Override
-    public Iterator<Audio> iterator() {
-        return audiosList.iterator();
-    }
-
     @Override
     public String toString()
     {

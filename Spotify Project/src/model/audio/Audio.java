@@ -4,7 +4,7 @@ import model.Genre;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public abstract class Audio implements Comparable
+public abstract class Audio
 {
     private static int audioCounter=0;
     private int audioID;
@@ -111,19 +111,6 @@ public abstract class Audio implements Comparable
     public static int getAudioCounter() {
         return audioCounter;
     }
-
-    @Override
-    public int compareTo(Object o)
-    {
-        Audio audio2=(Audio)o;
-        if((this.getAudioName().compareTo(audio2.getAudioName())<0)||(this.getAudioName().equals(audio2.getAudioName())&&this.getNumberOfLikes()>audio2.getNumberOfLikes())||(this.getAudioName().equals(audio2.getAudioName())&&this.getNumberOfLikes()>audio2.getNumberOfLikes()&&this.getAudioType().equals(AudioType.MUSIC)&&audio2.getAudioType().equals(AudioType.PODCAST))||(this.getAudioName().equals(audio2.getAudioName())&&this.getNumberOfLikes()>audio2.getNumberOfLikes()&&this.getAudioType().equals(audio2.getAudioType())&&this.getNumberOfPlays()>audio2.getNumberOfPlays()))
-            return 1;
-        else if(this.getAudioName().equals(audio2.getAudioName())&&this.getNumberOfLikes()==audio2.getNumberOfLikes()&&this.getAudioType().equals(audio2.getAudioType())&&this.getNumberOfPlays()==audio2.getNumberOfPlays())
-            return 0;
-        else
-            return -1;
-    }
-
     @Override
     public String toString()
     {

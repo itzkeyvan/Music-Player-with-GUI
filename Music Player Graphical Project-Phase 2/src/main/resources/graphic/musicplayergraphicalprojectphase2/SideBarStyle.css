@@ -1,0 +1,27 @@
+/* Base styles for HBox elements */
+.hbox-container {
+    -fx-border-color: #B4B4B4;
+    -fx-border-width: 3;
+    -fx-border-radius: 10;
+    -fx-spacing: 10;
+}
+
+/* Default color for ImageView and Label */
+.label {
+    -fx-text-fill: #B4B4B4;
+}
+
+.image-view {
+    -fx-opacity: 0.7; /* Set initial opacity for a lighter look */
+}
+
+/* Hover effect for HBox */
+.hbox-container:hover .image-view {
+    -fx-opacity: 1.0; /* Make image fully opaque (light white) */
+    -fx-effect: innershadow(gaussian, rgba(255, 255, 255, 0.8), 10, 0.5, 0, 0); /* Add a white inner shadow to lighten the image */
+}
+
+.hbox-container:hover .label {
+    -fx-text-fill: white; /* Change label text to white */
+    -fx-underline: true;  /* Underline the text */
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="424.0" minWidth="210.0" prefHeight="403.0" prefWidth="210.0" style="-fx-background-color: #2b2b27;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SideBarController">
+   <stylesheets>
+      <URL value="@SideBarStyle.css" />
+   </stylesheets>
+   <children>
+      <VBox layoutX="28.0" layoutY="71.0" prefHeight="406.0" prefWidth="197.0" spacing="8.0" AnchorPane.bottomAnchor="113.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox spacing="8.0">
+               <children>
+                  <HBox fx:id="btn_home" onMouseClicked="#homeBtn_Clicked" prefHeight="69.0" prefWidth="196.0" spacing="10.0" styleClass="hbox-container">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                           <image>
+                              <Image url="@PngAndJpg/SideBar/Home.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="83.0" prefWidth="78.0" styleClass="label" text="Home">
+                           <font>
+                              <Font name="Gotham-Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="btn_search" onMouseClicked="#searchBtn_Clicked" prefHeight="69.0" prefWidth="200.0" spacing="10.0" styleClass="hbox-container">
+                     <children>
+                        <ImageView fitHeight="69.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                           <image>
+                              <Image url="@PngAndJpg/SideBar/Search.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="69.0" prefWidth="126.0" styleClass="label" text="Search">
+                           <font>
+                              <Font name="Gotham-Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="7.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox spacing="8.0">
+               <children>
+                  <HBox fx:id="btn_library" onMouseClicked="#libraryBtn_Clicked" prefHeight="69.0" prefWidth="200.0" spacing="10.0" styleClass="hbox-container">
+                     <children>
+                        <ImageView fitHeight="69.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                           <image>
+                              <Image url="@PngAndJpg/SideBar/Library.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="69.0" prefWidth="126.0" styleClass="label" text="Library">
+                           <font>
+                              <Font name="Gotham-Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="7.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="btn_artists" onMouseClicked="#artistsBtn_Clicked" prefHeight="69.0" prefWidth="200.0" spacing="10.0" styleClass="hbox-container">
+                     <children>
+                        <ImageView fitHeight="69.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                           <image>
+                              <Image url="@PngAndJpg/SideBar/Artist.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="69.0" prefWidth="126.0" styleClass="label" text="Artists">
+                           <font>
+                              <Font name="Gotham-Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="7.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="btn_audios" onMouseClicked="#audiosBtn_Clicked" prefHeight="69.0" prefWidth="200.0" spacing="10.0" styleClass="hbox-container">
+                     <children>
+                        <ImageView fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                           <image>
+                              <Image url="@PngAndJpg/SideBar/Audio.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="69.0" prefWidth="126.0" styleClass="label" text="Audios">
+                           <font>
+                              <Font name="Gotham-Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="7.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </opaqueInsets>
+</AnchorPane>
