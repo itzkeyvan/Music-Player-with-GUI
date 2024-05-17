@@ -5,28 +5,47 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #444345;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.HomePageController">
+
+<AnchorPane minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #444345;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.HomePageController">
    <children>
-      <ScrollPane layoutX="20.0" layoutY="147.20000000000002" prefHeight="199.0" prefWidth="571.0" style="-fx-background-color: #434345; -fx-border-width: 5; -fx-border-radius: 10; -fx-border-color: #48484A;" stylesheets="@ScrollPaneStyle.css" vbarPolicy="NEVER" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="142.0">
-         <content>
-            <HBox fx:id="HBoxForMusics_HomePage" prefHeight="174.0" prefWidth="1785.0" spacing="5.0" style="-fx-background-color: #48484A;">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
+      <VBox alignment="CENTER" layoutX="20.0" layoutY="147.1999969482422" prefHeight="400.0" prefWidth="600.0" spacing="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label prefHeight="71.0" prefWidth="134.0" text="Home" textFill="WHITE">
+                     <font>
+                        <Font name="Gotham-Bold" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
             </HBox>
-         </content></ScrollPane>
-      <Label alignment="CENTER" prefHeight="71.0" prefWidth="134.0" text="Home" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <font>
-            <Font name="Gotham-Bold" size="31.0" />
-         </font>
-      </Label>
-      <Label fx:id="lbl_homePageHboxLabel" layoutX="20.0" layoutY="103.0" prefHeight="44.0" prefWidth="329.0" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Label>
+            <VBox>
+               <children>
+                  <HBox>
+                     <children>
+                        <Label fx:id="lbl_homePageHboxLabel" prefHeight="44.0" prefWidth="329.0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ScrollPane prefHeight="216.0" prefWidth="561.0" style="-fx-background-color: #434345; -fx-border-width: 5; -fx-border-radius: 10; -fx-border-color: #48484A;" stylesheets="@ScrollPaneStyle.css" vbarPolicy="NEVER">
+                     <content>
+                        <HBox fx:id="HBoxForMusics_HomePage" prefHeight="174.0" prefWidth="1785.0" spacing="5.0" style="-fx-background-color: #48484A;">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
    </children>
    <opaqueInsets>
       <Insets />

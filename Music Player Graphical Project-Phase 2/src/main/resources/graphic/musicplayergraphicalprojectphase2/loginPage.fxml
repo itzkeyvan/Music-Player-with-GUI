@@ -46,7 +46,7 @@
                         <Insets left="2.0" right="2.0" />
                      </padding>
                   </HBox>
-                  <Label fx:id="lblBtn_Login" alignment="CENTER" minHeight="34.0" minWidth="107.0" onMouseClicked="#loginBtn_clicked" prefHeight="34.0" prefWidth="107.0" stylesheets="@ButtonStyle.css" text="Login">
+                  <Label fx:id="lblBtn_Login" alignment="CENTER" minHeight="34.0" minWidth="107.0" onMouseClicked="#loginBtn_clicked" prefHeight="34.0" prefWidth="107.0" stylesheets="@LabelButtonStyle.css" text="Login">
                      <font>
                         <Font name="Gotham-Bold" size="20.0" />
                      </font>
