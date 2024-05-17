@@ -1,25 +1,22 @@
-.hbox-container {
-    -fx-border-color: #B4B4B4;
-    -fx-border-width: 3;
-    -fx-border-radius: 10;
+.label {
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 2;
+    -fx-border-radius: 50;
     -fx-spacing: 10;
 }
-
 .label {
-    -fx-text-fill: #B4B4B4;
-}
-
-.image-view {
-    -fx-opacity: 0.7;
+    -fx-text-fill: #b1b1b1;
 }
 
 /* Hover effect for HBox */
-.hbox-container:hover .image-view {
+.label:hover{
     -fx-opacity: 1.0;
+    -fx-border-width: 3;
     -fx-effect: innershadow(gaussian, rgba(255, 255, 255, 0.8), 10, 0.5, 0, 0); /* Add a white inner shadow to lighten the image */
 }
 
-.hbox-container:hover .label {
+.label:hover .label {
+    -fx-background-color: #989898;
     -fx-text-fill: white;
     -fx-underline: true;
 }
