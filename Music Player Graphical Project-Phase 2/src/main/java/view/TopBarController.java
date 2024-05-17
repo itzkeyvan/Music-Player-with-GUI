@@ -1,4 +1,4 @@
-package graphic.musicplayergraphicalprojectphase2;
+package view;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
