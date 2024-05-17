@@ -21,7 +21,7 @@
                   <Font name="Gotham-Bold" size="29.0" />
                </font>
             </Label>
-            <VBox alignment="CENTER" prefHeight="341.0" prefWidth="560.0">
+            <VBox alignment="CENTER" prefHeight="341.0" prefWidth="560.0" spacing="5.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="45.0" prefWidth="590.0" spacing="10.0">
                      <children>
@@ -161,18 +161,23 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <HBox alignment="CENTER" layoutX="10.0" layoutY="176.0" prefHeight="76.0" prefWidth="560.0" spacing="10.0">
+                  <HBox alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="176.0" prefHeight="58.0" prefWidth="579.0" spacing="10.0">
                      <children>
                         <Label alignment="CENTER" lineSpacing="5.0" prefHeight="76.0" prefWidth="84.0" text="Bio:" textFill="WHITE">
                            <font>
                               <Font name="Gotham-Bold" size="16.0" />
                            </font>
                         </Label>
-                        <TextArea fx:id="txtArea_Bio" prefHeight="76.0" prefWidth="490.0" />
+                        <TextArea fx:id="txtArea_Bio" prefHeight="44.0" prefWidth="486.0" />
                      </children>
                   </HBox>
                </children>
             </VBox>
+            <Label fx:id="lblBtn_SingUP" alignment="CENTER" minHeight="34.0" minWidth="107.0" onMouseDragged="#signUpBtn_clicked" prefHeight="34.0" prefWidth="107.0" stylesheets="@ButtonStyle.css" text="Sign up">
+               <font>
+                  <Font name="Gotham-Bold" size="20.0" />
+               </font>
+            </Label>
          </children>
       </VBox>
    </children>

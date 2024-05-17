@@ -10,16 +10,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="346.0" minWidth="165.0" prefHeight="347.0" prefWidth="173.0" style="-fx-background-color: #2b2b27;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SideBarController">
+<AnchorPane minHeight="346.0" minWidth="165.0" prefHeight="371.0" prefWidth="173.0" style="-fx-background-color: #2b2b27;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SideBarController">
    <stylesheets>
       <URL value="@SideBarStyle.css" />
    </stylesheets>
    <children>
-      <VBox layoutX="28.0" layoutY="71.0" prefHeight="406.0" prefWidth="197.0" spacing="8.0" AnchorPane.bottomAnchor="113.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" layoutX="28.0" layoutY="71.0" prefHeight="376.0" prefWidth="173.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <VBox prefHeight="135.0" prefWidth="191.0" spacing="8.0">
+            <VBox alignment="CENTER" prefHeight="135.0" prefWidth="191.0" spacing="8.0">
                <children>
-                  <HBox fx:id="btn_home" onMouseClicked="#homeBtn_Clicked" prefHeight="69.0" prefWidth="196.0" spacing="5.0" styleClass="hbox-container">
+                  <HBox fx:id="btn_home" alignment="CENTER_LEFT" onMouseClicked="#homeBtn_Clicked" prefHeight="69.0" prefWidth="196.0" spacing="5.0" styleClass="hbox-container">
                      <children>
                         <ImageView fitHeight="64.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
                            <image>
@@ -33,7 +33,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox fx:id="btn_search" onMouseClicked="#searchBtn_Clicked" prefHeight="69.0" prefWidth="200.0" spacing="10.0" styleClass="hbox-container">
+                  <HBox fx:id="btn_search" alignment="BOTTOM_LEFT" onMouseClicked="#searchBtn_Clicked" prefHeight="69.0" prefWidth="200.0" spacing="10.0" styleClass="hbox-container">
                      <children>
                         <ImageView fitHeight="53.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
                            <image>
@@ -52,9 +52,9 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox spacing="8.0">
+            <VBox alignment="CENTER" spacing="8.0">
                <children>
-                  <HBox fx:id="btn_library" onMouseClicked="#libraryBtn_Clicked" prefHeight="69.0" prefWidth="200.0" spacing="10.0" styleClass="hbox-container">
+                  <HBox fx:id="btn_library" alignment="CENTER_LEFT" onMouseClicked="#libraryBtn_Clicked" prefHeight="69.0" prefWidth="200.0" spacing="10.0" styleClass="hbox-container">
                      <children>
                         <ImageView fitHeight="55.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
                            <image>
@@ -71,7 +71,7 @@
                         <Insets left="7.0" />
                      </padding>
                   </HBox>
-                  <HBox fx:id="btn_artists" onMouseClicked="#artistsBtn_Clicked" prefHeight="69.0" prefWidth="200.0" spacing="10.0" styleClass="hbox-container">
+                  <HBox fx:id="btn_artists" alignment="CENTER_LEFT" onMouseClicked="#artistsBtn_Clicked" prefHeight="69.0" prefWidth="200.0" spacing="10.0" styleClass="hbox-container">
                      <children>
                         <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
                            <image>
@@ -88,7 +88,7 @@
                         <Insets left="7.0" />
                      </padding>
                   </HBox>
-                  <HBox fx:id="btn_audios" onMouseClicked="#audiosBtn_Clicked" prefHeight="69.0" prefWidth="200.0" spacing="10.0" styleClass="hbox-container">
+                  <HBox fx:id="btn_audios" alignment="BOTTOM_LEFT" onMouseClicked="#audiosBtn_Clicked" prefHeight="69.0" prefWidth="200.0" spacing="10.0" styleClass="hbox-container">
                      <children>
                         <ImageView fitHeight="57.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
                            <image>

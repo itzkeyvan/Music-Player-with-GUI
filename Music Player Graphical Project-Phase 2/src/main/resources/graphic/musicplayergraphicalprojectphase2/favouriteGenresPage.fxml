@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #444345;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.FavouriteGenresPageController">
+   <children>
+      <VBox alignment="CENTER" layoutX="11.2" layoutY="-25.6" prefHeight="426.0" prefWidth="600.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-26.0">
+         <children>
+            <Label prefHeight="54.0" prefWidth="579.0" text="Favourite genres" textFill="WHITE">
+               <font>
+                  <Font name="Gotham-Bold" size="29.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" prefHeight="219.0" prefWidth="579.0" spacing="5.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="203.0" prefWidth="579.0" spacing="30.0">
+                     <children>
+                        <Label prefHeight="11.0" prefWidth="579.0" text="Select at most 4 of your favourite genres below: " textFill="WHITE">
+                           <font>
+                              <Font name="Gotham-Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <VBox spacing="10.0" stylesheets="@ToggleButtonStyle.css">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="72.0" prefWidth="579.0" spacing="10.0">
+                                 <children>
+                                    <ToggleButton fx:id="tglBtn_Rock" mnemonicParsing="false" prefHeight="100.0" prefWidth="183.0" text="Rock" textFill="#949494">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="27.0" />
+                                       </font>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="tglBtn_Pop" layoutX="214.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="183.0" text="Pop" textFill="#949494">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="27.0" />
+                                       </font>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="tglBtn_Jazz" layoutX="300.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="183.0" text="Jazz" textFill="#949494">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="27.0" />
+                                       </font>
+                                    </ToggleButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="49.0" prefWidth="622.0" spacing="10.0">
+                                 <children>
+                                    <ToggleButton fx:id="tglBtn_Hiphop" mnemonicParsing="false" prefHeight="100.0" prefWidth="183.0" text="HipHop" textFill="#949494">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="27.0" />
+                                       </font>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="tglBtn_Country" layoutX="214.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="183.0" text="Country" textFill="#949494">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="27.0" />
+                                       </font>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="tglBtn_TrueCrime" layoutX="300.0" layoutY="10.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="183.0" text="TrueCrime" textFill="#949494">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="27.0" />
+                                       </font>
+                                    </ToggleButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="90.0" prefHeight="72.0" prefWidth="579.0" spacing="10.0">
+                                 <children>
+                                    <ToggleButton fx:id="tglBtn_Society" mnemonicParsing="false" prefHeight="69.0" prefWidth="183.0" text="Society" textFill="#949494">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="27.0" />
+                                       </font>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="tglBtn_Interview" layoutX="214.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="183.0" text="Interview" textFill="#949494">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="27.0" />
+                                       </font>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="tglBtn_History" layoutX="300.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="183.0" text="History" textFill="#949494">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="27.0" />
+                                       </font>
+                                    </ToggleButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <Label fx:id="lblBtn_doneGenresSelection" alignment="CENTER" minHeight="34.0" minWidth="107.0" onMouseClicked="#doneGenresSelectionBtn_clicked" prefHeight="34.0" prefWidth="107.0" stylesheets="@ButtonStyle.css" text="Done">
+               <font>
+                  <Font name="Gotham-Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
