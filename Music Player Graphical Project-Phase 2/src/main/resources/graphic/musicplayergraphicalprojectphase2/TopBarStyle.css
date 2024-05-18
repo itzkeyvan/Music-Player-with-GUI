@@ -1,0 +1,64 @@
+@import "TextFieldStyle.css";
+
+#lblBtn_Login {
+    -fx-border-color: #0e8f38;
+    -fx-border-width: 2;
+    -fx-border-radius: 50;
+    -fx-spacing: 10;
+    -fx-text-fill: #b1b1b1;
+}
+
+#lblBtn_Logout {
+    -fx-border-color: #aa0000;
+    -fx-border-width: 2;
+    -fx-border-radius: 50;
+    -fx-spacing: 10;
+    -fx-text-fill: #b1b1b1;
+}
+
+#lblBtn_SignUp {
+    -fx-border-color: #0097b3;
+    -fx-border-width: 2;
+    -fx-border-radius: 50;
+    -fx-spacing: 10;
+    -fx-text-fill: #b1b1b1;
+}
+
+.label {
+    -fx-text-fill: #b1b1b1;
+}
+
+#lblBtn_Login:hover {
+    -fx-border-width: 3;
+    -fx-effect: innershadow(gaussian, rgba(34, 255, 0, 0.8), 10, 0.5, 0, 0);
+    -fx-text-fill: white;
+}
+
+#lblBtn_Logout:hover {
+    -fx-border-width: 3;
+    -fx-effect: innershadow(gaussian, rgb(255, 0, 0), 10, 0.5, 0, 0);
+    -fx-text-fill: white;
+}
+
+#lblBtn_SignUp:hover {
+    -fx-border-width: 3;
+    -fx-effect: innershadow(gaussian, rgb(0, 205, 255), 10, 0.5, 0, 0);
+    -fx-text-fill: white;
+}
+
+.image-view {
+    -fx-opacity: 0.5;
+}
+
+.image-view:hover {
+    -fx-opacity: 1.0;
+}
+
+#HBox_Search:hover .image-view, #HBox_Search:hover .text-field {
+    -fx-opacity: 1.0;
+}
+
+/* Ensure the prompt text in the TextField is styled as well */
+.text-field {
+    -fx-prompt-text-fill: #B3B3B3; /* Grey prompt text */
+}

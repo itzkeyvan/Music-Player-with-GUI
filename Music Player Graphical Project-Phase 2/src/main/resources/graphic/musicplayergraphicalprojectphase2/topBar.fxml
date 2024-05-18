@@ -1,33 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="60.0" prefWidth="1079.0" style="-fx-background-color: #2b2b27;" stylesheets="@LabelButtonStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TopBarController">
+<AnchorPane prefHeight="60.0" prefWidth="1037.0" style="-fx-background-color: #2b2b27;" stylesheets="@TopBarStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TopBarController">
    <children>
-      <HBox alignment="CENTER" layoutX="-144.0" layoutY="9.0" prefHeight="73.0" prefWidth="1434.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="377.0" spacing="10.0" AnchorPane.leftAnchor="10.0">
          <children>
-            <Label fx:id="lblBtn_Login" alignment="CENTER" layoutX="245.0" layoutY="10.0" minHeight="34.0" minWidth="107.0" onMouseClicked="#loginBtn_clicked" prefHeight="34.0" prefWidth="107.0" text="Login">
-               <font>
-                  <Font name="Gotham-Bold" size="20.0" />
-               </font>
-            </Label>
-            <Label fx:id="lblBtn_SingUP" alignment="CENTER" layoutX="484.0" layoutY="10.0" minHeight="34.0" minWidth="107.0" onMouseDragged="#signUpBtn_clicked" prefHeight="34.0" prefWidth="107.0" text="Sign up">
-               <font>
-                  <Font name="Gotham-Bold" size="20.0" />
-               </font>
-            </Label>
-            <HBox alignment="CENTER_RIGHT">
+            <HBox alignment="CENTER">
                <children>
-                  <Label fx:id="lblBtn_Logout" alignment="CENTER" minHeight="34.0" minWidth="107.0" onMouseDragged="#logout_clicked" prefHeight="34.0" prefWidth="107.0" text="Logout">
-                     <font>
-                        <Font name="Gotham-Bold" size="20.0" />
-                     </font>
-                  </Label>
+                  <ImageView fx:id="imgView_Back" fitHeight="47.0" fitWidth="63.0" onMouseClicked="#BackButton_Clicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@PngAndJpg/TopBar/Back.png" />
+                     </image>
+                  </ImageView>
                </children>
             </HBox>
+            <Separator orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
+            <HBox fx:id="HBox_Search" alignment="CENTER" prefHeight="60.0" prefWidth="397.0">
+               <children>
+                  <ImageView fx:id="imgView_Search" fitHeight="50.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                     <image>
+                        <Image url="@PngAndJpg/TopBar/Search.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="textField_Search" focusTraversable="false" prefHeight="34.0" prefWidth="266.0" promptText="What do you want to play?" styleClass="text-field">
+                     <font>
+                        <Font name="Gotham-Bold" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="322.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <Label fx:id="lblBtn_Login" alignment="CENTER" minHeight="34.0" minWidth="107.0" onMouseClicked="#loginBtn_clicked" prefHeight="34.0" prefWidth="107.0" text="Login">
+               <font>
+                  <Font name="Gotham-Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblBtn_SignUp" alignment="CENTER" minHeight="34.0" minWidth="107.0" onMouseClicked="#signUpBtn_clicked" prefHeight="34.0" prefWidth="107.0" text="Sign Up">
+               <font>
+                  <Font name="Gotham-Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblBtn_Logout" alignment="CENTER" minHeight="34.0" minWidth="107.0" onMouseClicked="#logoutBtn_clicked" prefHeight="34.0" prefWidth="107.0" text="Logout">
+               <font>
+                  <Font name="Gotham-Bold" size="20.0" />
+               </font>
+            </Label>
          </children>
       </HBox>
    </children>

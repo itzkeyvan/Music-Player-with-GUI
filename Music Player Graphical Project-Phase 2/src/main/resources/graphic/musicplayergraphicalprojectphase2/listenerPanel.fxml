@@ -200,7 +200,7 @@
                               </VBox>
                               <HBox alignment="CENTER">
                                  <children>
-                                    <Button fx:id="btn_explorePremium" mnemonicParsing="false" onMouseClicked="#explorePremiumBtn_Clicked" prefHeight="37.0" prefWidth="228.0" stylesheets="@ButtonStyle.css" text="Explore Premium">
+                                    <Button fx:id="btn_explorePremium" mnemonicParsing="false" onMouseClicked="#explorePremiumBtn_Clicked" prefHeight="37.0" prefWidth="228.0" stylesheets="@GreenButtonStyle.css" text="Explore Premium">
                                        <font>
                                           <Font name="Gotham-Bold" size="21.0" />
                                        </font>
@@ -226,7 +226,7 @@
                                     </ScrollPane>
                                     <HBox prefHeight="42.0" prefWidth="591.0">
                                        <children>
-                                          <Button fx:id="btn_newPlaylist" mnemonicParsing="false" onMouseClicked="#newPlaylistBtnClicked" prefHeight="42.0" prefWidth="115.0" stylesheets="@ButtonStyle.css" text="New playlist">
+                                          <Button fx:id="btn_newPlaylist" mnemonicParsing="false" onMouseClicked="#newPlaylistBtnClicked" prefHeight="42.0" prefWidth="115.0" stylesheets="@GreenButtonStyle.css" text="New playlist">
                                              <font>
                                                 <Font name="Gotham-Bold" size="13.0" />
                                              </font>

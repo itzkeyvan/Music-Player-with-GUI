@@ -1,0 +1,34 @@
+.text-field {
+    -fx-background-color: #676767; /* Dark background */
+    -fx-text-fill: #FFFFFF; /* White text color */
+    -fx-background-radius: 10; /* Rounded corners */
+    -fx-padding: 10;
+    -fx-font-size: 13;
+    -fx-font-family: 'Gotham';
+    -fx-font-weight: bold;
+    -fx-prompt-text-fill: rgba(179, 179, 179, 0.78); /* Grey prompt text */
+    -fx-border-radius: 10; /* Green border when focused */
+    -fx-pref-height: 34;
+    -fx-min-height: 34;
+}
+
+.text-field:focused {
+    -fx-border-color: #ffffff; /* Green border when focused */
+    -fx-font-family: 'Gotham';
+    -fx-font-weight: bold;
+}
+
+.text-field:hover {
+    -fx-border-color: #ffffff; /* Green border on hover */
+    -fx-font-family: 'Gotham';
+    -fx-font-weight: bold;
+}
+
+.text-field:disabled {
+    -fx-background-color: #858585; /* Dark grey background when disabled */
+    -fx-border-color: #7e7e7e; /* Grey border when disabled */
+    -fx-text-fill: #666666; /* Grey text color when disabled */
+    -fx-prompt-text-fill: #666666; /* Grey prompt text when disabled */
+    -fx-font-family: 'Gotham';
+    -fx-font-weight: bold;
+}
