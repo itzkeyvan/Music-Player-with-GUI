@@ -136,9 +136,7 @@ public class PlayBarController implements Initializable
         //--------------------------  audio image:
         Image albumArtImage = extractAlbumArt("file:C:\\Users\\LENOVO LOQ\\Downloads\\Telegram Desktop\\Catchybeatz, Isam - Ba Man Bia.mp3");
 
-        if (albumArtImage != null) {
-            imgView_musicCover.setImage(albumArtImage);
-        }
+        if (albumArtImage != null) {}
         else
         {
             imgView_musicCover.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/defaultAudioCover.png"));

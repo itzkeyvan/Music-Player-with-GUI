@@ -8,15 +8,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="156.0" prefWidth="1079.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PlayBarController">
+<AnchorPane prefHeight="132.0" prefWidth="1150.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PlayBarController">
    <children>
-      <HBox alignment="BOTTOM_LEFT" layoutX="348.0" prefHeight="156.0" prefWidth="1079.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER_LEFT" layoutX="5.0" prefHeight="156.0" prefWidth="1150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="120.0" prefWidth="351.0">
+            <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="156.0" prefWidth="351.0" spacing="5.0">
                <children>
-                  <ImageView fx:id="imgView_musicCover" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+                  <Rectangle arcHeight="15.0" arcWidth="15.0" fill="DODGERBLUE" height="120.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
                   <VBox prefHeight="82.0" prefWidth="317.0">
                      <children>
                         <Label fx:id="lbl_audioName" prefHeight="40.0" prefWidth="316.0" textFill="WHITE">
@@ -33,7 +34,11 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox>
+         </children>
+      </HBox>
+      <HBox fx:id="rectangle_AudioCover" alignment="CENTER" layoutX="383.0" prefHeight="156.0" prefWidth="1150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER">
                <children>
                   <VBox alignment="CENTER" fillWidth="false" prefHeight="156.0" prefWidth="383.0">
                      <children>
@@ -59,7 +64,7 @@
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <Slider fx:id="slider_audioProgressBar" prefHeight="22.0" prefWidth="316.0" />
+                              <Slider fx:id="slider_audioProgressBar" prefHeight="22.0" prefWidth="350.0" stylesheets="@AudioProgressBarStyle.css" />
                               <Label fx:id="lbl_audioTotalTime" contentDisplay="CENTER" minHeight="20.0" minWidth="45.0" prefHeight="20.0" prefWidth="79.0" textAlignment="CENTER" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
@@ -70,7 +75,7 @@
                      </children>
                   </VBox>
                </children>
-            </HBox>
+            </VBox>
          </children>
       </HBox>
    </children>

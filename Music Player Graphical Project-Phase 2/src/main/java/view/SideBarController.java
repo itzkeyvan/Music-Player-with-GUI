@@ -7,6 +7,9 @@ import javafx.scene.layout.HBox;
 public class SideBarController {
 
     @FXML
+    private HBox btn_Playlists;
+
+    @FXML
     private HBox btn_artists;
 
     @FXML
@@ -38,6 +41,11 @@ public class SideBarController {
 
     @FXML
     void libraryBtn_Clicked(MouseEvent event) {
+
+    }
+
+    @FXML
+    void playlistsBtn_Clicked(MouseEvent event) {
 
     }
 
