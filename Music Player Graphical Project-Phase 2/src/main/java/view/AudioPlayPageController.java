@@ -19,13 +19,16 @@ public class AudioPlayPageController {
     private ImageView imageViewBtn_PlayOrPause;
 
     @FXML
+    private Label lbl_AudioType;
+
+    @FXML
     private Label lbl_LyricsOrBio;
 
     @FXML
     private Rectangle rectangle_AudioCover;
 
     @FXML
-    private Text txt_ArtistName;
+    private Text txt_ArtistUserName;
 
     @FXML
     private Text txt_AudioLength;

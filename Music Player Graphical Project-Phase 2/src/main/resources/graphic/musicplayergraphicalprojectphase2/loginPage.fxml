@@ -19,7 +19,7 @@
             </Label>
             <VBox alignment="CENTER" prefHeight="341.0" prefWidth="560.0" spacing="80.0">
                <children>
-                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="590.0" spacing="10.0">
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="590.0" spacing="10.0" stylesheets="@TextFieldStyle.css">
                      <children>
                         <HBox alignment="CENTER" minHeight="39.0" prefHeight="74.0" prefWidth="284.0" spacing="5.0">
                            <children>
@@ -28,7 +28,7 @@
                                     <Font name="Gotham-Bold" size="16.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="txtField_userName" prefHeight="26.0" prefWidth="150.0" />
+                              <TextField fx:id="txtField_userName" minHeight="29.0" prefHeight="29.0" prefWidth="150.0" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER" layoutX="164.0" layoutY="10.0" minHeight="39.0" prefHeight="74.0" prefWidth="284.0" spacing="5.0">
@@ -38,7 +38,7 @@
                                     <Font name="Gotham-Bold" size="16.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="txtField_password" prefHeight="26.0" prefWidth="150.0" />
+                              <TextField fx:id="txtField_password" minHeight="16.0" prefHeight="16.0" prefWidth="150.0" />
                            </children>
                         </HBox>
                      </children>
@@ -46,7 +46,7 @@
                         <Insets left="2.0" right="2.0" />
                      </padding>
                   </HBox>
-                  <Label fx:id="lblBtn_Login" alignment="CENTER" minHeight="34.0" minWidth="107.0" onMouseClicked="#loginBtn_clicked" prefHeight="34.0" prefWidth="107.0" stylesheets="@LabelButtonStyle.css" text="Login">
+                  <Label fx:id="lblBtn_Login" alignment="CENTER" minHeight="34.0" minWidth="107.0" onMouseClicked="#loginBtn_clicked" prefHeight="34.0" prefWidth="107.0" stylesheets="@../../../../../../../demo/src/main/resources/org/example/demo/LabelButtonStyle.css" text="Login">
                      <font>
                         <Font name="Gotham-Bold" size="20.0" />
                      </font>

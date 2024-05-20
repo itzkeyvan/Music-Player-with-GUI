@@ -42,7 +42,7 @@
                <children>
                   <VBox alignment="CENTER" fillWidth="false" prefHeight="156.0" prefWidth="383.0">
                      <children>
-                        <HBox alignment="CENTER" prefHeight="68.0" prefWidth="444.0" spacing="8.0">
+                        <HBox alignment="CENTER" prefHeight="68.0" prefWidth="444.0" spacing="8.0" stylesheets="@ImageViewButtonStyle.css">
                            <children>
                               <ImageView fx:id="btn_previous" fitHeight="55.0" fitWidth="43.0" onMouseClicked="#previousBtn_clicked" pickOnBounds="true" preserveRatio="true">
                                  <image>

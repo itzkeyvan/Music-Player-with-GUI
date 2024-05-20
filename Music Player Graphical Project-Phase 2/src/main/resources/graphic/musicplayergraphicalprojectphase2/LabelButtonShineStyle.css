@@ -1,0 +1,18 @@
+.label {
+    -fx-opacity: 0.5;
+    -fx-border-width: 2;
+    -fx-border-radius: 50;
+
+    -fx-spacing: 10;
+}
+
+/* Hover effect for HBox */
+.label:hover{
+    -fx-opacity: 1.0;
+    -fx-border-width: 3;
+}
+
+.label:hover .label {
+    -fx-underline: true;
+    -fx-background-color: #989898;
+}
