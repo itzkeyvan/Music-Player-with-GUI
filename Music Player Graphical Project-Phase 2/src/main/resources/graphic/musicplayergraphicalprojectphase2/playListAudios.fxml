@@ -29,7 +29,7 @@
                                             <children>
                                                 <Label text="Playlist" textFill="WHITE">
                                                     <font>
-                                                        <Font name="Gotham-Bold" size="14.0" />
+                                                        <Font name="Gotham-Bold" size="15.0" />
                                                     </font>
                                                 </Label>
                                             </children>
