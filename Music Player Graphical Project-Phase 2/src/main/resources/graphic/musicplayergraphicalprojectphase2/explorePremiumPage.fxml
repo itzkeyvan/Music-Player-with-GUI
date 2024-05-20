@@ -30,7 +30,7 @@
                   </Label>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
                      <children>
-                        <VBox spacing="10.0">
+                        <VBox alignment="CENTER" spacing="10.0">
                            <children>
                               <Label fx:id="lblBtn_bronzePlan" alignment="CENTER" onMouseClicked="#bronzePlanLblBtn_Clicked" prefHeight="51.0" prefWidth="618.0" style="-fx-border-color: #C9B037;" stylesheets="@LabelButtonShineStyle.css" text="Bronze : 30 days for 5$" textFill="#c9b037">
                                  <font>
@@ -70,7 +70,7 @@
                               </Label>
                            </children>
                         </VBox>
-                        <Button fx:id="btn_purchase" mnemonicParsing="false" onMouseClicked="#purchaseBtn_Clicked" prefHeight="40.0" prefWidth="147.0" stylesheets="@GreenButtonStyle.css" text="Purchase">
+                        <Button fx:id="btn_purchase" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#purchaseBtn_Clicked" prefHeight="40.0" prefWidth="147.0" stylesheets="@GreenButtonStyle.css" text="Purchase">
                            <font>
                               <Font name="Gotham-Bold" size="19.0" />
                            </font>
