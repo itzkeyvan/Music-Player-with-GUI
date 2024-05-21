@@ -1,5 +1,6 @@
 package model.audio;
 
+import javafx.scene.image.Image;
 import model.Genre;
 
 import java.util.Date;
@@ -7,7 +8,7 @@ import java.util.Date;
 public class Music extends Audio
 {
     private String lyrics;
-    public Music(String audioName,String artistName,Date releaseDate,Genre genre,String audioURL,String cover,String lyrics)
+    public Music(String audioName, String artistName, Date releaseDate, Genre genre, String audioURL, Image cover, String lyrics)
     {
         super(audioName, artistName,  releaseDate, genre, audioURL, cover);
         this.lyrics=lyrics;

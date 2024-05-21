@@ -1,5 +1,6 @@
 package model.audio;
 
+import javafx.scene.image.Image;
 import model.Genre;
 
 import java.util.Date;
@@ -7,7 +8,7 @@ import java.util.Date;
 public class Podcast extends Audio
 {
     private String caption;
-    public Podcast(String audioName, String artistName, Date releaseDate, Genre genre, String audioURL, String cover, String caption)
+    public Podcast(String audioName, String artistName, Date releaseDate, Genre genre, String audioURL, Image cover, String caption)
     {
         super(audioName, artistName,  releaseDate, genre, audioURL, cover);
         this.caption=caption;

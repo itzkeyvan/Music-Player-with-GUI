@@ -4,6 +4,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,9 +12,10 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="509.0" minWidth="745.0" prefHeight="509.0" prefWidth="745.0" style="-fx-background-color: #42413e;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainTemplateController">
+<AnchorPane minHeight="509.0" minWidth="744.0" prefHeight="547.0" prefWidth="745.0" style="-fx-background-color: #42413e;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainTemplateController">
    <children>
       <BorderPane layoutX="-63.2" layoutY="-52.8" minHeight="400.0" minWidth="700.0" prefHeight="533.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
@@ -152,11 +154,11 @@
             </AnchorPane>
          </left>
          <top>
-            <AnchorPane BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="39.0" prefWidth="746.0" BorderPane.alignment="CENTER">
                <children>
                   <VBox prefHeight="57.6" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <AnchorPane prefHeight="22.0" prefWidth="700.0" style="-fx-background-color: #2b2b27;" stylesheets="@TopBarStyle.css">
+                        <AnchorPane prefHeight="81.0" prefWidth="746.0" style="-fx-background-color: #2b2b27;" stylesheets="@TopBarStyle.css">
                            <children>
                               <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="378.0" spacing="10.0" AnchorPane.leftAnchor="5.0">
                                  <children>
@@ -207,11 +209,91 @@
                               </HBox>
                            </children>
                         </AnchorPane>
-                        <Separator prefHeight="0.0" prefWidth="700.0" />
+                        <Separator prefHeight="0.0" prefWidth="700.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></Separator>
                      </children>
                   </VBox>
                </children>
             </AnchorPane>
-         </top></BorderPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="94.0" prefWidth="1150.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutX="9.6" prefHeight="104.0" prefWidth="1145.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="131.0" prefWidth="351.0" spacing="5.0">
+                           <children>
+                              <Rectangle arcHeight="15.0" arcWidth="15.0" fill="DODGERBLUE" height="76.0" stroke="BLACK" strokeType="INSIDE" width="77.0" />
+                              <VBox prefHeight="68.0" prefWidth="259.0">
+                                 <children>
+                                    <Label fx:id="lbl_audioName" prefHeight="40.0" prefWidth="316.0" textFill="WHITE">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_artistName" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="451.0" textFill="#eaeaea">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="rectangle_AudioCover" alignment="CENTER" layoutX="383.0" prefHeight="156.0" prefWidth="1150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <VBox alignment="CENTER" fillWidth="false" prefHeight="73.0" prefWidth="383.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="68.0" prefWidth="444.0" spacing="8.0" stylesheets="@ImageViewButtonStyle.css">
+                                       <children>
+                                          <ImageView fx:id="btn_previous" fitHeight="36.0" fitWidth="36.0" onMouseClicked="#previousBtn_clicked" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@PngAndJpg/PlayBar/Previous.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="btn_playORpause" fitHeight="50.0" fitWidth="50.0" layoutX="377.0" layoutY="16.0" onKeyPressed="#playORpause_keyPressed" onMouseClicked="#playORpauseBtn_clicked" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fx:id="btn_next" fitHeight="36.0" fitWidth="36.0" onMouseClicked="#nextBtn_clicked" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@PngAndJpg/PlayBar/Next.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="22.0" prefWidth="486.0" spacing="5.0">
+                                       <children>
+                                          <Label fx:id="lbl_elapsedTime" alignment="CENTER_RIGHT" contentDisplay="CENTER" minWidth="45.0" prefHeight="20.0" prefWidth="70.0" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider fx:id="slider_audioProgressBar" prefHeight="41.0" prefWidth="303.0" stylesheets="@AudioProgressBarStyle.css" />
+                                          <Label fx:id="lbl_audioTotalTime" contentDisplay="CENTER" minHeight="20.0" minWidth="45.0" prefHeight="20.0" prefWidth="79.0" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </AnchorPane>
+         </bottom></BorderPane>
    </children>
 </AnchorPane>

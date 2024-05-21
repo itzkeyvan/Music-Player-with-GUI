@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.scene.image.Image;
 import model.Album;
 import model.DataBase;
 import model.Genre;
@@ -53,7 +54,7 @@ public class SingerController extends ArtistController
         singer.getAlbumsList().add(album);
         return "Album created successfully.";
     }
-    public String publishMusic(String title, Genre genre, String lyrics, String URL, String cover, String albumID)
+    public String publishMusic(String title, Genre genre, String lyrics, String URL, Image cover, String albumID)
     {
         for(Album album:singer.getAlbumsList())
             for(Music music:album.getMusicsList())

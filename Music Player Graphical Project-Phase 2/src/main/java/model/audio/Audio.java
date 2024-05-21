@@ -20,8 +20,8 @@ public abstract class Audio implements Comparable
     private Date releaseDate;
     private Genre genre;
     private String audioURL;
-    private final String cover;
-    public Audio(String audioName,String artistName,Date releaseDate,Genre genre,String audioURL,String cover)
+    private final Image cover;
+    public Audio(String audioName,String artistName,Date releaseDate,Genre genre,String audioURL,Image cover)
     {
         this.audioID=(++audioCounter);
         this.audioName=audioName;
@@ -97,7 +97,7 @@ public abstract class Audio implements Comparable
         this.audioURL = audioURL;
     }
 
-    public String getCover()
+    public Image getCover()
     {
         return cover;
     }
@@ -131,20 +131,5 @@ public abstract class Audio implements Comparable
     {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         return "Audio name: "+audioName+" | Audio ID: "+audioID+" | Artist: "+artistName+" | Genre: "+genre.getGenreName()+" | Audio type: "+audioType.toString()+"\nRelease date: "+dateFormat.format(releaseDate)+" | Number of likes: "+numberOfLikes+" | Number of plays: "+numberOfPlays;
-    }
-    public static Image extractAlbumArt(String filePath) {
-        try {
-            Mp3File mp3File = new Mp3File(filePath);
-            if (mp3File.hasId3v2Tag()) {
-                ID3v2 id3v2Tag = mp3File.getId3v2Tag();
-                byte[] albumImageData = id3v2Tag.getAlbumImage();
-                if (albumImageData != null) {
-                    return new Image(new ByteArrayInputStream(albumImageData));
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 }

@@ -2,15 +2,19 @@ package view;
 
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import model.DataBase;
 import model.audio.Audio;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -56,6 +60,14 @@ public class HomePageController implements Initializable
                     }
             for(Audio audio:al)
             {
+                Parent music= null;
+                try {
+                    music = FXMLLoader.load(AudioInListController.class.getResource("audioInList.fxml"));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                music.
+                VBox_homePage_audiosSortedByLikesList.getChildren().add(music);
 
 
             }
