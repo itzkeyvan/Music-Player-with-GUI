@@ -9,10 +9,10 @@ import javafx.scene.text.Text;
 public class AudioInListController {
 
     @FXML
-    private ImageView imgView_PlayOrPauseInList1;
+    private ImageView imgView_PlayOrPauseInList;
 
     @FXML
-    private Rectangle rectangle_AudioCover1;
+    private Rectangle rectangle_AudioCover;
 
     @FXML
     private Text txt_artistName;
@@ -27,7 +27,7 @@ public class AudioInListController {
     private Text txt_audioNumber;
 
     @FXML
-    private Text txt_audioNumberOfPlays;
+    private Text txt_audioNumberOfPlaysOrLikes;
 
     @FXML
     void PlayOrPauseInList_Clicked(MouseEvent event) {

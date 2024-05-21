@@ -13,7 +13,7 @@
          <children>
             <HBox alignment="CENTER_LEFT" disable="true" prefHeight="52.0" prefWidth="2.0" spacing="5.0">
                <children>
-                  <ImageView fx:id="imgView_PlayOrPauseInList1" fitHeight="25.0" fitWidth="29.0" onMouseClicked="#PlayOrPauseInList_Clicked" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imgView_PlayOrPauseInList" fitHeight="25.0" fitWidth="29.0" onMouseClicked="#PlayOrPauseInList_Clicked" pickOnBounds="true" preserveRatio="true" />
                   <Text fx:id="txt_audioNumber" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
                      <font>
                         <Font name="Gotham-Bold" size="16.0" />
@@ -21,7 +21,7 @@
                   </Text>
                </children>
             </HBox>
-            <Rectangle fx:id="rectangle_AudioCover1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" stroke="BLACK" strokeType="INSIDE" width="50.0">
+            <Rectangle fx:id="rectangle_AudioCover" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" stroke="BLACK" strokeType="INSIDE" width="50.0">
                <HBox.margin>
                   <Insets bottom="5.0" top="5.0" />
                </HBox.margin>
@@ -40,7 +40,7 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="147.0">
          <children>
-            <Text fx:id="txt_audioNumberOfPlays" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="77.3366870880127">
+            <Text fx:id="txt_audioNumberOfPlaysOrLikes" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="77.3366870880127">
                <font>
                   <Font name="Gotham-Bold" size="14.0" />
                </font>

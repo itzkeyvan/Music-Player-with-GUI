@@ -1,6 +1,10 @@
 package model.audio;
+import com.mpatric.mp3agic.ID3v2;
+import com.mpatric.mp3agic.Mp3File;
+import javafx.scene.image.Image;
 import model.Genre;
 
+import java.io.ByteArrayInputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -31,11 +35,9 @@ public abstract class Audio implements Comparable
     public int getAudioID() {
         return audioID;
     }
-
     public void setAudioID(int audioID) {
         this.audioID = audioID;
     }
-
     public String getAudioName()
     {
         return audioName;
@@ -129,5 +131,20 @@ public abstract class Audio implements Comparable
     {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         return "Audio name: "+audioName+" | Audio ID: "+audioID+" | Artist: "+artistName+" | Genre: "+genre.getGenreName()+" | Audio type: "+audioType.toString()+"\nRelease date: "+dateFormat.format(releaseDate)+" | Number of likes: "+numberOfLikes+" | Number of plays: "+numberOfPlays;
+    }
+    public static Image extractAlbumArt(String filePath) {
+        try {
+            Mp3File mp3File = new Mp3File(filePath);
+            if (mp3File.hasId3v2Tag()) {
+                ID3v2 id3v2Tag = mp3File.getId3v2Tag();
+                byte[] albumImageData = id3v2Tag.getAlbumImage();
+                if (albumImageData != null) {
+                    return new Image(new ByteArrayInputStream(albumImageData));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

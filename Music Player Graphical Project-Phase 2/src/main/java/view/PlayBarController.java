@@ -142,19 +142,4 @@ public class PlayBarController implements Initializable
             imgView_musicCover.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/defaultAudioCover.png"));
         }
     }
-    public static Image extractAlbumArt(String filePath) {
-        try {
-            Mp3File mp3File = new Mp3File(filePath);
-            if (mp3File.hasId3v2Tag()) {
-                ID3v2 id3v2Tag = mp3File.getId3v2Tag();
-                byte[] albumImageData = id3v2Tag.getAlbumImage();
-                if (albumImageData != null) {
-                    return new Image(new ByteArrayInputStream(albumImageData));
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 }
