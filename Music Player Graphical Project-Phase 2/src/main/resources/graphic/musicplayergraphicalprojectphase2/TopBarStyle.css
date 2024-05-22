@@ -54,10 +54,6 @@
     -fx-opacity: 1.0;
 }
 
-#HBox_Search:hover .image-view, #HBox_Search:hover .text-field {
-    -fx-opacity: 1.0;
-}
-
 /* Ensure the prompt text in the TextField is styled as well */
 .text-field {
     -fx-prompt-text-fill: #B3B3B3; /* Grey prompt text */

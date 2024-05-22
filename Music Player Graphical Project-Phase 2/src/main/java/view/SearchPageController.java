@@ -1,12 +1,10 @@
 package view;
 
+import controller.ListenerController;
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -19,22 +17,40 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class HomePageController implements Initializable
-{
+public class SearchPageController implements Initializable {
+
+    static private String searchedTerm;
     @FXML
-    private VBox VBox_homePage_audiosSortedByLikesList;
+    private VBox VBox_searchResultList;
 
     @FXML
-    private Label lbl_homePageHboxLabel;
+    private Text txt_artistName;
+
+    @FXML
+    private Text txt_audioName;
+
+    @FXML
+    private Text txt_audioNumberOfPlays;
+
+    @FXML
+    void PlayOrPauseInList_Clicked(MouseEvent event) {
+
+    }
+
+    public static String getSearchedTerm() {
+        return searchedTerm;
+    }
+
+    public static void setSearchedTerm(String searchedTerm) {
+        SearchPageController.searchedTerm = searchedTerm;
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        int audioNumber=1;
-        if(!Main.isLoggedIn())
+        for(Audio audio:ListenerController.getListenerController().searchInAudios(searchedTerm));
         {
-            AudioInListController.setNumOfLikes(true);
-            lbl_homePageHboxLabel.setText("Most liked audios");
+            int audioNumber=1;
             ArrayList<Audio> al=new ArrayList<>(DataBase.getDataBase().getAudiosList());
             for(int i=0;i<al.size()-1;i++)
                 for(int j=0;j<al.size()-1-i;j++)
@@ -55,26 +71,8 @@ public class HomePageController implements Initializable
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-                VBox_homePage_audiosSortedByLikesList.getChildren().add(audioInList);
+                VBox_searchResultList.getChildren().add(audioInList);
             }
         }
-        else
-        {
-            lbl_homePageHboxLabel.setText("Audios for you");
-            for(Audio audio:Main.getListenerController().getSuggestedAudios())
-            {
-                AudioInListController audioInListController=new AudioInListController();
-                AudioInListController.setAudio(audio);
-                audioInListController.setTxt_audioNumber(new Text(Integer.toString(audioNumber++)));
-                HBox audioInList = null;
-                try {
-                    audioInList = FXMLLoader.load(AudioInListController.class.getResource("audioInList.fxml"));
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-                VBox_homePage_audiosSortedByLikesList.getChildren().add(audioInList);
-            }
-        }
-        AudioInListController.setNumOfLikes(false);
     }
 }

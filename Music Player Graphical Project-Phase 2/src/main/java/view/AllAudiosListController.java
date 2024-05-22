@@ -12,9 +12,6 @@ public class AllAudiosListController {
     private VBox VBox_allAudiosList;
 
     @FXML
-    private ImageView imgView_PlayOrPauseInList;
-
-    @FXML
     private Text txt_artistName1;
 
     @FXML

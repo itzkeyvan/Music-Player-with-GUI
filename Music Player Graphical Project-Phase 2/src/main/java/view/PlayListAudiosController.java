@@ -17,9 +17,6 @@ public class PlayListAudiosController {
     private VBox VBox_audiosList;
 
     @FXML
-    private ImageView imgView_PlayOrPauseInList;
-
-    @FXML
     private Rectangle rectangle_AudioCover;
 
     @FXML

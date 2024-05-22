@@ -165,18 +165,15 @@ public class ListenerController
             }
         return "Audio not found";
     }
-    public String searchInAudios(String entry)
+    public ArrayList<Audio> searchInAudios(String entry)
     {
-        StringBuilder result=new StringBuilder();
+        ArrayList<Audio> result=new ArrayList<>();
         for (Audio audio : DataBase.getDataBase().getAudiosList())
             if (audio.getAudioName().equals(entry)||audio.getArtistName().equals(entry))  //found.
             {
-                result.append(audio.toString());
+                result.add(audio);
             }
-        if(result.isEmpty())
-            return "Audio not found";
-        else
-            return result.toString();
+        return result;
     }
     public String sortAudios()
     {

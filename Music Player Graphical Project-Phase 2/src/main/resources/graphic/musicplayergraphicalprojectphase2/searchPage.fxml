@@ -12,11 +12,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #444345;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AllAudiosListController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #444345;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SearchPageController">
    <children>
       <VBox alignment="CENTER" layoutX="10.399999618530273" layoutY="10.399999618530273" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Label prefHeight="51.0" prefWidth="618.0" text="All Audios" textFill="WHITE">
+            <Label prefHeight="51.0" prefWidth="618.0" text="Search" textFill="WHITE">
                <font>
                   <Font name="Gotham-Bold" size="29.0" />
                </font>
@@ -46,12 +46,12 @@
                                                       </Text>
                                                    </children>
                                                 </HBox>
-                                                <Text fx:id="txt_audioName1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" wrappingWidth="207.73667335510254">
+                                                <Text fx:id="txt_audioName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" wrappingWidth="207.73667335510254">
                                                    <font>
                                                       <Font name="Gotham-Bold" size="22.0" />
                                                    </font>
                                                 </Text>
-                                                <Text fx:id="txt_artistName1" fill="WHITE" layoutX="144.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artist" wrappingWidth="114.13661382198188">
+                                                <Text fx:id="txt_artistName" fill="WHITE" layoutX="144.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artist" wrappingWidth="114.13661382198188">
                                                    <font>
                                                       <Font name="Gotham-Bold" size="22.0" />
                                                    </font>
@@ -60,7 +60,7 @@
                                           </HBox>
                                           <HBox alignment="CENTER_RIGHT" prefHeight="56.0" prefWidth="142.0">
                                              <children>
-                                                <Text fx:id="txt_audioNumberOfPlays1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Plays" wrappingWidth="82.9366626739502">
+                                                <Text fx:id="txt_audioNumberOfPlays" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Plays" wrappingWidth="82.9366626739502">
                                                    <font>
                                                       <Font name="Gotham-Bold" size="14.0" />
                                                    </font>
@@ -91,7 +91,7 @@
                                           </HBox>
                                        </children>
                                     </HBox>
-                                    <VBox fx:id="VBox_allAudiosList" prefHeight="2800.0" prefWidth="590.0" />
+                                    <VBox fx:id="VBox_searchResultList" prefHeight="2800.0" prefWidth="590.0" />
                                  </children>
                               </VBox>
                            </content>

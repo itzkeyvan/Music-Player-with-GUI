@@ -21,7 +21,7 @@ import java.util.ResourceBundle;
 public class AudioInListController implements Initializable
 {
     private static Audio audio;
-
+    private static boolean numOfLikes;
     @FXML
     private ImageView imgView_PlayOrPauseInList;
 
@@ -59,7 +59,10 @@ public class AudioInListController implements Initializable
         rectangle_AudioCover.setFill(new ImagePattern(audio.getCover()));
         txt_artistName.setText(audio.getArtistName());
         txt_audioName.setText(audio.getAudioName());
-        txt_audioNumberOfPlaysOrLikes.setText(String.valueOf(audio.getNumberOfLikes()));
+        if(isNumOfLikes())
+            txt_audioNumberOfPlaysOrLikes.setText(String.valueOf(audio.getNumberOfLikes()));
+        else
+            txt_audioNumberOfPlaysOrLikes.setText(String.valueOf(audio.getNumberOfPlays()));
         txt_audioLength.setText(audio.getAudioLength()/60+":"+ audio.getAudioLength()%60);
     }
 
@@ -77,5 +80,13 @@ public class AudioInListController implements Initializable
 
     public void setTxt_audioNumber(Text txt_audioNumber) {
         this.txt_audioNumber = txt_audioNumber;
+    }
+
+    public static boolean isNumOfLikes() {
+        return numOfLikes;
+    }
+
+    public static void setNumOfLikes(boolean numOfPlaysOrLikes) {
+        AudioInListController.numOfLikes = numOfPlaysOrLikes;
     }
 }
