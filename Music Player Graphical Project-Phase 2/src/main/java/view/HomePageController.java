@@ -25,30 +25,15 @@ public class HomePageController implements Initializable
     private VBox VBox_homePage_audiosSortedByLikesList;
 
     @FXML
-    private ImageView imgView_PlayOrPauseInList;
-
-    @FXML
     private Label lbl_homePageHboxLabel;
-
-    @FXML
-    private Text txt_homePage_artistName;
-
-    @FXML
-    private Text txt_homePage_audioName;
-
-    @FXML
-    private Text txt_homePage_audioNumberOfLikes;
-
-    @FXML
-    void PlayOrPauseInList_Clicked(MouseEvent event) {
-
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        int audioNumber=1;
         if(!Main.isLoggedIn())
         {
+            lbl_homePageHboxLabel.setText("Most liked audios");
             ArrayList<Audio> al=new ArrayList<>(DataBase.getDataBase().getAudiosList());
             for(int i=0;i<al.size()-1;i++)
                 for(int j=0;j<al.size()-1-i;j++)
@@ -60,16 +45,33 @@ public class HomePageController implements Initializable
                     }
             for(Audio audio:al)
             {
-                Parent music= null;
+                AudioInListController audioInListController=new AudioInListController();
+                AudioInListController.setAudio(audio);
+                audioInListController.setTxt_audioNumber(new Text(Integer.toString(audioNumber++)));
+                HBox audioInList= null;
                 try {
-                    music = FXMLLoader.load(AudioInListController.class.getResource("audioInList.fxml"));
+                    audioInList = FXMLLoader.load(AudioInListController.class.getResource("audioInList.fxml"));
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-                music.
-                VBox_homePage_audiosSortedByLikesList.getChildren().add(music);
-
-
+                VBox_homePage_audiosSortedByLikesList.getChildren().add(audioInList);
+            }
+        }
+        else
+        {
+            lbl_homePageHboxLabel.setText("Audios for you");
+            for(Audio audio:Main.getListenerController().getSuggestedAudios())
+            {
+                AudioInListController audioInListController=new AudioInListController();
+                AudioInListController.setAudio(audio);
+                audioInListController.setTxt_audioNumber(new Text(Integer.toString(audioNumber++)));
+                HBox audioInList = null;
+                try {
+                    audioInList = FXMLLoader.load(AudioInListController.class.getResource("audioInList.fxml"));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                VBox_homePage_audiosSortedByLikesList.getChildren().add(audioInList);
             }
         }
     }

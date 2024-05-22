@@ -4,6 +4,7 @@ module graphic.musicplayergraphicalprojectphase2 {
     requires java.sql;
     requires javafx.media;
     requires mp3agic;
+    requires java.desktop;
 
 
     opens graphic.musicplayergraphicalprojectphase2 to javafx.fxml;

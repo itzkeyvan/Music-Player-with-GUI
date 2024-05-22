@@ -5,9 +5,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 
 public class MainTemplateController {
+
+    @FXML
+    private static BorderPane BorderPane_mainTemplate;
 
     @FXML
     private HBox HBox_Search;
@@ -98,4 +102,11 @@ public class MainTemplateController {
 
     }
 
+    public static BorderPane getBorderPane_mainTemplate() {
+        return BorderPane_mainTemplate;
+    }
+
+    public static void setBorderPane_mainTemplate(BorderPane borderPane_mainTemplate) {
+        BorderPane_mainTemplate = borderPane_mainTemplate;
+    }
 }

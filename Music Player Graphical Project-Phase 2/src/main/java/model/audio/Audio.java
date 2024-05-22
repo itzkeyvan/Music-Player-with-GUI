@@ -1,12 +1,15 @@
 package model.audio;
-import com.mpatric.mp3agic.ID3v2;
-import com.mpatric.mp3agic.Mp3File;
 import javafx.scene.image.Image;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
 import model.Genre;
 
-import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import static view.PlayBarController.getAudio;
 
 public abstract class Audio implements Comparable
 {
@@ -21,6 +24,7 @@ public abstract class Audio implements Comparable
     private Genre genre;
     private String audioURL;
     private final Image cover;
+    private double audioLength;
     public Audio(String audioName,String artistName,Date releaseDate,Genre genre,String audioURL,Image cover)
     {
         this.audioID=(++audioCounter);
@@ -30,6 +34,8 @@ public abstract class Audio implements Comparable
         this.genre=genre;
         this.audioURL=audioURL;
         this.cover=cover;
+        MediaPlayer mediaPlayer=new MediaPlayer(new Media(audioURL));
+        this.audioLength =mediaPlayer.getTotalDuration().toSeconds();
     }
 
     public int getAudioID() {
@@ -112,6 +118,14 @@ public abstract class Audio implements Comparable
 
     public static int getAudioCounter() {
         return audioCounter;
+    }
+
+    public double getAudioLength() {
+        return audioLength;
+    }
+
+    public void setAudioLength(double audioLength) {
+        this.audioLength = audioLength;
     }
 
     @Override

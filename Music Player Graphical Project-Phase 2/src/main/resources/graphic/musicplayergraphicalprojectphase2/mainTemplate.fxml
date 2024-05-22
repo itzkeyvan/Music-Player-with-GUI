@@ -17,7 +17,7 @@
 
 <AnchorPane minHeight="509.0" minWidth="744.0" prefHeight="547.0" prefWidth="745.0" style="-fx-background-color: #42413e;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainTemplateController">
    <children>
-      <BorderPane layoutX="-63.2" layoutY="-52.8" minHeight="400.0" minWidth="700.0" prefHeight="533.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane fx:id="BorderPane_mainTemplate" layoutX="-63.2" layoutY="-52.8" minHeight="400.0" minWidth="700.0" prefHeight="533.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
             <AnchorPane minHeight="346.0" minWidth="130.0" prefHeight="426.0" prefWidth="145.0" style="-fx-background-color: #2b2b27;" BorderPane.alignment="CENTER">
                <stylesheets>

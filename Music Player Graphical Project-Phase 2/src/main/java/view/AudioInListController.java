@@ -1,12 +1,26 @@
 package view;
 
+import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import model.audio.Audio;
 
-public class AudioInListController {
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class AudioInListController implements Initializable
+{
+    private static Audio audio;
 
     @FXML
     private ImageView imgView_PlayOrPauseInList;
@@ -30,8 +44,38 @@ public class AudioInListController {
     private Text txt_audioNumberOfPlaysOrLikes;
 
     @FXML
-    void PlayOrPauseInList_Clicked(MouseEvent event) {
-
+    void PlayOrPauseInListBtn_Clicked(MouseEvent event) throws IOException
+    {
+        imgView_PlayOrPauseInList.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePause.png"));
+        PlayBarController.setAudio(audio);
+        AnchorPane playBar= FXMLLoader.load(PlayBarController.class.getResource("playBar.fxml"));
+        MainTemplateController.getBorderPane_mainTemplate().setBottom(playBar);
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+        imgView_PlayOrPauseInList.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePlay.png"));
+        rectangle_AudioCover.setFill(new ImagePattern(audio.getCover()));
+        txt_artistName.setText(audio.getArtistName());
+        txt_audioName.setText(audio.getAudioName());
+        txt_audioNumberOfPlaysOrLikes.setText(String.valueOf(audio.getNumberOfLikes()));
+        txt_audioLength.setText(audio.getAudioLength()/60+":"+ audio.getAudioLength()%60);
+    }
+
+    public static Audio getAudio() {
+        return audio;
+    }
+
+    public static void setAudio(Audio audio) {
+        AudioInListController.audio = audio;
+    }
+
+    public Text getTxt_audioNumber() {
+        return txt_audioNumber;
+    }
+
+    public void setTxt_audioNumber(Text txt_audioNumber) {
+        this.txt_audioNumber = txt_audioNumber;
+    }
 }

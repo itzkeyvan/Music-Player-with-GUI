@@ -354,9 +354,9 @@ public class ListenerController
                 return playlist.toString();
         return "Playlist not found.";
     }
-    public String showSuggestedAudios()
+    public ArrayList<Audio> getSuggestedAudios()
     {
-        StringBuilder sb = new StringBuilder();
+        ArrayList<Audio> suggestedAudios=new ArrayList<>();
         Map.Entry<Genre,Integer>[]genreScores=listener.getGenresScores().entrySet().toArray(new Map.Entry[listener.getGenresScores().size()]);
         for(int i=0;i<genreScores.length-1;i++)
             for(int j=0;j<genreScores.length-1-i;j++)
@@ -373,7 +373,7 @@ public class ListenerController
                 for (Map.Entry<Genre, Integer> genreScoresEntry : genreScores)
                     for (Audio audio : DataBase.getDataBase().getAudiosList()) {
                         if (audio.getGenre() == genreScoresEntry.getKey())
-                            sb.append(i+1+": "+audio + "\n\n");
+                            suggestedAudios.add(audio);
                         i++;
                     }
             }
@@ -386,7 +386,7 @@ public class ListenerController
                             for (Album album : singer.getAlbumsList())
                                 for (Music music : album.getMusicsList())
                                     if (music.getGenre() == genreScoresEntry.getKey()) {
-                                        sb.append(i+1+": "+music.toString() + "\n\n");
+                                        suggestedAudios.add(music);
                                         i++;
                                     }
                         }
@@ -399,7 +399,7 @@ public class ListenerController
                             Podcaster podcaster = (Podcaster) artist;
                             for (Podcast podcast : podcaster.getPodcastsList())
                                 if (podcast.getGenre() == genreScoresEntry.getKey()) {
-                                    sb.append(i+1+": "+podcast + "\n\n");
+                                    suggestedAudios.add(podcast);
                                     i++;
                                 }
                         }
@@ -410,9 +410,9 @@ public class ListenerController
         }
         else
         {
-            return "At least 10 songs should be published in order to suggest them to you.";
+            throw new RuntimeException();
         }
-        return "Suggestions:\n\n"+sb;
+        return suggestedAudios;
     }
     public String buyOrRenewSubscription(PremiumPlans premiumPlan) throws LackOfCreditException {
         if(listener.getAccountCredit()>=premiumPlan.getPlanPrice())

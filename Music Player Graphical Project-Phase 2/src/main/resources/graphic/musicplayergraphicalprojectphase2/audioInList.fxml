@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Rectangle?>
@@ -13,7 +14,15 @@
          <children>
             <HBox alignment="CENTER_LEFT" disable="true" prefHeight="52.0" prefWidth="2.0" spacing="5.0">
                <children>
-                  <ImageView fx:id="imgView_PlayOrPauseInList" fitHeight="25.0" fitWidth="29.0" onMouseClicked="#PlayOrPauseInList_Clicked" pickOnBounds="true" preserveRatio="true" />
+                  <HBox alignment="CENTER" stylesheets="@ImageViewButtonStyle.css">
+                     <children>
+                        <ImageView fx:id="imgView_PlayOrPauseInList" fitHeight="30.0" fitWidth="27.0" onMouseClicked="#PlayOrPauseInListBtn_Clicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@PngAndJpg/WhitePlay.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
                   <Text fx:id="txt_audioNumber" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
                      <font>
                         <Font name="Gotham-Bold" size="16.0" />
