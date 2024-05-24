@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
@@ -19,8 +20,11 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import model.audio.Audio;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 
 import java.io.IOException;
 import java.net.URL;
@@ -35,6 +39,9 @@ public class MainTemplateController implements Initializable,GeneralOperations {
 
     @FXML
     private HBox HBox_Search;
+
+    @FXML
+    private ImageView imgViewBtn_Exit;
 
     @FXML
     private HBox btn_Playlists;
@@ -99,54 +106,38 @@ public class MainTemplateController implements Initializable,GeneralOperations {
     @FXML
     private TextField textField_Search;
 
+    //Initialize-----------------------------------------------------------
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+        if(Main.isLoggedIn())
+        {
+            lblBtn_SignUp.setDisable(true);
+            lblBtn_Login.setDisable(true);
+            lblBtn_Logout.setDisable(false);
+        }
+        if(!Main.isLoggedIn())
+        {
+            lblBtn_SignUp.setDisable(false);
+            lblBtn_Login.setDisable(false);
+            lblBtn_Logout.setDisable(true);
+        }
+        setupMediaPlayer();
+        setupSlider();
+        setupAudioCover();
+        if(Main.getCenterNodesHistory().size()==1)
+            imgView_Back.setDisable(true);
+        else
+            imgView_Back.setDisable(false);
+    }
+
     //Side Bar-------------------------------------------------------------------
-    @FXML
-    void artistsBtn_Clicked(MouseEvent event)
-    {
-        try {
-            Main.setCurrentCenterNode(FXMLLoader.load(ArtistsPageController.class.getResource("Artists.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.getStage().setScene(scene);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    @FXML
-    void audiosBtn_Clicked(MouseEvent event)
-    {
-        try {
-            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("allAudiosList.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.getStage().setScene(scene);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
     @FXML
     void homeBtn_Clicked(MouseEvent event)
     {
+        HBox_Search.setVisible(false);
         try {
             Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("homePage.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.getStage().setScene(scene);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    @FXML
-    void libraryBtn_Clicked(MouseEvent event)
-    {
-        try {
-            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("listenerPanel.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
             Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
@@ -161,12 +152,88 @@ public class MainTemplateController implements Initializable,GeneralOperations {
     {
         HBox_Search.setVisible(true);
     }
+
+    @FXML
+    void libraryBtn_Clicked(MouseEvent event)
+    {
+        HBox_Search.setVisible(false);
+        try {
+            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("listenerPanel.fxml")));
+            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
+            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
+            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
+            Main.getStage().setScene(scene);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    void audiosBtn_Clicked(MouseEvent event)
+    {
+        HBox_Search.setVisible(false);
+        try {
+            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("allAudiosList.fxml")));
+            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
+            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
+            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
+            Main.getStage().setScene(scene);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    void artistsBtn_Clicked(MouseEvent event)
+    {
+        HBox_Search.setVisible(false);
+        try {
+            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("listenerPanel.fxml")));
+            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
+            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
+            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
+            Main.getStage().setScene(scene);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    @FXML
+    void playlistsBtn_Clicked(MouseEvent event)
+    {
+        HBox_Search.setVisible(false);
+        try {
+            Main.setCurrentCenterNode(FXMLLoader.load(ArtistsPageController.class.getResource("Artists.fxml")));
+            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
+            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
+            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
+            Main.getStage().setScene(scene);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
     //------------------------------------------------------------
     //Top Bar-----------------------------------------------------
     @FXML
     void BackButton_Clicked(MouseEvent event)
     {
         backTo();
+    }
+    @FXML
+    void exitImgViewBtn_Clicked(MouseEvent event)
+    {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("Program Exit");
+        alert.setHeaderText(null);
+        alert.setContentText("Have a good day!");
+        Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+        alertStage.getIcons().add(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/Exit.png"));
+        alert.showAndWait().ifPresent(response -> {
+            if (response == ButtonType.OK) {
+                System.exit(0);
+            }
+        });
     }
 
     @FXML
@@ -331,18 +398,6 @@ public class MainTemplateController implements Initializable,GeneralOperations {
 
     public static void setBorderPane_mainTemplate(BorderPane borderPane_mainTemplate) {
         BorderPane_mainTemplate = borderPane_mainTemplate;
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle)
-    {
-        setupMediaPlayer();
-        setupSlider();
-        setupAudioCover();
-        if(Main.getCenterNodesHistory().size()==1)
-            imgView_Back.setDisable(true);
-        else
-            imgView_Back.setDisable(false);
     }
 
     @Override

@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox alignment="CENTER" minHeight="44.0" minWidth="566.0" prefHeight="106.0" prefWidth="566.0" spacing="5.0" style="-fx-background-color: #444345;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER" minHeight="44.0" minWidth="566.0" prefHeight="106.0" prefWidth="566.0" spacing="5.0" style="-fx-background-color: #444345;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ArtistPreviewController">
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="106.0" prefWidth="412.0" spacing="8.0">
          <children>

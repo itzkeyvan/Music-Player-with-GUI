@@ -173,7 +173,7 @@
                                              <children>
                                                 <HBox alignment="CENTER_LEFT" disable="true" prefHeight="52.0" prefWidth="2.0" spacing="5.0">
                                                    <children>
-                                                      <ImageView fitHeight="27.0" fitWidth="25.0" onMouseClicked="#PlayOrPauseInList_Clicked" pickOnBounds="true" preserveRatio="true" />
+                                                      <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
                                                       <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="#">
                                                          <font>
                                                             <Font name="Gotham-Bold" size="29.0" />
