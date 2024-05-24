@@ -46,7 +46,8 @@ public class LoginPageController {
                 alert.showAndWait().ifPresent(response -> {
                     if (response == ButtonType.OK) {
                         try {
-                            Main.setCurrentCenterNode(FXMLLoader.load(HomePageController.class.getResource("homePage.fxml")));
+                            Main.setCurrentCenterNode(FXMLLoader.load(FavouriteGenresPageController.class.getResource("favouriteGenresPage.fxml")));
+                            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
                             Scene scene = new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
                             Main.getStage().setScene(scene);
                         } catch (IOException e) {
