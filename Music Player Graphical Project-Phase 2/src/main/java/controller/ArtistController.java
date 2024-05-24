@@ -1,6 +1,7 @@
 package controller;
 
 import exceptions.InvalidFormatException;
+import javafx.scene.image.Image;
 import model.Album;
 import model.DataBase;
 import model.audio.Music;
@@ -37,7 +38,7 @@ public abstract class ArtistController
     public void setArtist(Artist artist) {
         this.artist = artist;
     }
-    public String signUp(String userName, String password, String firstAndLastName, String email, String phoneNumber, Date birthDate, String biography, ArtistType artistType) throws InvalidFormatException {
+    public String signUp(String userName, String password, String firstAndLastName, String email, String phoneNumber, Date birthDate, String biography, ArtistType artistType, Image profilePicture) throws InvalidFormatException {
         for(UserAccount user: DataBase.getDataBase().getUsersList())
         {
             if (user.getUserName().equals(userName))
@@ -59,14 +60,14 @@ public abstract class ArtistController
             throw new InvalidFormatException("Weak password.");
         if(artistType==ArtistType.SINGER)
         {
-            Singer singer = new Singer(userName, password, firstAndLastName, email, phoneNumber, birthDate, biography);
+            Singer singer = new Singer(userName, password, firstAndLastName, email, phoneNumber, birthDate, biography,profilePicture);
             DataBase.getDataBase().getUsersList().add(singer);
             setArtist(singer);
             SingerController.getSingerController().logIn(singer);
         }
         else
         {
-            Podcaster podcaster = new Podcaster(userName, password, firstAndLastName, email, phoneNumber, birthDate, biography);
+            Podcaster podcaster = new Podcaster(userName, password, firstAndLastName, email, phoneNumber, birthDate, biography,profilePicture);
             DataBase.getDataBase().getUsersList().add(podcaster);
             setArtist(podcaster);
             PodcasterController.getPodcasterController().logIn(podcaster);

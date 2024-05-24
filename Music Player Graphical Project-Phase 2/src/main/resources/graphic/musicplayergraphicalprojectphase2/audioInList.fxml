@@ -35,7 +35,7 @@
                   <Insets bottom="5.0" top="5.0" />
                </HBox.margin>
             </Rectangle>
-            <Text fx:id="txt_audioName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.1366672515869">
+            <Text fx:id="txt_audioName" fill="WHITE" onMouseClicked="#audioNameTxt_clicked" onMouseEntered="#audioNameTxt_mouseEntered" onMouseExited="#audioNameTxt_mouseExited" opacity="0.6" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.1366672515869">
                <font>
                   <Font name="Gotham-Bold" size="16.0" />
                </font>

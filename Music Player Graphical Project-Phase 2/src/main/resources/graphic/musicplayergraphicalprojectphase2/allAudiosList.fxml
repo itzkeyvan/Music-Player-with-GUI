@@ -38,7 +38,7 @@
                                              <children>
                                                 <HBox alignment="CENTER_LEFT" disable="true" prefHeight="52.0" prefWidth="2.0" spacing="5.0">
                                                    <children>
-                                                      <ImageView fitHeight="27.0" fitWidth="25.0" onMouseClicked="#PlayOrPauseInList_Clicked" pickOnBounds="true" preserveRatio="true" />
+                                                      <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
                                                       <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="#">
                                                          <font>
                                                             <Font name="Gotham-Bold" size="29.0" />
@@ -46,12 +46,12 @@
                                                       </Text>
                                                    </children>
                                                 </HBox>
-                                                <Text fx:id="txt_audioName1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" wrappingWidth="207.73667335510254">
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" wrappingWidth="207.73667335510254">
                                                    <font>
                                                       <Font name="Gotham-Bold" size="22.0" />
                                                    </font>
                                                 </Text>
-                                                <Text fx:id="txt_artistName1" fill="WHITE" layoutX="144.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artist" wrappingWidth="114.13661382198188">
+                                                <Text fill="WHITE" layoutX="144.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artist" wrappingWidth="114.13661382198188">
                                                    <font>
                                                       <Font name="Gotham-Bold" size="22.0" />
                                                    </font>
@@ -60,7 +60,7 @@
                                           </HBox>
                                           <HBox alignment="CENTER_RIGHT" prefHeight="56.0" prefWidth="142.0">
                                              <children>
-                                                <Text fx:id="txt_audioNumberOfPlays1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Plays" wrappingWidth="82.9366626739502">
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Plays" wrappingWidth="82.9366626739502">
                                                    <font>
                                                       <Font name="Gotham-Bold" size="14.0" />
                                                    </font>

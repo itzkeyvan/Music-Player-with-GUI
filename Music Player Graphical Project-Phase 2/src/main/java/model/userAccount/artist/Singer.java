@@ -1,4 +1,5 @@
 package model.userAccount.artist;
+import javafx.scene.image.Image;
 import model.Album;
 import model.DataBase;
 import model.audio.Music;
@@ -12,9 +13,9 @@ import java.util.Date;
 public class Singer extends Artist
 {
     private ArrayList<Album> albumsList =new ArrayList<Album>();
-    public Singer(String userName, String password, String firstAndLastName, String email, String phoneNumber, Date birthDate, String biography)
+    public Singer(String userName, String password, String firstAndLastName, String email, String phoneNumber, Date birthDate, String biography, Image profilePicture)
     {
-        super(userName, password, firstAndLastName, email, phoneNumber, birthDate, biography);
+        super(userName, password, firstAndLastName, email, phoneNumber, birthDate, biography,profilePicture);
         setArtistType(ArtistType.SINGER);
     }
     public String showWorks()

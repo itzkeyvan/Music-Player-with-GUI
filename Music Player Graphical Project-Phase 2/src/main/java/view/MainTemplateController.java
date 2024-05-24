@@ -166,72 +166,31 @@ public class MainTemplateController implements Initializable,GeneralOperations {
     @FXML
     void BackButton_Clicked(MouseEvent event)
     {
-        if(Main.getCenterNodesHistory().size()!=1)
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1));
-        try {
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.setScene(scene);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        backTo();
     }
 
     @FXML
     void searchImgViewBtn_clicked(MouseEvent event)
     {
-        try {
-            SearchPageController.setSearchedTerm(textField_Search.getText());
-            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("searchPage.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.setScene(scene);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        search();
     }
 
     @FXML
     void signUpBtn_clicked(MouseEvent event)
     {
-        try {
-            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("signUpPage.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.setScene(scene);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        signup();
     }
 
     @FXML
     void loginBtn_clicked(MouseEvent event)
     {
-        try {
-            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("loginPage.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.setScene(scene);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        login();
     }
 
     @FXML
     void logoutBtn_clicked(MouseEvent event)
     {
-        Main.setLoggedIn(false);
-        try {
-            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("homePage.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.setScene(scene);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        logout();
     }
     //---------------------------------------------------------
     //Play Bar-------------------------------------------------
@@ -387,27 +346,73 @@ public class MainTemplateController implements Initializable,GeneralOperations {
     }
 
     @Override
-    public void backTo() {
-
+    public void backTo()
+    {
+        if(Main.getCenterNodesHistory().size()!=1)
+            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1));
+        try {
+            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
+            Main.setScene(scene);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
-    public void logout() {
-
+    public void logout()
+    {
+        Main.setLoggedIn(false);
+        try {
+            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("homePage.fxml")));
+            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
+            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
+            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
+            Main.setScene(scene);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
-    public void login() {
-
+    public void login()
+    {
+        try {
+            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("loginPage.fxml")));
+            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
+            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
+            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
+            Main.setScene(scene);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
-    public void signup() {
-
+    public void signup()
+    {
+        try {
+            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("signUpPage.fxml")));
+            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
+            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
+            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
+            Main.setScene(scene);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
-    public void search() {
-
+    public void search()
+    {
+        try {
+            SearchPageController.setSearchedTerm(textField_Search.getText());
+            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("searchPage.fxml")));
+            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
+            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
+            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
+            Main.setScene(scene);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

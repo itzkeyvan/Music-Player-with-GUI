@@ -172,7 +172,7 @@
                                        </children>
                                     </HBox>
                                     <Separator orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
-                                    <HBox fx:id="HBox_Search" alignment="CENTER" prefHeight="60.0" prefWidth="397.0">
+                                    <HBox fx:id="HBox_Search" alignment="CENTER" prefHeight="60.0" prefWidth="397.0" visible="false">
                                        <children>
                                           <ImageView fx:id="imgView_Search" fitHeight="50.0" fitWidth="47.0" onMouseClicked="#searchImgViewBtn_clicked" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
                                              <image>

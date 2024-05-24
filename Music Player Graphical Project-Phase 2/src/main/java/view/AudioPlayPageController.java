@@ -1,13 +1,21 @@
 package view;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import model.audio.Audio;
 
-public class AudioPlayPageController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class AudioPlayPageController implements Initializable
+{
+    private static Audio audio;
 
     @FXML
     private ImageView imageViewBtn_AddOrRemoveFromPlayList;
@@ -57,4 +65,20 @@ public class AudioPlayPageController {
 
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+        rectangle_AudioCover.setFill(new ImagePattern(audio.getCover()));
+        txt_ArtistUserName.setText(audio.getArtistName());
+        txt_AudioLength.setText(audio.getAudioLength()/60 + ":"+audio.getAudioLength()%60);
+        txt_AudioName.setText(audio.getAudioName());
+    }
+
+    public static Audio getAudio() {
+        return audio;
+    }
+
+    public static void setAudio(Audio audio) {
+        AudioPlayPageController.audio = audio;
+    }
 }

@@ -52,6 +52,29 @@ public class AudioInListController implements Initializable
         MainTemplateController.getBorderPane_mainTemplate().setBottom(playBar);
     }
 
+    @FXML
+    void audioNameTxt_clicked(MouseEvent event)
+    {
+        AudioPlayPageController.setAudio(audio);
+        AnchorPane audioPlayPage= null;
+        try {
+            audioPlayPage = FXMLLoader.load(AudioPlayPageController.class.getResource("AudioPlayPage.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        MainTemplateController.getBorderPane_mainTemplate().setCenter(audioPlayPage);
+    }
+    @FXML
+    void audioNameTxt_mouseEntered(MouseEvent event)
+    {
+        txt_audioName.setOpacity(1.0);
+    }
+
+    @FXML
+    void audioNameTxt_mouseExited(MouseEvent event)
+    {
+        txt_audioName.setOpacity(0.6);
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {

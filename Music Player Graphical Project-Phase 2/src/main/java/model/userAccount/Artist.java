@@ -1,6 +1,7 @@
 package model.userAccount;
 
 import controller.ArtistController;
+import javafx.scene.image.Image;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -12,9 +13,11 @@ public abstract class Artist extends UserAccount
     private String biography;
     private ArtistType artistType;
     private int numberOfTotalPlays;
-    public Artist(String userName, String password, String firstAndLastName, String email, String phoneNumber, Date birthDate, String biography)
+    private Image profilePicture;
+    public Artist(String userName, String password, String firstAndLastName, String email, String phoneNumber, Date birthDate, String biography,Image profilePicture)
     {
         super(userName, password, firstAndLastName, email, phoneNumber, birthDate);
+        setProfilePicture(profilePicture);
         setBiography(biography);
         setUserType(UserType.ARTIST);
     }
@@ -49,6 +52,18 @@ public abstract class Artist extends UserAccount
 
     public void setArtistType(ArtistType artistType) {
         this.artistType = artistType;
+    }
+
+    public void setNumberOfTotalPlays(int numberOfTotalPlays) {
+        this.numberOfTotalPlays = numberOfTotalPlays;
+    }
+
+    public Image getProfilePicture() {
+        return profilePicture;
+    }
+
+    public void setProfilePicture(Image profilePicture) {
+        this.profilePicture = profilePicture;
     }
 
     public int getNumberOfTotalPlays()

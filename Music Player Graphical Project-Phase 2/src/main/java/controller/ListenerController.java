@@ -175,9 +175,9 @@ public class ListenerController
             }
         return result;
     }
-    public String sortAudios()
+    public ArrayList<Audio> sortAudios()
     {
-    ArrayList<Audio> al=DataBase.getDataBase().getAudiosList();
+    ArrayList<Audio> al=new ArrayList<>(DataBase.getDataBase().getAudiosList());
         for(int i=0;i<al.size()-1;i++)
             for(int j=0;j<al.size()-1-i;j++)
                 if(al.get(j).compareTo(al.get(j+1))<0)
@@ -186,62 +186,38 @@ public class ListenerController
                     al.set(j,al.get(j+1));
                     al.set(j+1,temp);
                 }
-        StringBuilder result=new StringBuilder();
-        for(Audio audio:al)
-        {
-            result.append(audio.toString()+"\n");
-        }
-        return "Sort complete:\n\n" +result;
+        return al;
     }
-    public String filterAudiosByArtistOrGenre(String filterType,String filterBy)
+    public ArrayList<Audio> filterAudiosByArtistOrGenre(String filterType,String filterBy)
     {
         ArrayList<Audio> filteredAudios=new ArrayList<>();
         if(filterType.equalsIgnoreCase("A"))  //Artist
         {
-            int filteredAudiosCount=0;
             for(Audio audio:DataBase.getDataBase().getAudiosList())
             {
                 if(audio.getArtistName().equalsIgnoreCase(filterBy))  //artist found
                 {
                     filteredAudios.add(audio);
-                    filteredAudiosCount++;
                 }
             }
-            if(filteredAudiosCount==0)
-                return "No audios found by this artist.";
-            StringBuilder result=new StringBuilder();
-            for(Audio audio:filteredAudios)
-            {
-                result.append(audio.toString()+"\n");
-            }
-            return "Filter complete:\n\n" +result;
+            return filteredAudios;
         }
         else  //Genre
         {
-            int filteredAudiosCount=0;
             for(Audio audio:DataBase.getDataBase().getAudiosList())
             {
                 if(audio.getGenre().getGenreName().equalsIgnoreCase(filterBy))  //genre found
                 {
                     filteredAudios.add(audio);
-                    filteredAudiosCount++;
                 }
             }
-            if(filteredAudiosCount==0)
-                return "No audios found by this genre.";
-            StringBuilder result=new StringBuilder();
-            for(Audio audio:filteredAudios)
-            {
-                result.append(audio.toString()+"\n");
-            }
-            return "Filter complete:\n\n" +result;
+            return filteredAudios;
         }
     }
-    public String filterByDate(Date filterDate)
+    public ArrayList<Audio> filterByDate(Date filterDate)
     {
         ArrayList<Audio> filteredAudios=new ArrayList<>();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        int j=0;
         for(Audio audio:DataBase.getDataBase().getAudiosList())
         {
             LocalDate localDate = audio.getReleaseDate().toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDate();
@@ -251,26 +227,13 @@ public class ListenerController
             if(convertedUtilDate.equals(filterDate))  //date found
             {
                 filteredAudios.add(audio);
-                j++;
             }
         }
-        if(j==0)
-            return "No audios found by this date.";
-        StringBuilder result=new StringBuilder();
-        for(Audio audio:filteredAudios)
-        {
-            result.append(audio.toString()+"\n");
-        }
-        return "Filter complete:\n\n" +result;
+        return filteredAudios;
     }
-    public String showFollowingsList()
+    public ArrayList<Artist> showFollowingsList()
     {
-        if(listener.getFollowingsList().isEmpty())
-            return "You don't follow any user.";
-        StringBuilder sb=new StringBuilder();
-        for(UserAccount user:listener.getFollowingsList())
-            sb.append(user.toString());
-        return sb.toString();
+        return listener.getFollowingsList();
     }
     public String reportArtist(String artistUserName,String description)
     {
@@ -283,12 +246,9 @@ public class ListenerController
             }
         return "Artist not found.";
     }
-    public String showArtistsList()
+    public ArrayList<Artist> showArtistsList()
     {
-        StringBuilder sb=new StringBuilder();
-        for(Artist artist:AdminController.getAdminController().getArtistsArrayList())
-            sb.append(artist.toString()+"\n\n");
-        return sb.toString();
+        return AdminController.getAdminController().getArtistsArrayList();
     }
     public String showArtist(String userName)
     {
@@ -335,21 +295,16 @@ public class ListenerController
         }
         return "Music not found.";
     }
-    public String showPlaylists()
-    {
-        if(listener.getPlaylistsList().isEmpty())
-            return "You have no playlists.";
-        StringBuilder sb=new StringBuilder();
-        for(Playlist playlist:listener.getPlaylistsList())
-            sb.append(playlist.toString()+"\n");
-        return "Your playlists:\n\n"+sb;
+    public ArrayList<Playlist> showPlaylists()
+    {;
+        return listener.getPlaylistsList();
     }
-    public String selectAndShowAPlaylist(String playlistName)
+    public Playlist selectAndShowAPlaylist(String playlistName)
     {
         for(Playlist playlist:listener.getPlaylistsList())
             if(playlist.getPlaylistName().equals(playlistName))
-                return playlist.toString();
-        return "Playlist not found.";
+                return playlist;
+        return null;
     }
     public ArrayList<Audio> getSuggestedAudios()
     {

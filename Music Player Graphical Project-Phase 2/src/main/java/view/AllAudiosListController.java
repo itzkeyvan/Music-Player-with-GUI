@@ -1,28 +1,39 @@
 package view;
 
 import javafx.fxml.FXML;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import model.DataBase;
+import model.audio.Audio;
 
-public class AllAudiosListController {
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class AllAudiosListController implements Initializable {
 
     @FXML
     private VBox VBox_allAudiosList;
 
-    @FXML
-    private Text txt_artistName1;
-
-    @FXML
-    private Text txt_audioName1;
-
-    @FXML
-    private Text txt_audioNumberOfPlays1;
-
-    @FXML
-    void PlayOrPauseInList_Clicked(MouseEvent event) {
-
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+        int audioNumber=1;
+        for(Audio audio: DataBase.getDataBase().getAudiosList())
+        {
+            AudioInListController audioInListController=new AudioInListController();
+            AudioInListController.setAudio(audio);
+            audioInListController.setTxt_audioNumber(new Text(Integer.toString(audioNumber++)));
+            HBox audioInList= null;
+            try {
+                audioInList = FXMLLoader.load(AudioInListController.class.getResource("audioInList.fxml"));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            VBox_allAudiosList.getChildren().add(audioInList);
+        }
     }
-
 }
