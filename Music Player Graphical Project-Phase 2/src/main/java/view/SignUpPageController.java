@@ -74,7 +74,8 @@ public class SignUpPageController {
     @FXML
     void signUpBtn_clicked(MouseEvent event) {
         if (role.getSelectedToggle() == radioBtn_listener) {
-            try {
+            try
+            {
                 String result = ListenerController.getListenerController().signUp(txtField_userName.getText(), txtField_password.getText(), txtField_firstAndLastName.getText(), txtField_email.getText(), txtField_phoneNumber.getText(), Date.from(datePicker_birthDate.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
                 if (result.equals("Signup successful. You have been rewarded $50 of credit!")) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -96,7 +97,28 @@ public class SignUpPageController {
                         }
                     });
                 }
-            } catch (InvalidFormatException e) {
+                else if(result.equals("This username is already taken."))
+                {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Error");
+                    alert.setHeaderText(null);
+                    alert.setContentText("This username is already taken.");
+                    Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+                    alertStage.getIcons().add(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Error.png"));
+                    alert.showAndWait();
+                }
+                else if(result.equals("This email is already taken."))
+                {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Error");
+                    alert.setHeaderText(null);
+                    alert.setContentText("This email is already taken.");
+                    Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+                    alertStage.getIcons().add(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Error.png"));
+                    alert.showAndWait();
+                }
+            }
+            catch (InvalidFormatException e) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Error");
                 alert.setHeaderText(null);
