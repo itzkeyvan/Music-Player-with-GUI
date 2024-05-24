@@ -6,7 +6,6 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tooltip?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -90,10 +89,7 @@
                            <graphic>
                               <HBox alignment="CENTER">
                                  <children>
-                                    <ImageView fx:id="imageViewBtn_PlayOrPause" fitHeight="51.0" fitWidth="51.0" onMouseClicked="#PlayOrPauseBtn_Clicked" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@PngAndJpg/PlayBar/GreenPlay.png" />
-                                       </image></ImageView>
+                                    <ImageView fx:id="imageViewBtn_PlayOrPause" fitHeight="51.0" fitWidth="51.0" onMouseClicked="#PlayOrPauseBtn_Clicked" pickOnBounds="true" preserveRatio="true" />
                                  </children>
                               </HBox>
                            </graphic>
@@ -109,10 +105,7 @@
                            <graphic>
                               <HBox alignment="CENTER">
                                  <children>
-                                    <ImageView fx:id="imageViewBtn_Like" fitHeight="39.0" fitWidth="36.0" onMouseClicked="#LikeBtn_Clicked" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@PngAndJpg/PlayBar/NotLiked.png" />
-                                       </image></ImageView>
+                                    <ImageView fx:id="imageViewBtn_Like" fitHeight="39.0" fitWidth="36.0" onMouseClicked="#LikeBtn_Clicked" pickOnBounds="true" preserveRatio="true" />
                                  </children>
                               </HBox>
                            </graphic>
@@ -124,7 +117,7 @@
                               </Tooltip>
                            </tooltip>
                         </Label>
-                        <MenuButton fx:id="menuBtn_AddToPlayList" mnemonicParsing="false" popupSide="RIGHT" prefHeight="42.0" prefWidth="163.0" stylesheets="@MenuButtonStyle.css" text="Add to playList" textFill="WHITE">
+                        <MenuButton fx:id="MenuBtn_AddToPlayList" mnemonicParsing="false" popupSide="RIGHT" prefHeight="42.0" prefWidth="163.0" stylesheets="@MenuButtonStyle.css" text="Add to playList" textFill="WHITE">
                           <items>
                             <MenuItem mnemonicParsing="false" text="Action 1" />
                             <MenuItem mnemonicParsing="false" text="Action 2" />
@@ -149,7 +142,7 @@
                      <children>
                         <HBox alignment="CENTER" prefHeight="26.0" prefWidth="554.0">
                            <children>
-                              <Label fx:id="lbl_LyricsOrCaption" prefHeight="18.0" prefWidth="626.0" textFill="WHITE">
+                              <Label fx:id="lbl_LyricsOrBio" prefHeight="18.0" prefWidth="626.0" textFill="WHITE">
                                  <font>
                                     <Font name="Gotham-Bold" size="22.0" />
                                  </font>
@@ -168,7 +161,7 @@
                      <children>
                         <ScrollPane hbarPolicy="NEVER" stylesheets="@ScrollPaneStyle.css">
                            <content>
-                              <Text fx:id="txt_LyricsOrCaption" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="554.9366455078125">
+                              <Text fx:id="txt_LyricsOrBio" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="554.9366455078125">
                                  <font>
                                     <Font name="Gotham-Bold" size="15.0" />
                                  </font>

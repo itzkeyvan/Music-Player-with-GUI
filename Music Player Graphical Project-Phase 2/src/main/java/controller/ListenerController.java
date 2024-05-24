@@ -3,6 +3,7 @@ package controller;
 import exceptions.FreeAccountLimitException;
 import exceptions.InvalidFormatException;
 import exceptions.LackOfCreditException;
+import graphic.musicplayergraphicalprojectphase2.Main;
 import model.*;
 import model.audio.*;
 import model.userAccount.*;
@@ -65,6 +66,9 @@ public class ListenerController
             throw new InvalidFormatException("Weak password.");
         FreeListener listener=new FreeListener(userName,password,firstAndLastName,email,phoneNumber,birthDate);
         logIn(listener);
+        Main.getListenerController().setListener(listener);
+        Main.setListenerController(listenerController);
+        Main.setListener(listener);
         setListenerController(listenerController);
         DataBase.getDataBase().getUsersList().add(listener);
         listener.setAccountCredit(50);
@@ -90,6 +94,9 @@ public class ListenerController
     public String logIn(UserAccount user)
     {
         listener=(Listener)user;
+        Main.getListenerController().setListener(listener);
+        Main.setListenerController(listenerController);
+        Main.setListener(listener);
         return "Logged-in as listener.";
     }
     public String newPlayList(String playlistName) throws FreeAccountLimitException {
