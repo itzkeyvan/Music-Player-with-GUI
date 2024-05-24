@@ -28,7 +28,7 @@ public class PlayBarController implements Initializable {
     private ImageView btn_next;
 
     @FXML
-    private ImageView btn_playORpause;
+    private static ImageView btn_playORpause;
 
     @FXML
     private ImageView btn_previous;
@@ -73,8 +73,8 @@ public class PlayBarController implements Initializable {
         }
     }
 
-    private MediaPlayer mediaPlayer;
-    private boolean atEndOfMedia = false;
+    private static MediaPlayer mediaPlayer;
+    private static boolean atEndOfMedia = false;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
@@ -123,7 +123,7 @@ public class PlayBarController implements Initializable {
         }
     }
 
-    private void playNextAudio() {
+    public void playNextAudio() {
         int currentIndex = audiosList.indexOf(getAudio());
         if (currentIndex == audiosList.size() - 1) { // at the end of the list
             setAudio(audiosList.get(0)); // play the first audio in the list
@@ -133,7 +133,7 @@ public class PlayBarController implements Initializable {
         reloadAudio();
     }
 
-    private void playPreviousAudio() {
+    public void playPreviousAudio() {
         int currentIndex = audiosList.indexOf(getAudio());
         if (currentIndex == 0) { // at the start of the list
             setAudio(audiosList.get(audiosList.size() - 1)); // play the last audio in the list
@@ -143,7 +143,7 @@ public class PlayBarController implements Initializable {
         reloadAudio();
     }
 
-    private void togglePlayPause() {
+    public static void togglePlayPause() {
         if (mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
             mediaPlayer.pause();
             btn_playORpause.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Play.png"));
@@ -157,7 +157,7 @@ public class PlayBarController implements Initializable {
         }
     }
 
-    private void reloadAudio() {
+    public void reloadAudio() {
         mediaPlayer.stop();
         setupMediaPlayer();
         mediaPlayer.play();
@@ -188,5 +188,21 @@ public class PlayBarController implements Initializable {
 
     public static void setAudiosList(ArrayList<Audio> audiosList) {
         PlayBarController.audiosList = audiosList;
+    }
+
+    public boolean isAtEndOfMedia() {
+        return atEndOfMedia;
+    }
+
+    public void setAtEndOfMedia(boolean atEndOfMedia) {
+        this.atEndOfMedia = atEndOfMedia;
+    }
+
+    public static MediaPlayer getMediaPlayer() {
+        return mediaPlayer;
+    }
+
+    public static void setMediaPlayer(MediaPlayer mediaPlayer) {
+        PlayBarController.mediaPlayer = mediaPlayer;
     }
 }

@@ -47,19 +47,17 @@ public class AudioInListController implements Initializable
     @FXML
     void PlayOrPauseInListBtn_Clicked(MouseEvent event) throws IOException
     {
-        if(imgView_PlayOrPauseInList.getImage().getUrl().equals("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePlay.png"))  //Not playing
+        if(!PlayBarController.getAudio().equals(audio))  //Not playing
         {
             imgView_PlayOrPauseInList.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePause.png"));
+            PlayBarController.setAudio(audio);
+            PlayBarController.togglePlayPause();
         }
         else   //Playing
         {
             imgView_PlayOrPauseInList.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePlay.png"));
+            PlayBarController.togglePlayPause();
         }
-        PlayBarController.setAudio(audio);
-        AnchorPane playBar= FXMLLoader.load(PlayBarController.class.getResource("playBar.fxml"));
-        MainTemplateController.getBorderPane_mainTemplate().setBottom(playBar);
-        Scene scene =new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-        Main.getStage().setScene(scene);
     }
 
     @FXML

@@ -1,0 +1,32 @@
+/* styles.css */
+
+/* General styles for the MenuButton */
+.menu-button {
+    -fx-background-color: #6e6e6e;
+    -fx-border-color: #555;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10 5 10;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-effect: dropshadow(three-pass-box, rgba(101, 101, 101, 0.3), 10, 0, 0, 0);
+}
+
+/* Hover effect for the MenuButton */
+.menu-button:hover {
+    -fx-background-color: #444;
+    -fx-border-color: #666;
+}
+
+/* Styles for the MenuButton when focused */
+.menu-button:focused {
+    -fx-background-color: #555;
+    -fx-border-color: #777;
+}
+
+/* Styles for the MenuButton's arrow */
+.menu-button .arrow {
+    -fx-background-color: #f0f0f0;
+    -fx-padding: 0 5 0 5;
+}
