@@ -104,11 +104,11 @@ public class MainTemplateController implements Initializable,GeneralOperations {
     void artistsBtn_Clicked(MouseEvent event)
     {
         try {
-            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("Artists.fxml")));
+            Main.setCurrentCenterNode(FXMLLoader.load(ArtistsPageController.class.getResource("Artists.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
             Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.setScene(scene);
+            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -122,7 +122,7 @@ public class MainTemplateController implements Initializable,GeneralOperations {
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
             Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.setScene(scene);
+            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -136,7 +136,7 @@ public class MainTemplateController implements Initializable,GeneralOperations {
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
             Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.setScene(scene);
+            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -150,7 +150,7 @@ public class MainTemplateController implements Initializable,GeneralOperations {
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
             Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.setScene(scene);
+            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -352,7 +352,7 @@ public class MainTemplateController implements Initializable,GeneralOperations {
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1));
         try {
             Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.setScene(scene);
+            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -367,7 +367,7 @@ public class MainTemplateController implements Initializable,GeneralOperations {
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
             Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.setScene(scene);
+            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -381,7 +381,7 @@ public class MainTemplateController implements Initializable,GeneralOperations {
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
             Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.setScene(scene);
+            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -395,7 +395,7 @@ public class MainTemplateController implements Initializable,GeneralOperations {
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
             Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.setScene(scene);
+            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -410,7 +410,7 @@ public class MainTemplateController implements Initializable,GeneralOperations {
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
             Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.setScene(scene);
+            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

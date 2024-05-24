@@ -1,0 +1,6 @@
+.hbox-container{
+    -fx-opacity: 0.8;
+}
+.hbox-container:hover{
+    -fx-opacity: 1.0;
+}

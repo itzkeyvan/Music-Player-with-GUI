@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox alignment="CENTER" minHeight="44.0" minWidth="566.0" prefHeight="106.0" prefWidth="566.0" spacing="5.0" style="-fx-background-color: #444345;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="106.0" prefWidth="412.0" spacing="8.0">
+         <children>
+            <Rectangle fx:id="rectangle_artistPP" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="86.0" stroke="BLACK" strokeType="INSIDE" width="86.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </HBox.margin>
+            </Rectangle>
+            <Text fx:id="txt_ArtistName" fill="WHITE" onMouseClicked="#artistNameTxt_Clicked" onMouseEntered="#artistNameTxt_mouseEntered" onMouseExited="#artistNameTxt_mouseExited" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="291.73671531677246">
+               <font>
+                  <Font name="Gotham-Bold" size="26.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="106.0" prefWidth="178.0" spacing="5.0">
+         <children>
+            <Text fx:id="txt_artistNumOfFollowers" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="75.73674616217613">
+               <font>
+                  <Font name="Gotham-Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="followers" wrappingWidth="76.5367374420166">
+               <font>
+                  <Font name="Gotham-Bold" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets left="5.0" right="5.0" />
+   </padding>
+</HBox>

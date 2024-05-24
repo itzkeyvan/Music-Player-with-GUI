@@ -80,7 +80,7 @@ public class AudioInListController implements Initializable
     @FXML
     void audioNameTxt_mouseExited(MouseEvent event)
     {
-        txt_audioName.setOpacity(0.6);
+        txt_audioName.setOpacity(0.8);
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
