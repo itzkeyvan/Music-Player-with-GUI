@@ -77,7 +77,9 @@ public class PlayBarController implements Initializable {
     private boolean atEndOfMedia = false;
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+        btn_playORpause.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Pause.png"));
         setupMediaPlayer();
         setupSlider();
         setupAudioCover();

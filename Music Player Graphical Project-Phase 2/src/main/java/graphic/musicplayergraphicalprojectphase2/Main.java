@@ -30,7 +30,6 @@ import java.util.ArrayList;
 public class Main extends Application
 {
     static private Stage stage;
-    static private Scene scene;
     static private ArrayList<Parent> centerNodesHistory=new ArrayList<>();
     static private Parent currentCenterNode;
     static private boolean loggedIn = false;
@@ -45,12 +44,11 @@ public class Main extends Application
         centerNodesHistory.add(currentCenterNode);
         MainTemplateController.setBorderPane_mainTemplate(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
         MainTemplateController.getBorderPane_mainTemplate().setCenter(currentCenterNode);
-        Scene scene = new Scene(MainTemplateController.getBorderPane_mainTemplate(), 745, 509);
-        setScene(scene);
+        Scene scene = new Scene(MainTemplateController.getBorderPane_mainTemplate(), 745, 547);
         getStage().setTitle("Music PLayer");
         getStage().getIcons().add(logo);
         getStage().setScene(scene);
-        stage.show();
+        getStage().show();
     }
 
     public static void main(String[] args) throws UnsupportedAudioFileException, IOException {
@@ -100,14 +98,6 @@ public class Main extends Application
 
     public static void setStage(Stage stage) {
         Main.stage = stage;
-    }
-
-    public static Scene getScene() {
-        return scene;
-    }
-
-    public static void setScene(Scene scene) {
-        Main.scene = scene;
     }
 
     public static boolean isLoggedIn() {
@@ -170,3 +160,5 @@ public class Main extends Application
         return audioLengthInSeconds/60+":"+audioLengthInSeconds%60;
     }
 }
+//Main.setCurrentCenterNode(FXMLLoader.load(ReportPageController.class.getResource("reportPage.fxml")));
+//        Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());

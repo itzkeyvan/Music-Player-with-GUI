@@ -2,11 +2,15 @@ package view;
 
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
@@ -19,6 +23,7 @@ import model.userAccount.ArtistType;
 import model.userAccount.artist.Podcaster;
 import model.userAccount.artist.Singer;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -57,11 +62,6 @@ public class ArtistInfoPageController implements Initializable
     private Text txt_numberOfFollowers;
 
     @FXML
-    void PlayOrPauseInList_Clicked(MouseEvent event) {
-
-    }
-
-    @FXML
     void followLblBtn_Clicked(MouseEvent event)
     {
         if(lblBTn_Follow.getText().equals("Follow"))
@@ -71,13 +71,19 @@ public class ArtistInfoPageController implements Initializable
         }
         else
         {
-
+            Main.getListenerController().unFollowArtist(artist.getUserName());
+            lblBTn_Follow.setText("Follow");
         }
     }
 
     @FXML
-    void reportLblBtn_Clicked(MouseEvent event) {
-
+    void reportLblBtn_Clicked(MouseEvent event) throws IOException
+    {
+        Main.setCurrentCenterNode(FXMLLoader.load(ReportPageController.class.getResource("reportPage.fxml")));
+        Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
+        MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
+        Scene scene =new Scene(MainTemplateController.getBorderPane_mainTemplate(),745,547);
+        Main.getStage().setScene(scene);
     }
 
     @Override
@@ -96,9 +102,21 @@ public class ArtistInfoPageController implements Initializable
             int numberOfAudios=0;
             for(Album album: singer.getAlbumsList())
             {
-                numberOfAudios++;
                 for(Music music:album.getMusicsList())
-                    numberOfTotalPlays+=music.getNumberOfPlays();
+                {
+                    numberOfAudios++;
+                    numberOfTotalPlays += music.getNumberOfPlays();
+                    AudioInListController audioInListController=new AudioInListController();
+                    AudioInListController.setAudio(music);
+                    audioInListController.setTxt_audioNumber(new Text(Integer.toString(numberOfAudios)));
+                    HBox audioInList= null;
+                    try {
+                        audioInList = FXMLLoader.load(AudioInListController.class.getResource("audioInList.fxml"));
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    VBox_audiosList.getChildren().add(audioInList);
+                }
             }
             txt_NumberOfTotalPlays.setText(String.valueOf(numberOfTotalPlays));
             txt_NumberOfAudios.setText(String.valueOf(numberOfAudios));
@@ -122,7 +140,6 @@ public class ArtistInfoPageController implements Initializable
         txt_artistType.setText(artist.getArtistType().getArtistTypeInString());
         txt_biography.setText(artist.getBiography());
         txt_numberOfFollowers.setText(String.valueOf(artist.getFollowersList().size()));
-
     }
 
     public static Artist getArtist() {

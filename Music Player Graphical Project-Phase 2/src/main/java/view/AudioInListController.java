@@ -4,6 +4,7 @@ import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -46,23 +47,29 @@ public class AudioInListController implements Initializable
     @FXML
     void PlayOrPauseInListBtn_Clicked(MouseEvent event) throws IOException
     {
-        imgView_PlayOrPauseInList.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePause.png"));
+        if(imgView_PlayOrPauseInList.getImage().getUrl().equals("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePlay.png"))  //Not playing
+        {
+            imgView_PlayOrPauseInList.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePause.png"));
+        }
+        else   //Playing
+        {
+            imgView_PlayOrPauseInList.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePlay.png"));
+        }
         PlayBarController.setAudio(audio);
         AnchorPane playBar= FXMLLoader.load(PlayBarController.class.getResource("playBar.fxml"));
         MainTemplateController.getBorderPane_mainTemplate().setBottom(playBar);
+        Scene scene =new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
+        Main.getStage().setScene(scene);
     }
 
     @FXML
-    void audioNameTxt_clicked(MouseEvent event)
-    {
+    void audioNameTxt_clicked(MouseEvent event) throws IOException {
         AudioPlayPageController.setAudio(audio);
-        AnchorPane audioPlayPage= null;
-        try {
-            audioPlayPage = FXMLLoader.load(AudioPlayPageController.class.getResource("AudioPlayPage.fxml"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        MainTemplateController.getBorderPane_mainTemplate().setCenter(audioPlayPage);
+        Main.setCurrentCenterNode(FXMLLoader.load(AudioPlayPageController.class.getResource("AudioPlayPage.fxml")));
+        Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
+        MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
+        Scene scene = new Scene(MainTemplateController.getBorderPane_mainTemplate(), 745, 547);
+        Main.getStage().setScene(scene);
     }
     @FXML
     void audioNameTxt_mouseEntered(MouseEvent event)
@@ -78,7 +85,10 @@ public class AudioInListController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        imgView_PlayOrPauseInList.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePlay.png"));
+        if(PlayBarController.getAudio()==audio)   //Already playing
+            imgView_PlayOrPauseInList.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePause.png"));
+        else
+            imgView_PlayOrPauseInList.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePlay.png"));
         rectangle_AudioCover.setFill(new ImagePattern(audio.getCover()));
         txt_artistName.setText(audio.getArtistName());
         txt_audioName.setText(audio.getAudioName());

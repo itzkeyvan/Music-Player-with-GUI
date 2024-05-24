@@ -3,6 +3,7 @@ package view;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -27,7 +28,7 @@ public class AllAudiosListController implements Initializable {
             AudioInListController audioInListController=new AudioInListController();
             AudioInListController.setAudio(audio);
             audioInListController.setTxt_audioNumber(new Text(Integer.toString(audioNumber++)));
-            HBox audioInList= null;
+            Parent audioInList;
             try {
                 audioInList = FXMLLoader.load(AudioInListController.class.getResource("audioInList.fxml"));
             } catch (IOException e) {

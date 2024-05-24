@@ -188,6 +188,33 @@ public class ListenerController
                 }
         return al;
     }
+    public ArrayList<Audio> sortAudiosByPlaysOrLikes(String sortType)
+    {
+        ArrayList<Audio> al=new ArrayList<>(DataBase.getDataBase().getAudiosList());
+        if(sortType.equalsIgnoreCase("P"))
+        {
+            for(int i=0;i<al.size()-1;i++)
+                for(int j=0;j<al.size()-1-i;j++)
+                    if(al.get(j).getNumberOfPlays()<al.get(j+1).getNumberOfPlays())
+                    {
+                        Audio temp=al.get(j);
+                        al.set(j,al.get(j+1));
+                        al.set(j+1,temp);
+                    }
+        }
+        else //sortType=='L'||sortType=='l'
+        {
+            for(int i=0;i<al.size()-1;i++)
+                for(int j=0;j<al.size()-1-i;j++)
+                    if(al.get(j).getNumberOfLikes()<al.get(j+1).getNumberOfLikes())
+                    {
+                        Audio temp=al.get(j);
+                        al.set(j,al.get(j+1));
+                        al.set(j+1,temp);
+                    }
+        }
+        return al;
+    }
     public ArrayList<Audio> filterAudiosByArtistOrGenre(String filterType,String filterBy)
     {
         ArrayList<Audio> filteredAudios=new ArrayList<>();
@@ -273,10 +300,19 @@ public class ListenerController
         for(Artist artist:AdminController.getAdminController().getArtistsArrayList())
             if(artist.getUserName().equals(userName))
             {
-                if(listener.getFollowingsList().contains(artist))
-                    return "You have already followed this artist.";
                 artist.getFollowersList().add(listener);
                 listener.getFollowingsList().add(artist);
+                return "Artist followed successfully.";
+            }
+        return "Artist not found";
+    }
+    public String unFollowArtist(String userName)
+    {
+        for(Artist artist:AdminController.getAdminController().getArtistsArrayList())
+            if(artist.getUserName().equals(userName))
+            {
+                artist.getFollowersList().remove(listener);
+                listener.getFollowingsList().remove(artist);
                 return "Artist followed successfully.";
             }
         return "Artist not found";

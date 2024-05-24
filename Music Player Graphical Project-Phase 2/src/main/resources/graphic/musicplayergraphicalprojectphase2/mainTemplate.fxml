@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="509.0" minWidth="744.0" prefHeight="547.0" prefWidth="745.0" style="-fx-background-color: #42413e;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainTemplateController">
+<AnchorPane minHeight="547.0" minWidth="745.0" prefHeight="547.0" prefWidth="745.0" style="-fx-background-color: #42413e;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainTemplateController">
    <children>
       <BorderPane fx:id="BorderPane_mainTemplate" layoutX="-63.2" layoutY="-52.8" minHeight="400.0" minWidth="700.0" prefHeight="533.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
