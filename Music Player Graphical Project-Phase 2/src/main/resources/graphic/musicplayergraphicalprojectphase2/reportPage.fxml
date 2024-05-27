@@ -41,7 +41,7 @@
                   </HBox>
                   <HBox alignment="CENTER" spacing="10.0">
                      <children>
-                        <Label fx:id="lblBtn_cancel" alignment="CENTER" minHeight="34.0" minWidth="107.0" onMouseClicked="#cancelBtn_clicked" prefHeight="34.0" prefWidth="107.0" style="-fx-border-color: green;" stylesheets="@LabelButtonShineStyle.css" text="Cancel" textFill="#00ff1e">
+                        <Label fx:id="lblBtn_cancel" alignment="CENTER" minHeight="34.0" minWidth="107.0" onMouseClicked="#cancelBtn_clicked" prefHeight="34.0" prefWidth="107.0" style="-fx-border-color: #28ff41;" stylesheets="@LabelButtonShineStyle.css" text="Cancel" textFill="#28ff41">
                            <font>
                               <Font name="Gotham-Bold" size="20.0" />
                            </font>
