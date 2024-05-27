@@ -235,7 +235,7 @@
                                        <children>
                                           <ScrollPane hbarPolicy="NEVER" prefHeight="246.0" prefWidth="575.0" stylesheets="@ScrollPaneStyle.css">
                                              <content>
-                                                <VBox fx:id="VBox_ArtistsList" minHeight="1060.0" minWidth="556.0" prefHeight="1500.0" prefWidth="556.0" />
+                                                <VBox fx:id="VBox_FollowingArtistsList" minHeight="1060.0" minWidth="556.0" prefHeight="1500.0" prefWidth="556.0" />
                                              </content>
                                           </ScrollPane>
                                        </children>

@@ -11,6 +11,8 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import model.Playlist;
 import model.userAccount.Artist;
 
@@ -27,7 +29,7 @@ public class ListenerPanelController implements Initializable
 {
 
     @FXML
-    private HBox HBoxForFollowingArtists_ListenerPanel;
+    private VBox VBox_FollowingArtistsList;
 
     @FXML
     private HBox HBoxForPlaylists_ListenerPanel;
@@ -37,9 +39,6 @@ public class ListenerPanelController implements Initializable
 
     @FXML
     private Button btn_newPlaylist;
-
-    @FXML
-    private VBox VBox_ArtistsList;
 
     @FXML
     private Label lbl_Credit;
@@ -85,7 +84,16 @@ public class ListenerPanelController implements Initializable
     @FXML
     void newPlaylistBtnClicked(MouseEvent event)
     {
-
+        try {
+            Parent root=FXMLLoader.load(CreateNewPlayListController.class.getResource("createNewPlayListPage.fxml"));
+            Scene scene=new Scene(root,300,200);
+            Stage playListCreationStage = new Stage();
+            playListCreationStage.initModality(Modality.APPLICATION_MODAL);
+            playListCreationStage.setScene(scene);
+            playListCreationStage.showAndWait();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override
@@ -133,7 +141,7 @@ public class ListenerPanelController implements Initializable
             ArtistPreviewController.setArtist(artist);
             try {
                 Parent root =FXMLLoader.load(PlayListPreviewController.class.getResource("playListPreview.fxml"));
-                HBoxForFollowingArtists_ListenerPanel.getChildren().add(root);
+                VBox_FollowingArtistsList.getChildren().add(root);
             } catch (IOException e) {
                 System.out.println(e.getMessage());
             }
