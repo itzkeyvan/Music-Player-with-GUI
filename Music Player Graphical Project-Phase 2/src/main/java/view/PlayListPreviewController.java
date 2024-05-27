@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 public class PlayListPreviewController implements Initializable
 {
     static private Playlist playlist;
+
     @FXML
     private AnchorPane anchorPane_playListPreview;
 

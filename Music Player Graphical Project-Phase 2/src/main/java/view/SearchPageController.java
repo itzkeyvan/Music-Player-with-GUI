@@ -32,11 +32,6 @@ public class SearchPageController implements Initializable {
     @FXML
     private Text txt_audioNumberOfPlays;
 
-    @FXML
-    void PlayOrPauseInList_Clicked(MouseEvent event) {
-
-    }
-
     public static String getSearchedTerm() {
         return searchedTerm;
     }
