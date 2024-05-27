@@ -200,9 +200,9 @@
                                           <Font name="Gotham-Bold" size="29.0" />
                                        </font>
                                     </Label>
-                                    <ScrollPane prefHeight="199.0" prefWidth="571.0" style="-fx-background-color: #434345; -fx-border-width: 5; -fx-border-radius: 10; -fx-border-color: #48484A;" stylesheets="@ScrollPaneStyle.css" vbarPolicy="NEVER">
+                                    <ScrollPane prefHeight="258.0" prefWidth="591.0" style="-fx-background-color: #434345; -fx-border-width: 5; -fx-border-radius: 10; -fx-border-color: #48484A; -fx-border-width: 2;" stylesheets="@ScrollPaneStyle.css" vbarPolicy="NEVER">
                                        <content>
-                                          <HBox fx:id="HBoxForPlaylists_ListenerPanel" minHeight="174.0" minWidth="2500.0" prefHeight="174.0" prefWidth="2500.0" spacing="5.0" style="-fx-background-color: #48484A;">
+                                          <HBox fx:id="HBoxForPlaylists_ListenerPanel" minHeight="184.0" minWidth="2500.0" prefHeight="184.0" prefWidth="2500.0" spacing="5.0" style="-fx-background-color: #48484A;">
                                              <opaqueInsets>
                                                 <Insets />
                                              </opaqueInsets>

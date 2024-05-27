@@ -1,6 +1,7 @@
 package view;
 
 import graphic.musicplayergraphicalprojectphase2.Main;
+import interfaces.GeneralOperations;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -31,7 +32,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class MainTemplateController implements Initializable,GeneralOperations {
+public class MainTemplateController implements Initializable, GeneralOperations {
     private static Audio audio;
     private static ArrayList<Audio> audiosList;
     @FXML

@@ -1,4 +1,4 @@
-package view;
+package interfaces;
 
 public interface GeneralOperations
 {

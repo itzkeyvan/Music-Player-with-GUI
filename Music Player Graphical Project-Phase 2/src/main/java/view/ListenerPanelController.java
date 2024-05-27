@@ -1,6 +1,5 @@
 package view;
 
-import controller.ListenerController;
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,14 +11,18 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import model.Genre;
-import model.userAccount.listener.PremiumListener;
+import model.Playlist;
+import model.userAccount.Artist;
 
 import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
 
+
+
+
+// Not complete!
 public class ListenerPanelController implements Initializable
 {
 
@@ -115,5 +118,25 @@ public class ListenerPanelController implements Initializable
             lbl_PremiumPlan.setText(Main.getListener().getPremiumPlan().name());
         }
         lbl_UserName.setText(Main.getListener().getUserName());
+        for(Playlist playlist:Main.getListener().getPlaylistsList())
+        {
+            PlayListPreviewController.setPlaylist(playlist);
+            try {
+                Parent root =FXMLLoader.load(PlayListPreviewController.class.getResource("playListPreview.fxml"));
+                HBoxForPlaylists_ListenerPanel.getChildren().add(root);
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        for(Artist artist:Main.getListener().getFollowingsList())
+        {
+            ArtistPreviewController.setArtist(artist);
+            try {
+                Parent root =FXMLLoader.load(PlayListPreviewController.class.getResource("playListPreview.fxml"));
+                HBoxForFollowingArtists_ListenerPanel.getChildren().add(root);
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 }
