@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #4D4C4C;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CreateNewPlayListController">
+   <children>
+      <VBox alignment="CENTER" layoutX="37.0" prefHeight="200.0" prefWidth="270.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="54.0" prefWidth="270.0" text="Enter a name for the playlist" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Gotham-Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtField_PlayListName" alignment="CENTER" minHeight="22.0" prefHeight="40.0" prefWidth="154.0" stylesheets="@TextFieldStyle.css">
+               <font>
+                  <Font name="Gotham-Bold" size="19.0" />
+               </font>
+            </TextField>
+            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="562.0" spacing="5.0">
+               <children>
+                  <Label fx:id="lblBTn_CreatePlatList" alignment="CENTER" onMouseClicked="#createPlayListLblBtn_Clicked" prefHeight="26.0" prefWidth="93.0" style="-fx-border-color: #23ff44;" text="Create" textFill="#23ff44">
+                     <font>
+                        <Font name="Gotham-Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblBTn_CancelCreatingPlayList" alignment="CENTER" onMouseClicked="#cancelCreatingPlayListLblBtn_Clicked" prefHeight="26.0" prefWidth="90.0" style="-fx-border-color: #ff0000;" text="Cancel" textFill="RED">
+                     <font>
+                        <Font name="Gotham-Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <stylesheets>
+                  <URL value="@ImageViewButtonStyle.css" />
+                  <URL value="@LabelButtonShineStyle.css" />
+               </stylesheets>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -140,19 +141,23 @@
                   <Insets left="10.0" right="10.0" />
                </VBox.margin>
                <children>
-                  <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="562.0" spacing="5.0" stylesheets="@ImageViewButtonStyle.css">
+                  <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="562.0" spacing="5.0">
                      <children>
-                        <Label fx:id="lblBTn_Follow" alignment="CENTER" onMouseClicked="#followLblBtn_Clicked" prefHeight="26.0" prefWidth="93.0" stylesheets="@../../../../../../../demo/src/main/resources/org/example/demo/LabelButtonStyle.css" text="Follow" textFill="WHITE">
+                        <Label fx:id="lblBTn_Follow" alignment="CENTER" onMouseClicked="#followLblBtn_Clicked" prefHeight="26.0" prefWidth="93.0" style="-fx-border-color: white;" text="Follow" textFill="WHITE">
                            <font>
                               <Font name="Gotham-Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lblBTn_Report" alignment="CENTER" onMouseClicked="#reportLblBtn_Clicked" prefHeight="26.0" prefWidth="90.0" style="-fx-border-color: #ff0000;" stylesheets="@../../../../../../../demo/src/main/resources/org/example/demo/LabelButtonShineStyle.css" text="Report" textFill="RED">
+                        <Label fx:id="lblBTn_Report" alignment="CENTER" onMouseClicked="#reportLblBtn_Clicked" prefHeight="26.0" prefWidth="90.0" style="-fx-border-color: #ff0000;" text="Report" textFill="RED">
                            <font>
                               <Font name="Gotham-Bold" size="14.0" />
                            </font>
                         </Label>
                      </children>
+                     <stylesheets>
+                        <URL value="@ImageViewButtonStyle.css" />
+                        <URL value="@LabelButtonShineStyle.css" />
+                     </stylesheets>
                   </HBox>
                </children>
             </HBox>
