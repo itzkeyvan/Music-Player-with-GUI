@@ -20,17 +20,9 @@ import java.util.ResourceBundle;
 public class SearchPageController implements Initializable {
 
     static private String searchedTerm;
+
     @FXML
     private VBox VBox_searchResultList;
-
-    @FXML
-    private Text txt_artistName;
-
-    @FXML
-    private Text txt_audioName;
-
-    @FXML
-    private Text txt_audioNumberOfPlays;
 
     public static String getSearchedTerm() {
         return searchedTerm;

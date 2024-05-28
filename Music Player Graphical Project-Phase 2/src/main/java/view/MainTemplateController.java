@@ -141,8 +141,6 @@ public class MainTemplateController implements Initializable, GeneralOperations 
             Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("homePage.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -162,8 +160,6 @@ public class MainTemplateController implements Initializable, GeneralOperations 
             Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("listenerPanel.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -177,8 +173,6 @@ public class MainTemplateController implements Initializable, GeneralOperations 
             Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("allAudiosList.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -192,8 +186,6 @@ public class MainTemplateController implements Initializable, GeneralOperations 
             Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("listenerPanel.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -206,8 +198,6 @@ public class MainTemplateController implements Initializable, GeneralOperations 
             Main.setCurrentCenterNode(FXMLLoader.load(ArtistsPageController.class.getResource("Artists.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -328,10 +318,10 @@ public class MainTemplateController implements Initializable, GeneralOperations 
 
     private void playNextAudio() {
         int currentIndex = audiosList.indexOf(getAudio());
-        if (currentIndex == audiosList.size() - 1) { // at the end of the list
-            setAudio(audiosList.get(0)); // play the first audio in the list
+        if (currentIndex == audiosList.size() - 1) {
+            setAudio(audiosList.get(0));
         } else {
-            setAudio(audiosList.get(currentIndex + 1)); // play the next audio
+            setAudio(audiosList.get(currentIndex + 1));
         }
         reloadAudio();
     }
@@ -339,9 +329,9 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     private void playPreviousAudio() {
         int currentIndex = audiosList.indexOf(getAudio());
         if (currentIndex == 0) { // at the start of the list
-            setAudio(audiosList.get(audiosList.size() - 1)); // play the last audio in the list
+            setAudio(audiosList.get(audiosList.size() - 1));
         } else {
-            setAudio(audiosList.get(currentIndex - 1)); // play the previous audio
+            setAudio(audiosList.get(currentIndex - 1));
         }
         reloadAudio();
     }
@@ -422,8 +412,6 @@ public class MainTemplateController implements Initializable, GeneralOperations 
             Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("homePage.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -436,8 +424,6 @@ public class MainTemplateController implements Initializable, GeneralOperations 
             Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("loginPage.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -450,8 +436,6 @@ public class MainTemplateController implements Initializable, GeneralOperations 
             Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("signUpPage.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -465,8 +449,6 @@ public class MainTemplateController implements Initializable, GeneralOperations 
             Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("searchPage.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
-            Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

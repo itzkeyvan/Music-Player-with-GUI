@@ -125,20 +125,20 @@ public class PlayBarController implements Initializable {
 
     public void playNextAudio() {
         int currentIndex = audiosList.indexOf(getAudio());
-        if (currentIndex == audiosList.size() - 1) { // at the end of the list
-            setAudio(audiosList.get(0)); // play the first audio in the list
+        if (currentIndex == audiosList.size() - 1) {
+            setAudio(audiosList.get(0));
         } else {
-            setAudio(audiosList.get(currentIndex + 1)); // play the next audio
+            setAudio(audiosList.get(currentIndex + 1));
         }
         reloadAudio();
     }
 
     public void playPreviousAudio() {
         int currentIndex = audiosList.indexOf(getAudio());
-        if (currentIndex == 0) { // at the start of the list
-            setAudio(audiosList.get(audiosList.size() - 1)); // play the last audio in the list
+        if (currentIndex == 0) {
+            setAudio(audiosList.get(audiosList.size() - 1));
         } else {
-            setAudio(audiosList.get(currentIndex - 1)); // play the previous audio
+            setAudio(audiosList.get(currentIndex - 1));
         }
         reloadAudio();
     }

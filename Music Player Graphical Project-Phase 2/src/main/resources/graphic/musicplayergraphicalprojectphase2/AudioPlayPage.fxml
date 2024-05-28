@@ -117,7 +117,7 @@
                               </Tooltip>
                            </tooltip>
                         </Label>
-                        <MenuButton fx:id="MenuBtn_AddToPlayList" mnemonicParsing="false" popupSide="RIGHT" prefHeight="42.0" prefWidth="163.0" stylesheets="@MenuButtonStyle.css" text="Add to playList" textFill="WHITE">
+                        <MenuButton fx:id="menuBtn_AddToPlayList" mnemonicParsing="false" popupSide="RIGHT" prefHeight="42.0" prefWidth="163.0" stylesheets="@MenuButtonStyle.css" text="Add to playList" textFill="WHITE">
                           <items>
                             <MenuItem mnemonicParsing="false" text="Action 1" />
                             <MenuItem mnemonicParsing="false" text="Action 2" />

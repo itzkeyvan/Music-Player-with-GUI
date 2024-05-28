@@ -1,11 +1,8 @@
 package view;
 
-import controller.ListenerController;
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -21,7 +18,6 @@ import model.audio.AudioType;
 import model.audio.Music;
 import model.audio.Podcast;
 
-import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
@@ -43,7 +39,7 @@ public class AudioPlayPageController implements Initializable
     private Label lbl_AudioType;
 
     @FXML
-    private Label lbl_LyricsOrCaption;
+    private Label lbl_LyricsOrBio;
 
     @FXML
     private Rectangle rectangle_AudioCover;
@@ -58,7 +54,7 @@ public class AudioPlayPageController implements Initializable
     private Text txt_AudioName;
 
     @FXML
-    private Text txt_LyricsOrCaption;
+    private Text txt_LyricsOrBio;
 
     @FXML
     private Text txt_ReleaseDate;
@@ -107,14 +103,14 @@ public class AudioPlayPageController implements Initializable
         if(audio.getAudioType().equals(AudioType.MUSIC))
         {
             Music music=(Music)audio;
-            lbl_LyricsOrCaption.setText("Lyrics");
-            txt_LyricsOrCaption.setText(music.getLyrics());
+            lbl_LyricsOrBio.setText("Lyrics");
+            txt_LyricsOrBio.setText(music.getLyrics());
         }
         else
         {
             Podcast podcast=(Podcast)audio;
-            lbl_LyricsOrCaption.setText("Caption");
-            txt_LyricsOrCaption.setText(podcast.getCaption());
+            lbl_LyricsOrBio.setText("Caption");
+            txt_LyricsOrBio.setText(podcast.getCaption());
         }
         PlayBarController.getMediaPlayer().statusProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue == MediaPlayer.Status.PLAYING&&PlayBarController.getAudio().equals(audio))  //Media is playing

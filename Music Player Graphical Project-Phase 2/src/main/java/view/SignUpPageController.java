@@ -1,7 +1,6 @@
 package view;
 
 import controller.ListenerController;
-import controller.SingerController;
 import exceptions.InvalidFormatException;
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
@@ -12,8 +11,6 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import model.userAccount.ArtistType;
-
 import java.io.IOException;
 import java.time.ZoneId;
 import java.util.Date;
@@ -88,8 +85,8 @@ public class SignUpPageController {
                     alert.showAndWait().ifPresent(response -> {
                         if (response == ButtonType.OK) {
                             try {
-                                Main.setCurrentCenterNode(FXMLLoader.load(HomePageController.class.getResource("homePage.fxml")));
-                                Scene scene = new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
+                                Main.setCurrentCenterNode(FXMLLoader.load(Main.class.getResource("homePage.fxml")));
+                                Scene scene = new Scene(FXMLLoader.load(Main.class.getResource("mainTemplate.fxml")));
                                 Main.getStage().setScene(scene);
                             } catch (IOException e) {
                                 System.out.println(e.getMessage());
