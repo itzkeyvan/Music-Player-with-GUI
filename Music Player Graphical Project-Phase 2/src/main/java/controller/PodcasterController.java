@@ -39,8 +39,7 @@ public class PodcasterController extends ArtistController
         podcaster=(Podcaster)user;
         return "Logged-in as podcaster.";
     }
-    public String publishPodcast(String title, Genre genre, String caption, String URL, Image cover)
-    {
+    public String publishPodcast(String title, Genre genre, String caption, String URL, Image cover) throws Exception {
         for(Podcast podcast: podcaster.getPodcastsList())
             if(podcast.getAudioName().equals(title))
                 return "This podcast is already published.";

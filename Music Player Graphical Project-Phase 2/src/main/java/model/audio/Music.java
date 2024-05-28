@@ -8,8 +8,7 @@ import java.util.Date;
 public class Music extends Audio
 {
     private String lyrics;
-    public Music(String audioName, String artistName, Date releaseDate, Genre genre, String audioURL, Image cover, String lyrics)
-    {
+    public Music(String audioName, String artistName, Date releaseDate, Genre genre, String audioURL, Image cover, String lyrics) throws Exception {
         super(audioName, artistName,  releaseDate, genre, audioURL, cover);
         this.lyrics=lyrics;
         setAudioType(AudioType.MUSIC);

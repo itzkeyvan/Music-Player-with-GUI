@@ -54,8 +54,7 @@ public class SingerController extends ArtistController
         singer.getAlbumsList().add(album);
         return "Album created successfully.";
     }
-    public String publishMusic(String title, Genre genre, String lyrics, String URL, Image cover, String albumID)
-    {
+    public String publishMusic(String title, Genre genre, String lyrics, String URL, Image cover, String albumID) throws Exception {
         for(Album album:singer.getAlbumsList())
             for(Music music:album.getMusicsList())
                 if(music.getAudioName().equals(title)&&albumID.equals(album.getAlbumID()))

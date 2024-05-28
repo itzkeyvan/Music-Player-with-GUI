@@ -3,9 +3,13 @@ import javafx.scene.image.Image;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
+import javazoom.jl.decoder.Bitstream;
+import javazoom.jl.decoder.Header;
 import model.Genre;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -25,8 +29,7 @@ public abstract class Audio implements Comparable
     private String audioURL;
     private final Image cover;
     private double audioLength;
-    public Audio(String audioName,String artistName,Date releaseDate,Genre genre,String audioURL,Image cover)
-    {
+    public Audio(String audioName,String artistName,Date releaseDate,Genre genre,String audioURL,Image cover) throws Exception {
         this.audioID=(++audioCounter);
         this.audioName=audioName;
         this.artistName=artistName;
@@ -34,8 +37,7 @@ public abstract class Audio implements Comparable
         this.genre=genre;
         this.audioURL=audioURL;
         this.cover=cover;
-        MediaPlayer mediaPlayer=new MediaPlayer(new Media(audioURL));
-        this.audioLength =mediaPlayer.getTotalDuration().toSeconds();
+        this.audioLength=calculateMP3Duration(audioURL);
     }
 
     public int getAudioID() {
@@ -145,5 +147,22 @@ public abstract class Audio implements Comparable
     {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         return "Audio name: "+audioName+" | Audio ID: "+audioID+" | Artist: "+artistName+" | Genre: "+genre.getGenreName()+" | Audio type: "+audioType.toString()+"\nRelease date: "+dateFormat.format(releaseDate)+" | Number of likes: "+numberOfLikes+" | Number of plays: "+numberOfPlays;
+    }
+    public static long calculateMP3Duration(String mp3FilePath) throws Exception {
+        InputStream is = new FileInputStream(mp3FilePath);
+        Bitstream bitstream = new Bitstream(is);
+        Header header;
+        long totalMs = 0;
+
+        try {
+            while ((header = bitstream.readFrame()) != null) {
+                totalMs += header.ms_per_frame();
+                bitstream.closeFrame();
+            }
+        } finally {
+            bitstream.close();
+        }
+
+        return totalMs / 1000;
     }
 }

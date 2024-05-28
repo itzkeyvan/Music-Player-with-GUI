@@ -5,6 +5,7 @@ module graphic.musicplayergraphicalprojectphase2 {
     requires javafx.media;
     requires mp3agic;
     requires java.desktop;
+    requires jlayer;
 
 
     opens graphic.musicplayergraphicalprojectphase2 to javafx.fxml;
