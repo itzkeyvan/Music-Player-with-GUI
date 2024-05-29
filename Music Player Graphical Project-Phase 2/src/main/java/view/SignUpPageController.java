@@ -85,7 +85,7 @@ public class SignUpPageController {
                     alert.showAndWait().ifPresent(response -> {
                         if (response == ButtonType.OK) {
                             try {
-                                Main.setCurrentCenterNode(FXMLLoader.load(Main.class.getResource("homePage.fxml")));
+                                Main.setCurrentCenterNode(FXMLLoader.load(Main.class.getResource("favouriteGenresPage.fxml")));
                                 Scene scene = new Scene(FXMLLoader.load(Main.class.getResource("mainTemplate.fxml")));
                                 Main.getStage().setScene(scene);
                             } catch (IOException e) {

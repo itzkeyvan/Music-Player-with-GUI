@@ -1,19 +1,13 @@
 package model.audio;
 import javafx.scene.image.Image;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.util.Duration;
 import javazoom.jl.decoder.Bitstream;
 import javazoom.jl.decoder.Header;
 import model.Genre;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import static view.PlayBarController.getAudio;
 
 public abstract class Audio implements Comparable
 {

@@ -79,10 +79,19 @@ public class PlayBarController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        btn_playORpause.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Pause.png"));
-        setupMediaPlayer();
-        setupSlider();
-        setupAudioCover();
+        if(audio!=null)
+        {
+            btn_playORpause.setDisable(false);
+            setupMediaPlayer();
+            setupSlider();
+            setupAudioCover();
+        }
+        else
+        {
+            rectangle_audioCover.setFill(new ImagePattern(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/DefaultAudioCover.png")));
+            btn_playORpause.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Play.png"));
+            btn_playORpause.setDisable(true);
+        }
     }
 
     private void setupMediaPlayer() {

@@ -90,7 +90,7 @@ public class ExplorePremiumPageController {
                     alert.showAndWait();
                 }
             }
-            else if(selectedLabel.equals(lblBtn_bronzePlan))
+            else if(selectedLabel.equals(lblBtn_silverPlan))
             {
                 try {
                     String result=ListenerController.getListenerController().buyOrRenewSubscription(PremiumPlans.TWOMONTHS);

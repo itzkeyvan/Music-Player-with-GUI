@@ -1,6 +1,5 @@
 package view;
 
-import controller.ListenerController;
 import controller.UserController;
 import exceptions.failedLoginExceptions.UserNotFoundException;
 import exceptions.failedLoginExceptions.WrongPasswordException;
@@ -46,7 +45,7 @@ public class LoginPageController {
                 alert.showAndWait().ifPresent(response -> {
                     if (response == ButtonType.OK) {
                         try {
-                            Main.setCurrentCenterNode(FXMLLoader.load(FavouriteGenresPageController.class.getResource("favouriteGenresPage.fxml")));
+                            Main.setCurrentCenterNode(FXMLLoader.load(FavouriteGenresPageController.class.getResource("homePage.fxml")));
                             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
                             Scene scene = new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
                             Main.getStage().setScene(scene);

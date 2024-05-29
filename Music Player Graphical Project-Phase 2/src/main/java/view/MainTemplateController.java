@@ -1,7 +1,7 @@
 package view;
 
 import graphic.musicplayergraphicalprojectphase2.Main;
-import interfaces.GeneralOperations;
+import model.interfaces.GeneralOperations;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -35,6 +35,7 @@ import java.util.ResourceBundle;
 public class MainTemplateController implements Initializable, GeneralOperations {
     private static Audio audio;
     private static ArrayList<Audio> audiosList;
+
     @FXML
     private static BorderPane BorderPane_mainTemplate;
 
@@ -117,15 +118,25 @@ public class MainTemplateController implements Initializable, GeneralOperations 
             lblBtn_Login.setDisable(true);
             lblBtn_Logout.setDisable(false);
         }
-        if(!Main.isLoggedIn())
+        else
         {
             lblBtn_SignUp.setDisable(false);
             lblBtn_Login.setDisable(false);
             lblBtn_Logout.setDisable(true);
         }
-        setupMediaPlayer();
-        setupSlider();
-        setupAudioCover();
+        if(audio!=null)
+        {
+            btn_playORpause.setDisable(false);
+            setupMediaPlayer();
+            setupSlider();
+            setupAudioCover();
+        }
+        else
+        {
+            rectangle_audioCover.setFill(new ImagePattern(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/DefaultAudioCover.png")));
+            btn_playORpause.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Play.png"));
+            btn_playORpause.setDisable(true);
+        }
         if(Main.getCenterNodesHistory().size()==1)
             imgView_Back.setDisable(true);
         else
@@ -394,7 +405,7 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     @Override
     public void backTo()
     {
-        if(Main.getCenterNodesHistory().size()!=1)
+        if(Main.getCenterNodesHistory().size()>1)
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1));
         try {
             Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));

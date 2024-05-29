@@ -173,7 +173,7 @@
                   </HBox>
                </children>
             </VBox>
-            <Label fx:id="lblBtn_SingUP" alignment="CENTER" minHeight="34.0" minWidth="107.0" onMouseDragged="#signUpBtn_clicked" prefHeight="34.0" prefWidth="107.0" stylesheets="@../../../../../../../demo/src/main/resources/org/example/demo/LabelButtonStyle.css" text="Sign up">
+            <Label fx:id="lblBtn_SingUP" alignment="CENTER" minHeight="34.0" minWidth="107.0" onMouseDragged="#signUpBtn_clicked" prefHeight="34.0" prefWidth="107.0" stylesheets="@LabelButtonStyle.css" text="Sign up">
                <font>
                   <Font name="Gotham-Bold" size="20.0" />
                </font>

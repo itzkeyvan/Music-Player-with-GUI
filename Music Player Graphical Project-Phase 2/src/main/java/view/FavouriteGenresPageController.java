@@ -4,7 +4,6 @@ import controller.ListenerController;
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
@@ -15,13 +14,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.ResourceBundle;
+import java.util.Queue;
 
-public class FavouriteGenresPageController implements Initializable
-{
+public class FavouriteGenresPageController {
 
     @FXML
     private Label lblBtn_doneGenresSelection;
@@ -53,15 +51,37 @@ public class FavouriteGenresPageController implements Initializable
     @FXML
     private ToggleButton tglBtn_TrueCrime;
 
-    private int selectedCount = 0;
+    private final Queue<ToggleButton> selectedButtons = new LinkedList<>();
     private final int maxSelections = 4;
+
+    @FXML
+    public void initialize() {
+        List<ToggleButton> buttons = List.of(tglBtn_Country, tglBtn_Hiphop, tglBtn_History, tglBtn_Interview, tglBtn_Jazz, tglBtn_Pop, tglBtn_Rock, tglBtn_Society, tglBtn_TrueCrime);
+
+        for (ToggleButton button : buttons) {
+            button.setOnAction(event -> handleToggleButtonSelection(button));
+        }
+    }
+
+    private void handleToggleButtonSelection(ToggleButton button) {
+        if (button.isSelected()) {
+            if (selectedButtons.size() >= maxSelections) {
+                ToggleButton firstSelected = selectedButtons.poll();
+                if (firstSelected != null) {
+                    firstSelected.setSelected(false);
+                }
+            }
+            selectedButtons.add(button);
+        } else {
+            selectedButtons.remove(button);
+        }
+    }
 
     @FXML
     void doneGenresSelectionBtn_clicked(MouseEvent event) {
         String[] selectedGenres = getSelectedGenres();
 
-        if (selectedGenres.length==0)
-        {
+        if (selectedGenres.length == 0) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Error");
             alert.setHeaderText(null);
@@ -69,12 +89,9 @@ public class FavouriteGenresPageController implements Initializable
             Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
             alertStage.getIcons().add(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Error.png"));
             alert.showAndWait();
-        }
-        else
-        {
-            String result=ListenerController.getListenerController().setFavouriteGenres(selectedGenres);
-            if(result.equals("Genres added to favourites successfully."))
-            {
+        } else {
+            String result = ListenerController.getListenerController().setFavouriteGenres(selectedGenres);
+            if (result.equals("Genres added to favourites successfully.")) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Success");
                 alert.setHeaderText(null);
@@ -97,6 +114,7 @@ public class FavouriteGenresPageController implements Initializable
             }
         }
     }
+
     private String[] getSelectedGenres() {
         List<String> selectedGenres = new ArrayList<>();
         if (tglBtn_Country.isSelected()) selectedGenres.add("Country");
@@ -109,26 +127,5 @@ public class FavouriteGenresPageController implements Initializable
         if (tglBtn_Society.isSelected()) selectedGenres.add("Society");
         if (tglBtn_TrueCrime.isSelected()) selectedGenres.add("TrueCrime");
         return selectedGenres.toArray(new String[0]);
-    }
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        ToggleButton[] toggleButtons = {
-                tglBtn_Country, tglBtn_Hiphop, tglBtn_History,
-                tglBtn_Interview, tglBtn_Jazz, tglBtn_Pop,
-                tglBtn_Rock, tglBtn_Society, tglBtn_TrueCrime
-        };
-        for (ToggleButton toggleButton : toggleButtons) {
-            toggleButton.setOnAction(event -> {
-                if (toggleButton.isSelected()) {
-                    if (selectedCount >= maxSelections) {
-                        toggleButton.setSelected(false);
-                    } else {
-                        selectedCount++;
-                    }
-                } else {
-                    selectedCount--;
-                }
-            });
-        }
     }
 }

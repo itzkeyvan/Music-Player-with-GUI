@@ -10,4 +10,6 @@ module graphic.musicplayergraphicalprojectphase2 {
 
     opens graphic.musicplayergraphicalprojectphase2 to javafx.fxml;
     exports graphic.musicplayergraphicalprojectphase2;
+    exports view;
+    opens view to javafx.fxml;
 }
