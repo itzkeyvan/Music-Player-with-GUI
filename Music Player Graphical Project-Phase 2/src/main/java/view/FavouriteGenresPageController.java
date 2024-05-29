@@ -102,9 +102,9 @@ public class FavouriteGenresPageController {
                 alert.showAndWait().ifPresent(response -> {
                     if (response == ButtonType.OK) {
                         try {
-                            Main.setCurrentCenterNode(FXMLLoader.load(HomePageController.class.getResource("homePage.fxml")));
+                            Main.setCurrentCenterNode(FXMLLoader.load(HomePageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/homePage.fxml")));
                             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-                            Scene scene = new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
+                            Scene scene = new Scene(FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml")));
                             Main.getStage().setScene(scene);
                         } catch (IOException e) {
                             System.out.println(e.getMessage());

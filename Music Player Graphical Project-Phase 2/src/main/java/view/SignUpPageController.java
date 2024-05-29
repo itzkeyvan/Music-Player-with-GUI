@@ -85,8 +85,8 @@ public class SignUpPageController {
                     alert.showAndWait().ifPresent(response -> {
                         if (response == ButtonType.OK) {
                             try {
-                                Main.setCurrentCenterNode(FXMLLoader.load(Main.class.getResource("favouriteGenresPage.fxml")));
-                                Scene scene = new Scene(FXMLLoader.load(Main.class.getResource("mainTemplate.fxml")));
+                                Main.setCurrentCenterNode(FXMLLoader.load(FavouriteGenresPageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/favouriteGenresPage.fxml")));
+                                Scene scene = new Scene(FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml")));
                                 Main.getStage().setScene(scene);
                             } catch (IOException e) {
                                 System.out.println(e.getMessage());

@@ -25,7 +25,7 @@ public class ArtistsPageController implements Initializable {
             ArtistPreviewController.setArtist(artist);
             Parent artistPreview;
             try {
-                artistPreview = FXMLLoader.load(AudioInListController.class.getResource("artistPreview.fxml"));
+                artistPreview = FXMLLoader.load(ArtistPreviewController.class.getResource("/graphic/musicplayergraphicalprojectphase2/artistPreview.fxml"));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

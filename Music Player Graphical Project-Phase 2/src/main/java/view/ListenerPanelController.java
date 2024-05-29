@@ -71,10 +71,10 @@ public class ListenerPanelController implements Initializable
     void explorePremiumBtn_Clicked(MouseEvent event)
     {
         try {
-            Main.setCurrentCenterNode(FXMLLoader.load(ExplorePremiumPageController.class.getResource("explorePremiumPage.fxml")));
+            Main.setCurrentCenterNode(FXMLLoader.load(ExplorePremiumPageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/explorePremiumPage.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTamplate.fxml")));
+            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml")));
             Main.getStage().setScene(scene);
         } catch (IOException e) {
             System.out.println(e.getMessage());
@@ -85,7 +85,7 @@ public class ListenerPanelController implements Initializable
     void newPlaylistBtnClicked(MouseEvent event)
     {
         try {
-            Parent root=FXMLLoader.load(CreateNewPlayListController.class.getResource("createNewPlayListPage.fxml"));
+            Parent root=FXMLLoader.load(CreateNewPlayListController.class.getResource("/graphic/musicplayergraphicalprojectphase2/createNewPlayListPage.fxml"));
             Scene scene=new Scene(root,300,200);
             Stage playListCreationStage = new Stage();
             playListCreationStage.initModality(Modality.APPLICATION_MODAL);
@@ -130,7 +130,7 @@ public class ListenerPanelController implements Initializable
         {
             PlayListPreviewController.setPlaylist(playlist);
             try {
-                Parent root =FXMLLoader.load(PlayListPreviewController.class.getResource("playListPreview.fxml"));
+                Parent root =FXMLLoader.load(PlayListPreviewController.class.getResource("/graphic/musicplayergraphicalprojectphase2/playListPreview.fxml"));
                 HBoxForPlaylists_ListenerPanel.getChildren().add(root);
             } catch (IOException e) {
                 System.out.println(e.getMessage());
@@ -140,7 +140,7 @@ public class ListenerPanelController implements Initializable
         {
             ArtistPreviewController.setArtist(artist);
             try {
-                Parent root =FXMLLoader.load(PlayListPreviewController.class.getResource("playListPreview.fxml"));
+                Parent root =FXMLLoader.load(PlayListPreviewController.class.getResource("/graphic/musicplayergraphicalprojectphase2/playListPreview.fxml"));
                 VBox_FollowingArtistsList.getChildren().add(root);
             } catch (IOException e) {
                 System.out.println(e.getMessage());

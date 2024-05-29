@@ -37,9 +37,9 @@ public class Main extends Application
     {
         setStage(stage);
         Image logo=new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SpotifyLogo.png");
-        currentCenterNode=FXMLLoader.load(HomePageController.class.getResource("homePage.fxml"));
+        currentCenterNode=FXMLLoader.load(HomePageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/homePage.fxml"));
         centerNodesHistory.add(currentCenterNode);
-        MainTemplateController.setBorderPane_mainTemplate(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
+        MainTemplateController.setBorderPane_mainTemplate(FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml")));
         MainTemplateController.getBorderPane_mainTemplate().setCenter(currentCenterNode);
         Scene scene = new Scene(MainTemplateController.getBorderPane_mainTemplate(), 745, 547);
         getStage().setTitle("Music PLayer");

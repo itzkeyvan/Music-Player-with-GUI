@@ -31,7 +31,7 @@ public class ArtistPreviewController implements Initializable
     @FXML
     void artistNameTxt_Clicked(MouseEvent event) throws IOException {
         ArtistInfoPageController.setArtist(artist);
-        Main.setCurrentCenterNode(FXMLLoader.load(AudioPlayPageController.class.getResource("artistInfoPage.fxml")));
+        Main.setCurrentCenterNode(FXMLLoader.load(ArtistInfoPageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/artistInfoPage.fxml")));
         Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
         MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
         Scene scene = new Scene(MainTemplateController.getBorderPane_mainTemplate(), 745, 547);

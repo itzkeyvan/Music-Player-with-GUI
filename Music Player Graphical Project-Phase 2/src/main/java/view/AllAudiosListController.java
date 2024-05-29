@@ -29,7 +29,7 @@ public class AllAudiosListController implements Initializable {
             audioInListController.setTxt_audioNumber(new Text(Integer.toString(audioNumber++)));
             Parent audioInList;
             try {
-                audioInList = FXMLLoader.load(AudioInListController.class.getResource("audioInList.fxml"));
+                audioInList = FXMLLoader.load(AudioInListController.class.getResource("/graphic/musicplayergraphicalprojectphase2/audioInList.fxml"));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

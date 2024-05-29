@@ -52,7 +52,7 @@ public class SearchPageController implements Initializable {
                 audioInListController.setTxt_audioNumber(new Text(Integer.toString(audioNumber++)));
                 HBox audioInList= null;
                 try {
-                    audioInList = FXMLLoader.load(AudioInListController.class.getResource("audioInList.fxml"));
+                    audioInList = FXMLLoader.load(AudioInListController.class.getResource("/graphic/musicplayergraphicalprojectphase2/audioInList.fxml"));
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }

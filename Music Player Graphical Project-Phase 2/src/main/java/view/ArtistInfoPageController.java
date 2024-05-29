@@ -76,7 +76,7 @@ public class ArtistInfoPageController implements Initializable
     @FXML
     void reportLblBtn_Clicked(MouseEvent event) throws IOException
     {
-        Main.setCurrentCenterNode(FXMLLoader.load(ReportPageController.class.getResource("reportPage.fxml")));
+        Main.setCurrentCenterNode(FXMLLoader.load(ReportPageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/reportPage.fxml")));
         Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
         MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
         Scene scene =new Scene(MainTemplateController.getBorderPane_mainTemplate(),745,547);
@@ -108,7 +108,7 @@ public class ArtistInfoPageController implements Initializable
                     audioInListController.setTxt_audioNumber(new Text(Integer.toString(numberOfAudios)));
                     HBox audioInList= null;
                     try {
-                        audioInList = FXMLLoader.load(AudioInListController.class.getResource("audioInList.fxml"));
+                        audioInList = FXMLLoader.load(AudioInListController.class.getResource("/graphic/musicplayergraphicalprojectphase2/audioInList.fxml"));
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }

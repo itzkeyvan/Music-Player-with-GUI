@@ -149,7 +149,7 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     {
         HBox_Search.setVisible(false);
         try {
-            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("homePage.fxml")));
+            Main.setCurrentCenterNode(FXMLLoader.load(HomePageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/homePage.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
         } catch (IOException e) {
@@ -168,7 +168,7 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     {
         HBox_Search.setVisible(false);
         try {
-            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("listenerPanel.fxml")));
+            Main.setCurrentCenterNode(FXMLLoader.load(ListenerPanelController.class.getResource("/graphic/musicplayergraphicalprojectphase2/listenerPanel.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
         } catch (IOException e) {
@@ -181,7 +181,7 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     {
         HBox_Search.setVisible(false);
         try {
-            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("allAudiosList.fxml")));
+            Main.setCurrentCenterNode(FXMLLoader.load(AllAudiosListController.class.getResource("/graphic/musicplayergraphicalprojectphase2/allAudiosList.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
         } catch (IOException e) {
@@ -194,7 +194,7 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     {
         HBox_Search.setVisible(false);
         try {
-            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("listenerPanel.fxml")));
+            Main.setCurrentCenterNode(FXMLLoader.load(ListenerPanelController.class.getResource("/graphic/musicplayergraphicalprojectphase2/listenerPanel.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
         } catch (IOException e) {
@@ -206,7 +206,7 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     {
         HBox_Search.setVisible(false);
         try {
-            Main.setCurrentCenterNode(FXMLLoader.load(ArtistsPageController.class.getResource("Artists.fxml")));
+            Main.setCurrentCenterNode(FXMLLoader.load(ArtistsPageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/Artists.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
         } catch (IOException e) {
@@ -408,7 +408,7 @@ public class MainTemplateController implements Initializable, GeneralOperations 
         if(Main.getCenterNodesHistory().size()>1)
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1));
         try {
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("mainTemplate.fxml")));
+            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml")));
             Main.getStage().setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -420,7 +420,7 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     {
         Main.setLoggedIn(false);
         try {
-            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("homePage.fxml")));
+            Main.setCurrentCenterNode(FXMLLoader.load(HomePageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/homePage.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
         } catch (IOException e) {
@@ -432,7 +432,7 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     public void login()
     {
         try {
-            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("loginPage.fxml")));
+            Main.setCurrentCenterNode(FXMLLoader.load(LoginPageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/loginPage.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
         } catch (IOException e) {
@@ -444,7 +444,7 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     public void signup()
     {
         try {
-            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("signUpPage.fxml")));
+            Main.setCurrentCenterNode(FXMLLoader.load(SignUpPageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/signUpPage.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
         } catch (IOException e) {
@@ -457,7 +457,7 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     {
         try {
             SearchPageController.setSearchedTerm(textField_Search.getText());
-            Main.setCurrentCenterNode(FXMLLoader.load(MainTemplateController.class.getResource("searchPage.fxml")));
+            Main.setCurrentCenterNode(FXMLLoader.load(SearchPageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/searchPage.fxml")));
             Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
             MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
         } catch (IOException e) {
