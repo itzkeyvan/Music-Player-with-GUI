@@ -24,9 +24,7 @@ public class AllAudiosListController implements Initializable {
         int audioNumber=1;
         for(Audio audio: DataBase.getDataBase().getAudiosList())
         {
-            AudioInListController audioInListController=new AudioInListController();
             AudioInListController.setAudio(audio);
-            audioInListController.setTxt_audioNumber(new Text(Integer.toString(audioNumber++)));
             Parent audioInList;
             try {
                 audioInList = FXMLLoader.load(AudioInListController.class.getResource("/graphic/musicplayergraphicalprojectphase2/audioInList.fxml"));

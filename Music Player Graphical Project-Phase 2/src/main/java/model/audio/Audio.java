@@ -22,7 +22,7 @@ public abstract class Audio implements Comparable
     private Genre genre;
     private String audioURL;
     private final Image cover;
-    private double audioLength;
+    private long audioLength;
     public Audio(String audioName,String artistName,Date releaseDate,Genre genre,String audioURL,Image cover) throws Exception {
         this.audioID=(++audioCounter);
         this.audioName=audioName;
@@ -116,11 +116,11 @@ public abstract class Audio implements Comparable
         return audioCounter;
     }
 
-    public double getAudioLength() {
+    public long getAudioLength() {
         return audioLength;
     }
 
-    public void setAudioLength(double audioLength) {
+    public void setAudioLength(long audioLength) {
         this.audioLength = audioLength;
     }
 
@@ -156,7 +156,6 @@ public abstract class Audio implements Comparable
         } finally {
             bitstream.close();
         }
-
         return totalMs / 1000;
     }
 }

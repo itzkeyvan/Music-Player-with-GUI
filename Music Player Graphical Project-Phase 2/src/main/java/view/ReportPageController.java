@@ -27,7 +27,7 @@ public class ReportPageController
     @FXML
     void cancelBtn_clicked(MouseEvent event)
     {
-        Main.getStage().setScene(new Scene(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().size()-2)));
+        MainTemplateController.centerPath.set(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1));
     }
 
 }

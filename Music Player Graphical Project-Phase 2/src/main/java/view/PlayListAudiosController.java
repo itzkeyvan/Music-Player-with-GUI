@@ -46,7 +46,7 @@ public class PlayListAudiosController implements Initializable
     void deletePlaylistBtn_Clicked(MouseEvent event)
     {
         Main.getListener().getPlaylistsList().remove(playlist);
-        Main.getStage().setScene(new Scene(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().size()-2)));
+        MainTemplateController.centerPath.set(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1));
     }
 
     @Override

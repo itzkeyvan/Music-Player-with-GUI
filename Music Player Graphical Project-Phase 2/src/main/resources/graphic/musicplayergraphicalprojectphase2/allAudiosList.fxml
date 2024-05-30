@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #444345;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AllAudiosListController">
+<AnchorPane minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #444345;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AllAudiosListController">
    <children>
       <VBox alignment="CENTER" layoutX="10.399999618530273" layoutY="10.399999618530273" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>

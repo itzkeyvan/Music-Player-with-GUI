@@ -3,14 +3,18 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #444345;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.HomePageController">
    <children>
-      <VBox alignment="CENTER" layoutX="20.0" layoutY="147.1999969482422" prefHeight="400.0" prefWidth="600.0" spacing="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" layoutX="20.0" layoutY="147.1999969482422" prefHeight="400.0" prefWidth="600.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="CENTER_LEFT">
                <children>
@@ -21,15 +25,70 @@
                   </Label>
                </children>
             </HBox>
-            <VBox>
+            <VBox spacing="5.0">
                <children>
-                  <HBox>
+                  <Label fx:id="lbl_homePageHboxLabel" textFill="WHITE">
+                     <font>
+                        <Font name="Gotham-Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" minHeight="44.0" minWidth="590.0" prefHeight="56.0" prefWidth="578.0" spacing="5.0">
                      <children>
-                        <Label fx:id="lbl_homePageHboxLabel" prefHeight="44.0" prefWidth="329.0" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="416.0" spacing="12.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" disable="true" prefHeight="52.0" prefWidth="2.0" spacing="5.0">
+                                 <children>
+                                    <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="#">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="29.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" wrappingWidth="207.73667335510254">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="22.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="144.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artist" wrappingWidth="114.13661382198188">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="22.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="56.0" prefWidth="142.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Plays" wrappingWidth="82.9366626739502">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Label textFill="WHITE">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@PngAndJpg/PlayList/Duration.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip opacity="0.8" text="Duration">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="13.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
                      </children>
                   </HBox>
                   <VBox alignment="CENTER" prefHeight="337.0" prefWidth="579.0" spacing="6.0">

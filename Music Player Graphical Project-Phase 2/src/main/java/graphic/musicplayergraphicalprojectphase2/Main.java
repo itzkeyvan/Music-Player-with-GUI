@@ -7,10 +7,12 @@ import controller.PodcasterController;
 import controller.SingerController;
 import exceptions.InvalidFormatException;
 import javafx.application.Application;
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.Genre;
 import model.userAccount.ArtistType;
@@ -27,22 +29,21 @@ import java.util.ArrayList;
 public class Main extends Application
 {
     static private Stage stage;
-    static private ArrayList<Parent> centerNodesHistory=new ArrayList<>();
-    static private Parent currentCenterNode;
+    static private ArrayList<String> centerNodesHistory=new ArrayList<>();
+    static private String currentCenterNode;
     static private boolean loggedIn = false;
     static private Listener listener;
     static private ListenerController listenerController;
     @Override
     public void start(Stage stage) throws IOException
     {
+
         setStage(stage);
         Image logo=new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SpotifyLogo.png");
-        currentCenterNode=FXMLLoader.load(HomePageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/homePage.fxml"));
-        centerNodesHistory.add(currentCenterNode);
-        MainTemplateController.setBorderPane_mainTemplate(FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml")));
-        MainTemplateController.getBorderPane_mainTemplate().setCenter(currentCenterNode);
-        Scene scene = new Scene(MainTemplateController.getBorderPane_mainTemplate(), 745, 547);
-        getStage().setTitle("Music PLayer");
+        Parent root=FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml"));
+        MainTemplateController.centerPath.set("homePage");
+        Scene scene = new Scene(root, 745, 547);
+        getStage().setTitle("Music Player");
         getStage().getIcons().add(logo);
         getStage().setScene(scene);
         getStage().show();
@@ -121,19 +122,19 @@ public class Main extends Application
         Main.listenerController = listenerController;
     }
 
-    public static ArrayList<Parent> getCenterNodesHistory() {
+    public static ArrayList<String> getCenterNodesHistory() {
         return centerNodesHistory;
     }
 
-    public static void setCenterNodesHistory(ArrayList<Parent> centerNodesHistory) {
+    public static void setCenterNodesHistory(ArrayList<String> centerNodesHistory) {
         Main.centerNodesHistory = centerNodesHistory;
     }
 
-    public static Parent getCurrentCenterNode() {
+    public static String getCurrentCenterNode() {
         return currentCenterNode;
     }
 
-    public static void setCurrentCenterNode(Parent currentCenterNode) {
+    public static void setCurrentCenterNode(String currentCenterNode) {
         Main.currentCenterNode = currentCenterNode;
     }
 

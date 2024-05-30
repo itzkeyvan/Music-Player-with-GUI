@@ -59,13 +59,9 @@ public class AudioInListController implements Initializable
     }
 
     @FXML
-    void audioNameTxt_clicked(MouseEvent event) throws IOException {
+    void audioNameTxt_clicked(MouseEvent event) {
         AudioPlayPageController.setAudio(audio);
-        Main.setCurrentCenterNode(FXMLLoader.load(AudioPlayPageController.class.getResource("AudioPlayPage.fxml")));
-        Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-        MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-        Scene scene = new Scene(MainTemplateController.getBorderPane_mainTemplate(), 745, 547);
-        Main.getStage().setScene(scene);
+        MainTemplateController.centerPath.set("audioPlayPage");
     }
     @FXML
     void audioNameTxt_mouseEntered(MouseEvent event)

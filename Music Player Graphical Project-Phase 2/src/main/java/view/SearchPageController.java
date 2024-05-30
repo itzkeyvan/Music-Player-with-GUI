@@ -33,31 +33,16 @@ public class SearchPageController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        for(Audio audio:ListenerController.getListenerController().searchInAudios(searchedTerm));
+        for(Audio audio:ListenerController.getListenerController().searchInAudios(searchedTerm))
         {
-            int audioNumber=1;
-            ArrayList<Audio> al=new ArrayList<>(DataBase.getDataBase().getAudiosList());
-            for(int i=0;i<al.size()-1;i++)
-                for(int j=0;j<al.size()-1-i;j++)
-                    if(al.get(j).getNumberOfLikes()<al.get(j+1).getNumberOfLikes())
-                    {
-                        Audio temp=al.get(j);
-                        al.set(j,al.get(j+1));
-                        al.set(j+1,temp);
-                    }
-            for(Audio audio:al)
-            {
-                AudioInListController audioInListController=new AudioInListController();
-                AudioInListController.setAudio(audio);
-                audioInListController.setTxt_audioNumber(new Text(Integer.toString(audioNumber++)));
-                HBox audioInList= null;
-                try {
-                    audioInList = FXMLLoader.load(AudioInListController.class.getResource("/graphic/musicplayergraphicalprojectphase2/audioInList.fxml"));
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-                VBox_searchResultList.getChildren().add(audioInList);
+            AudioInListController.setAudio(audio);
+            HBox audioInList= null;
+            try {
+                audioInList = FXMLLoader.load(AudioInListController.class.getResource("/graphic/musicplayergraphicalprojectphase2/audioInList.fxml"));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
+            VBox_searchResultList.getChildren().add(audioInList);
         }
     }
 }

@@ -1,6 +1,10 @@
 package view;
 
 import graphic.musicplayergraphicalprojectphase2.Main;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import model.interfaces.GeneralOperations;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -35,9 +39,10 @@ import java.util.ResourceBundle;
 public class MainTemplateController implements Initializable, GeneralOperations {
     private static Audio audio;
     private static ArrayList<Audio> audiosList;
+    public  static StringProperty centerPath=new SimpleStringProperty();
 
     @FXML
-    private static BorderPane BorderPane_mainTemplate;
+    private BorderPane BorderPane_mainTemplate;
 
     @FXML
     private HBox HBox_Search;
@@ -108,18 +113,34 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     @FXML
     private TextField textField_Search;
 
+
     //Initialize-----------------------------------------------------------
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        centerPath.addListener((observable, oldValue, newValue) -> {
+            try {
+                Parent parent = FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/" + newValue + ".fxml"));
+                Main.getCenterNodesHistory().add(newValue);
+                BorderPane_mainTemplate.setCenter(parent);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
         if(Main.isLoggedIn())
         {
+            btn_Playlists.setDisable(false);
+            btn_library.setDisable(false);
             lblBtn_SignUp.setDisable(true);
             lblBtn_Login.setDisable(true);
             lblBtn_Logout.setDisable(false);
+            btn_Playlists.setDisable(false);
+            btn_library.setDisable(false);
         }
         else
         {
+            btn_Playlists.setDisable(true);
+            btn_library.setDisable(true);
             lblBtn_SignUp.setDisable(false);
             lblBtn_Login.setDisable(false);
             lblBtn_Logout.setDisable(true);
@@ -148,13 +169,7 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     void homeBtn_Clicked(MouseEvent event)
     {
         HBox_Search.setVisible(false);
-        try {
-            Main.setCurrentCenterNode(FXMLLoader.load(HomePageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/homePage.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        MainTemplateController.centerPath.set("homePage");
     }
 
     @FXML
@@ -167,52 +182,27 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     void libraryBtn_Clicked(MouseEvent event)
     {
         HBox_Search.setVisible(false);
-        try {
-            Main.setCurrentCenterNode(FXMLLoader.load(ListenerPanelController.class.getResource("/graphic/musicplayergraphicalprojectphase2/listenerPanel.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        MainTemplateController.centerPath.set("listenerPanel");
     }
 
     @FXML
     void audiosBtn_Clicked(MouseEvent event)
     {
         HBox_Search.setVisible(false);
-        try {
-            Main.setCurrentCenterNode(FXMLLoader.load(AllAudiosListController.class.getResource("/graphic/musicplayergraphicalprojectphase2/allAudiosList.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        MainTemplateController.centerPath.set("allAudiosList");
     }
 
     @FXML
     void artistsBtn_Clicked(MouseEvent event)
     {
         HBox_Search.setVisible(false);
-        try {
-            Main.setCurrentCenterNode(FXMLLoader.load(ListenerPanelController.class.getResource("/graphic/musicplayergraphicalprojectphase2/listenerPanel.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        MainTemplateController.centerPath.set("Artists");
     }
     @FXML
     void playlistsBtn_Clicked(MouseEvent event)
     {
         HBox_Search.setVisible(false);
-        try {
-            Main.setCurrentCenterNode(FXMLLoader.load(ArtistsPageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/Artists.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
+        MainTemplateController.centerPath.set("listenerPanel");
     }
 
     //------------------------------------------------------------
@@ -394,74 +384,52 @@ public class MainTemplateController implements Initializable, GeneralOperations 
         MainTemplateController.audiosList = audiosList;
     }
 
-    public static BorderPane getBorderPane_mainTemplate() {
+    public BorderPane getBorderPane_mainTemplate() {
         return BorderPane_mainTemplate;
     }
 
-    public static void setBorderPane_mainTemplate(BorderPane borderPane_mainTemplate) {
+    public void setBorderPane_mainTemplate(BorderPane borderPane_mainTemplate) {
         BorderPane_mainTemplate = borderPane_mainTemplate;
+    }
+
+    public HBox getBtn_library() {
+        return btn_library;
+    }
+
+    public HBox getBtn_Playlists() {
+        return btn_Playlists;
     }
 
     @Override
     public void backTo()
     {
         if(Main.getCenterNodesHistory().size()>1)
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1));
-        try {
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml")));
-            Main.getStage().setScene(scene);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+            MainTemplateController.centerPath.set(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1));
     }
 
     @Override
     public void logout()
     {
         Main.setLoggedIn(false);
-        try {
-            Main.setCurrentCenterNode(FXMLLoader.load(HomePageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/homePage.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        MainTemplateController.centerPath.set("homePage");
     }
 
     @Override
     public void login()
     {
-        try {
-            Main.setCurrentCenterNode(FXMLLoader.load(LoginPageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/loginPage.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        MainTemplateController.centerPath.set("loginPage");
     }
 
     @Override
     public void signup()
     {
-        try {
-            Main.setCurrentCenterNode(FXMLLoader.load(SignUpPageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/signUpPage.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        MainTemplateController.centerPath.set("signUpPage");
     }
 
     @Override
     public void search()
     {
-        try {
-            SearchPageController.setSearchedTerm(textField_Search.getText());
-            Main.setCurrentCenterNode(FXMLLoader.load(SearchPageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/searchPage.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        SearchPageController.setSearchedTerm(textField_Search.getText());
+        MainTemplateController.centerPath.set("searchPage");
     }
 }

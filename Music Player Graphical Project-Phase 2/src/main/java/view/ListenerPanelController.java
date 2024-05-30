@@ -70,15 +70,7 @@ public class ListenerPanelController implements Initializable
     @FXML
     void explorePremiumBtn_Clicked(MouseEvent event)
     {
-        try {
-            Main.setCurrentCenterNode(FXMLLoader.load(ExplorePremiumPageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/explorePremiumPage.fxml")));
-            Main.getCenterNodesHistory().add(Main.getCurrentCenterNode());
-            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-            Scene scene=new Scene(FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml")));
-            Main.getStage().setScene(scene);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
+            MainTemplateController.centerPath.set("explorePremiumPage");
     }
 
     @FXML

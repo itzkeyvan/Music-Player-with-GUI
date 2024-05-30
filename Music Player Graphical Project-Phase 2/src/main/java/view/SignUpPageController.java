@@ -70,6 +70,17 @@ public class SignUpPageController {
 
     @FXML
     void signUpBtn_clicked(MouseEvent event) {
+        if(txtField_userName.getText().isEmpty()||txtField_password.getText().isEmpty()||txtField_firstAndLastName.getText().isEmpty()|| txtField_email.getText().isEmpty()|| txtField_phoneNumber.getText().isEmpty()|| datePicker_birthDate.getValue()==null)
+        {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("You should fill all the fields.");
+            Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+            alertStage.getIcons().add(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Error.png"));
+            alert.showAndWait();
+            return;
+        }
         if (role.getSelectedToggle() == radioBtn_listener) {
             try
             {

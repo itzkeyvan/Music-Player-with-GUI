@@ -124,7 +124,7 @@
                                        <children>
                                           <ImageView fitHeight="47.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
                                              <image>
-                                                <Image url="@PngAndJpg/SideBar/Playlist.png" />
+                                                <Image url="@PngAndJpg/SideBar/SideBarPlayList.png" />
                                              </image>
                                           </ImageView>
                                           <Label prefHeight="69.0" prefWidth="126.0" styleClass="label" text="Playlists">

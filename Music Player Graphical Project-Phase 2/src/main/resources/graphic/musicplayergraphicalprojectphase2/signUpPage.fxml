@@ -14,14 +14,14 @@
 
 <AnchorPane minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #444345;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SignUpPageController">
    <children>
-      <VBox alignment="CENTER" layoutX="10.399999618530273" layoutY="10.399999618530273" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <VBox alignment="CENTER" layoutX="10.399999618530273" layoutY="10.399999618530273" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
             <Label prefHeight="51.0" prefWidth="618.0" text="Sign Up" textFill="WHITE">
                <font>
                   <Font name="Gotham-Bold" size="29.0" />
                </font>
             </Label>
-            <VBox alignment="CENTER" prefHeight="341.0" prefWidth="560.0" spacing="5.0">
+            <VBox alignment="CENTER" prefHeight="341.0" prefWidth="560.0" spacing="4.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="45.0" prefWidth="590.0" spacing="10.0" stylesheets="@TextFieldStyle.css">
                      <children>
@@ -100,7 +100,7 @@
                                     <Font name="Gotham-Bold" size="16.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="txtField_phoneNumber" prefHeight="26.0" prefWidth="150.0" />
+                              <TextField fx:id="txtField_phoneNumber" prefHeight="26.0" prefWidth="150.0" promptText="09XXXXXXXXX" />
                            </children>
                         </HBox>
                      </children>
@@ -168,7 +168,7 @@
                               <Font name="Gotham-Bold" size="16.0" />
                            </font>
                         </Label>
-                        <TextArea fx:id="txtArea_Bio" prefHeight="44.0" prefWidth="486.0" />
+                        <TextArea fx:id="txtArea_Bio" prefHeight="49.0" prefWidth="486.0" />
                      </children>
                   </HBox>
                </children>

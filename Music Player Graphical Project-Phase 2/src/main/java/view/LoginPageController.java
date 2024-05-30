@@ -31,6 +31,17 @@ public class LoginPageController {
     @FXML
     void loginBtn_clicked(MouseEvent event)
     {
+        if(txtField_userName.getText().isEmpty()||txtField_password.getText().isEmpty())
+        {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("You should fill all the fields.");
+            Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+            alertStage.getIcons().add(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Error.png"));
+            alert.showAndWait();
+            return;
+        }
         try {
             String result=UserController.getUserController().logIn(txtField_userName.getText(),txtField_password.getText());
             if(result.equals("Logged in as a listener."))
@@ -44,14 +55,7 @@ public class LoginPageController {
                 alertStage.getIcons().add(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Tick.png"));
                 alert.showAndWait().ifPresent(response -> {
                     if (response == ButtonType.OK) {
-                        try {
-                            Main.setCurrentCenterNode(FXMLLoader.load(HomePageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/homePage.fxml")));
-                            MainTemplateController.getBorderPane_mainTemplate().setCenter(Main.getCurrentCenterNode());
-                            Scene scene = new Scene(FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml")));
-                            Main.getStage().setScene(scene);
-                        } catch (IOException e) {
-                            System.out.println(e.getMessage());
-                        }
+                        MainTemplateController.centerPath.set("homePage");
                     }
                 });
             }
