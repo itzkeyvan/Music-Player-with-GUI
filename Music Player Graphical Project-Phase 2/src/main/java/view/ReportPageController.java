@@ -1,5 +1,6 @@
 package view;
 
+import controller.ListenerController;
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
@@ -21,13 +22,13 @@ public class ReportPageController
     @FXML
     void ReportBtnInReportPage_clicked(MouseEvent event)
     {
-        Main.getListenerController().reportArtist(ArtistInfoPageController.getArtist().getUserName(),txtArea_Description.getText());
+        ListenerController.getListenerController().reportArtist(ArtistInfoPageController.getArtist().getUserName(),txtArea_Description.getText());
     }
 
     @FXML
     void cancelBtn_clicked(MouseEvent event)
     {
-        MainTemplateController.centerPath.set(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1));
+        MainTemplateController.centerPath.set(String.valueOf(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1)));
     }
 
 }

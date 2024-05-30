@@ -6,6 +6,7 @@ import exceptions.failedLoginExceptions.WrongPasswordException;
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
@@ -55,6 +56,12 @@ public class LoginPageController {
                 alertStage.getIcons().add(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Tick.png"));
                 alert.showAndWait().ifPresent(response -> {
                     if (response == ButtonType.OK) {
+                        try {
+                            Parent root=FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml"));
+                            Main.getStage().setScene(new Scene(root,745, 547));
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
                         MainTemplateController.centerPath.set("homePage");
                     }
                 });

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -12,25 +13,24 @@
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="418.0" spacing="5.0">
          <children>
-            <HBox alignment="CENTER_LEFT" disable="true" prefHeight="52.0" prefWidth="2.0" spacing="5.0">
-               <children>
-                  <HBox alignment="CENTER" stylesheets="@ImageViewButtonStyle.css">
-                     <children>
-                        <ImageView fx:id="imgView_PlayOrPauseInList" fitHeight="30.0" fitWidth="27.0" onMouseClicked="#PlayOrPauseInListBtn_Clicked" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@PngAndJpg/WhitePlay.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </HBox>
-                  <Text fx:id="txt_audioNumber" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
-                     <font>
-                        <Font name="Gotham-Bold" size="16.0" />
-                     </font>
-                  </Text>
-               </children>
-            </HBox>
-            <Rectangle fx:id="rectangle_AudioCover" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" stroke="BLACK" strokeType="INSIDE" width="50.0">
+            <Label maxHeight="32.0" maxWidth="36.0" minWidth="32.0" prefHeight="36.0" prefWidth="32.0" stylesheets="@LabelButtonShineStyle.css" text="Label">
+               <graphic>
+                  <ImageView fx:id="imgView_PlayOrPauseInList" fitHeight="29.0" fitWidth="31.0" onMouseClicked="#PlayOrPauseInListBtn_Clicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@PngAndJpg/WhitePlay.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Text fx:id="txt_audioNumber" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="27.400025367736816">
+               <font>
+                  <Font name="Gotham-Bold" size="16.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="rectangle_AudioCover" arcHeight="5.0" arcWidth="10.0" fill="DODGERBLUE" height="50.0" stroke="BLACK" strokeType="INSIDE" width="50.0">
                <HBox.margin>
                   <Insets bottom="5.0" top="5.0" />
                </HBox.margin>
@@ -49,7 +49,7 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="147.0">
          <children>
-            <Text fx:id="txt_audioNumberOfPlaysOrLikes" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="73.33662593364716">
+            <Text fx:id="txt_audioNumberOfPlaysOrLikes" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="73.33662593364716">
                <font>
                   <Font name="Gotham-Bold" size="14.0" />
                </font>

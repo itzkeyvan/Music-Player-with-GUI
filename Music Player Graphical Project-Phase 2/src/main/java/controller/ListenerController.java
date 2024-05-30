@@ -66,10 +66,8 @@ public class ListenerController
             throw new InvalidFormatException("Weak password.");
         FreeListener listener=new FreeListener(userName,password,firstAndLastName,email,phoneNumber,birthDate);
         logIn(listener);
-        Main.getListenerController().setListener(listener);
-        Main.setListenerController(listenerController);
-        Main.setListener(listener);
         setListenerController(listenerController);
+        setListener(listener);
         DataBase.getDataBase().getUsersList().add(listener);
         listener.setAccountCredit(50);
         return "Signup successful. You have been rewarded $50 of credit!"; //Please enter at least 1 and at most 4 of your favourite genres from: ROCK,POP,JAZZ,HIPHOP,COUNTRY,TRUECRIME,SOCIETY,INTERVIEW,HISTORY
@@ -94,9 +92,8 @@ public class ListenerController
     public String logIn(UserAccount user)
     {
         listener=(Listener)user;
-        Main.getListenerController().setListener(listener);
-        Main.setListenerController(listenerController);
-        Main.setListener(listener);
+        ListenerController.setListenerController(listenerController);
+        ListenerController.getListenerController().setListener(listener);
         return "Logged-in as listener.";
     }
     public String newPlayList(String playlistName) throws FreeAccountLimitException {

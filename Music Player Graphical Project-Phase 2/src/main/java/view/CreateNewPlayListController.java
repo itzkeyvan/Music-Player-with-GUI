@@ -1,5 +1,6 @@
 package view;
 
+import controller.ListenerController;
 import exceptions.FreeAccountLimitException;
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
@@ -33,7 +34,7 @@ public class CreateNewPlayListController {
     void createPlayListLblBtn_Clicked(MouseEvent event)
     {
         try {
-            Main.getListenerController().newPlayList(txtField_PlayListName.getText());
+            ListenerController.getListenerController().newPlayList(txtField_PlayListName.getText());
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Success");
             alert.setHeaderText(null);

@@ -1,5 +1,6 @@
 package view;
 
+import controller.ListenerController;
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -62,14 +63,14 @@ public class AudioPlayPageController implements Initializable
     @FXML
     void LikeBtn_Clicked(MouseEvent event)
     {
-        if(Main.getListener().getLikedAudios().containsKey(audio)&&Main.getListener().getLikedAudios().get(audio).equals(false)) //not liked
+        if(ListenerController.getListenerController().getListener().getLikedAudios().containsKey(audio)&&ListenerController.getListenerController().getListener().getLikedAudios().get(audio).equals(false)) //not liked
         {
-            Main.getListenerController().likeAudio(audio.getAudioID());
+            ListenerController.getListenerController().likeAudio(audio.getAudioID());
             imageViewBtn_Like.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/NotLiked.png"));
         }
         else  //liked
         {
-            Main.getListener().getLikedAudios().remove(audio);
+            ListenerController.getListenerController().getListener().getLikedAudios().remove(audio);
             imageViewBtn_Like.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Liked.png"));
         }
     }
@@ -122,11 +123,11 @@ public class AudioPlayPageController implements Initializable
                 imageViewBtn_PlayOrPause.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/GreenPlay.png"));
             }
         });
-        if(Main.getListener().getLikedAudios().containsKey(audio)&&Main.getListener().getLikedAudios().get(audio).equals(false)) //not liked
+        if(ListenerController.getListenerController().getListener().getLikedAudios().containsKey(audio)&&ListenerController.getListenerController().getListener().getLikedAudios().get(audio).equals(false)) //not liked
             imageViewBtn_Like.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/NotLiked.png"));
         else  //liked
             imageViewBtn_Like.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Liked.png"));
-        for(Playlist playlist: Main.getListener().getPlaylistsList())
+        for(Playlist playlist: ListenerController.getListenerController().getListener().getPlaylistsList())
         {
             MenuItem menuItem=new MenuItem(playlist.getPlaylistName());
             menuBtn_AddToPlayList.getItems().add(menuItem);

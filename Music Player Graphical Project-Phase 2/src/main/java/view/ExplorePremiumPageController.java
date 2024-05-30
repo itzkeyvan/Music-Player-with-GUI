@@ -5,6 +5,7 @@ import exceptions.LackOfCreditException;
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -72,12 +73,12 @@ public class ExplorePremiumPageController {
                     alert.showAndWait().ifPresent(response -> {
                         if (response == ButtonType.OK) {
                             try {
-                                Main.setCurrentCenterNode(FXMLLoader.load(HomePageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/homePage.fxml")));
-                                Scene scene = new Scene(FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml")));
-                                Main.getStage().setScene(scene);
+                                Parent root=FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml"));
+                                Main.getStage().setScene(new Scene(root,745, 547));
                             } catch (IOException e) {
-                                System.out.println(e.getMessage());
+                                throw new RuntimeException(e);
                             }
+                            MainTemplateController.centerPath.set("homePage");
                         }
                     });
                 } catch (LackOfCreditException e) {
@@ -104,12 +105,12 @@ public class ExplorePremiumPageController {
                     alert.showAndWait().ifPresent(response -> {
                         if (response == ButtonType.OK) {
                             try {
-                                Main.setCurrentCenterNode(FXMLLoader.load(HomePageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/homePage.fxml")));
-                                Scene scene = new Scene(FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml")));
-                                Main.getStage().setScene(scene);
+                                Parent root=FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml"));
+                                Main.getStage().setScene(new Scene(root,745, 547));
                             } catch (IOException e) {
-                                System.out.println(e.getMessage());
+                                throw new RuntimeException(e);
                             }
+                            MainTemplateController.centerPath.set("homePage");
                         }
                     });
                 } catch (LackOfCreditException e) {
@@ -136,12 +137,12 @@ public class ExplorePremiumPageController {
                     alert.showAndWait().ifPresent(response -> {
                         if (response == ButtonType.OK) {
                             try {
-                                Main.setCurrentCenterNode(FXMLLoader.load(HomePageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/homePage.fxml")));
-                                Scene scene = new Scene(FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml")));
-                                Main.getStage().setScene(scene);
+                                Parent root=FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml"));
+                                Main.getStage().setScene(new Scene(root,745, 547));
                             } catch (IOException e) {
-                                System.out.println(e.getMessage());
+                                throw new RuntimeException(e);
                             }
+                            MainTemplateController.centerPath.set("homePage");
                         }
                     });
                 } catch (LackOfCreditException e) {

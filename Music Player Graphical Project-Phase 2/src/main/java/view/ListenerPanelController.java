@@ -1,5 +1,6 @@
 package view;
 
+import controller.ListenerController;
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -91,34 +92,33 @@ public class ListenerPanelController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        lbl_Credit.setText(String.valueOf(Main.getListener().getAccountCredit()));
-        lbl_Email.setText(Main.getListener().getEmail());
-        lbl_Password.setText(Main.getListener().getPassword());
-        lbl_PhoneNumber.setText(Main.getListener().getPhoneNumber());
+        lbl_Credit.setText(String.valueOf(ListenerController.getListenerController().getListener().getAccountCredit()));
+        lbl_Email.setText(ListenerController.getListenerController().getListener().getEmail());
+        lbl_Password.setText(ListenerController.getListenerController().getListener().getPassword());
+        lbl_PhoneNumber.setText(ListenerController.getListenerController().getListener().getPhoneNumber());
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < Main.getListener().getFavouriteGenres().size(); i++)
+        for (int i = 0; i < ListenerController.getListenerController().getListener().getFavouriteGenres().size(); i++)
         {
-            sb.append(Main.getListener().getFavouriteGenres().get(i));
-            if(i==Main.getListener().getFavouriteGenres().size() - 1)
+            sb.append(ListenerController.getListenerController().getListener().getFavouriteGenres().get(i));
+            if(i==ListenerController.getListenerController().getListener().getFavouriteGenres().size() - 1)
                 break;
             sb.append(", ");
         }
         lbl_FavouriteGenres.setText(sb.toString());
-        lbl_FirstAndLastName.setText(Main.getListener().getFirstAndLastName());
+        lbl_FirstAndLastName.setText(ListenerController.getListenerController().getListener().getFirstAndLastName());
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-M-d");
-        lbl_PremiumExpirationDate.setText(dateFormat.format(Main.getListener().getSubscriptionExpirationDate()));
-        if(Main.getListener().getPremiumPlan()==null)
+        if(ListenerController.getListenerController().getListener().getPremiumPlan()==null)
         {
-            lbl_PremiumExpirationDate.setText("Not premium");
+            lbl_PremiumExpirationDate.setVisible(false);
             lbl_PremiumPlan.setText("Not premium");
         }
         else
         {
-            lbl_PremiumExpirationDate.setText(dateFormat.format(Main.getListener().getSubscriptionExpirationDate()));
-            lbl_PremiumPlan.setText(Main.getListener().getPremiumPlan().name());
+            lbl_PremiumExpirationDate.setText(dateFormat.format(ListenerController.getListenerController().getListener().getSubscriptionExpirationDate()));
+            lbl_PremiumPlan.setText(ListenerController.getListenerController().getListener().getPremiumPlan().name());
         }
-        lbl_UserName.setText(Main.getListener().getUserName());
-        for(Playlist playlist:Main.getListener().getPlaylistsList())
+        lbl_UserName.setText(ListenerController.getListenerController().getListener().getUserName());
+        for(Playlist playlist:ListenerController.getListenerController().getListener().getPlaylistsList())
         {
             PlayListPreviewController.setPlaylist(playlist);
             try {
@@ -128,7 +128,7 @@ public class ListenerPanelController implements Initializable
                 System.out.println(e.getMessage());
             }
         }
-        for(Artist artist:Main.getListener().getFollowingsList())
+        for(Artist artist:ListenerController.getListenerController().getListener().getFollowingsList())
         {
             ArtistPreviewController.setArtist(artist);
             try {

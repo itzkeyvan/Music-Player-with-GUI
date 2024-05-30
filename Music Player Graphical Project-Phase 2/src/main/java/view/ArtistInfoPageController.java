@@ -1,5 +1,6 @@
 package view;
 
+import controller.ListenerController;
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -63,12 +64,12 @@ public class ArtistInfoPageController implements Initializable
     {
         if(lblBTn_Follow.getText().equals("Follow"))
         {
-            Main.getListenerController().followArtist(artist.getUserName());
+            ListenerController.getListenerController().followArtist(artist.getUserName());
             lblBTn_Follow.setText("Following");
         }
         else
         {
-            Main.getListenerController().unFollowArtist(artist.getUserName());
+            ListenerController.getListenerController().unFollowArtist(artist.getUserName());
             lblBTn_Follow.setText("Follow");
         }
     }
@@ -83,7 +84,7 @@ public class ArtistInfoPageController implements Initializable
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
         rectangle_ArtistProfilePicture.setFill(new ImagePattern(artist.getProfilePicture()));
-        if(Main.getListener().getFollowingsList().contains(artist))
+        if(ListenerController.getListenerController().getListener().getFollowingsList().contains(artist))
             lblBTn_Follow.setText("Following");
         else
             lblBTn_Follow.setText("Follow");

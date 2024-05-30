@@ -5,6 +5,7 @@ import exceptions.InvalidFormatException;
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -25,7 +26,7 @@ public class SignUpPageController {
     private HBox hBox_bio;
 
     @FXML
-    private Label lblBtn_SingUP;
+    private Label lblBtn_SingUp;
 
     @FXML
     private RadioButton radioBtn_listener;
@@ -96,12 +97,12 @@ public class SignUpPageController {
                     alert.showAndWait().ifPresent(response -> {
                         if (response == ButtonType.OK) {
                             try {
-                                Main.setCurrentCenterNode(FXMLLoader.load(FavouriteGenresPageController.class.getResource("/graphic/musicplayergraphicalprojectphase2/favouriteGenresPage.fxml")));
-                                Scene scene = new Scene(FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml")));
-                                Main.getStage().setScene(scene);
+                                Parent root=FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml"));
+                                Main.getStage().setScene(new Scene(root,745, 547));
                             } catch (IOException e) {
-                                System.out.println(e.getMessage());
+                                throw new RuntimeException(e);
                             }
+                            MainTemplateController.centerPath.set("favouriteGenresPage");
                         }
                     });
                 }

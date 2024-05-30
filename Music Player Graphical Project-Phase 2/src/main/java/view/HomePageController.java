@@ -1,5 +1,6 @@
 package view;
 
+import controller.ListenerController;
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -58,7 +59,7 @@ public class HomePageController implements Initializable
         else
         {
             lbl_homePageHboxLabel.setText("Audios for you");
-            for(Audio audio:Main.getListenerController().getSuggestedAudios())
+            for(Audio audio: ListenerController.getListenerController().getSuggestedAudios())
             {
                 AudioInListController audioInListController=new AudioInListController();
                 AudioInListController.setAudio(audio);

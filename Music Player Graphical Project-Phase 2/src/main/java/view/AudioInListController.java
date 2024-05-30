@@ -43,12 +43,13 @@ public class AudioInListController implements Initializable
     private Text txt_audioNumberOfPlaysOrLikes;
 
     @FXML
-    void PlayOrPauseInListBtn_Clicked(MouseEvent event) throws IOException
+    void PlayOrPauseInListBtn_Clicked(MouseEvent event)
     {
         if(!PlayBarController.getAudio().equals(audio))  //Not playing
         {
             imgView_PlayOrPauseInList.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePause.png"));
             PlayBarController.setAudio(audio);
+            MainTemplateController.bottomPath.set("playBar");
             PlayBarController.togglePlayPause();
         }
         else   //Playing

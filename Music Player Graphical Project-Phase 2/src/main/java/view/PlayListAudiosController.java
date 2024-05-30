@@ -1,5 +1,6 @@
 package view;
 
+import controller.ListenerController;
 import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -45,8 +46,8 @@ public class PlayListAudiosController implements Initializable
     @FXML
     void deletePlaylistBtn_Clicked(MouseEvent event)
     {
-        Main.getListener().getPlaylistsList().remove(playlist);
-        MainTemplateController.centerPath.set(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1));
+        ListenerController.getListenerController().getListener().getPlaylistsList().remove(playlist);
+        MainTemplateController.centerPath.set(String.valueOf(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1)));
     }
 
     @Override

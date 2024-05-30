@@ -40,6 +40,7 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     private static Audio audio;
     private static ArrayList<Audio> audiosList;
     public  static StringProperty centerPath=new SimpleStringProperty();
+    public  static StringProperty bottomPath=new SimpleStringProperty();
 
     @FXML
     private BorderPane BorderPane_mainTemplate;
@@ -121,14 +122,25 @@ public class MainTemplateController implements Initializable, GeneralOperations 
         centerPath.addListener((observable, oldValue, newValue) -> {
             try {
                 Parent parent = FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/" + newValue + ".fxml"));
-                Main.getCenterNodesHistory().add(newValue);
+                Main.getCenterNodesHistory().add(new SimpleStringProperty(newValue));
                 BorderPane_mainTemplate.setCenter(parent);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        bottomPath.addListener((observable, oldValue, newValue) -> {
+            try {
+                Parent parent = FXMLLoader.load(PlayBarController.class.getResource("/graphic/musicplayergraphicalprojectphase2/" + newValue + ".fxml"));
+                BorderPane_mainTemplate.setBottom(parent);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         });
         if(Main.isLoggedIn())
         {
+            btn_artists.setDisable(false);
+            btn_audios.setDisable(false);
+            btn_search.setDisable(false);
             btn_Playlists.setDisable(false);
             btn_library.setDisable(false);
             lblBtn_SignUp.setDisable(true);
@@ -139,6 +151,9 @@ public class MainTemplateController implements Initializable, GeneralOperations 
         }
         else
         {
+            btn_artists.setDisable(true);
+            btn_audios.setDisable(true);
+            btn_search.setDisable(true);
             btn_Playlists.setDisable(true);
             btn_library.setDisable(true);
             lblBtn_SignUp.setDisable(false);
@@ -147,6 +162,8 @@ public class MainTemplateController implements Initializable, GeneralOperations 
         }
         if(audio!=null)
         {
+            btn_next.setDisable(false);
+            btn_previous.setDisable(false);
             btn_playORpause.setDisable(false);
             setupMediaPlayer();
             setupSlider();
@@ -157,8 +174,10 @@ public class MainTemplateController implements Initializable, GeneralOperations 
             rectangle_audioCover.setFill(new ImagePattern(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/DefaultAudioCover.png")));
             btn_playORpause.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Play.png"));
             btn_playORpause.setDisable(true);
+            btn_next.setDisable(true);
+            btn_previous.setDisable(true);
         }
-        if(Main.getCenterNodesHistory().size()==1)
+        if(Main.getCenterNodesHistory().size()<=1)
             imgView_Back.setDisable(true);
         else
             imgView_Back.setDisable(false);
@@ -404,13 +423,30 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     public void backTo()
     {
         if(Main.getCenterNodesHistory().size()>1)
-            MainTemplateController.centerPath.set(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1));
+            MainTemplateController.centerPath.set(String.valueOf(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1)));
     }
 
     @Override
     public void logout()
     {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Success");
+        alert.setHeaderText(null);
+        alert.setContentText("Logged out successfully.");
         Main.setLoggedIn(false);
+        Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+        alertStage.getIcons().add(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Tick.png"));
+        alert.showAndWait().ifPresent(response -> {
+            if (response == ButtonType.OK) {
+                try {
+                    Parent root=FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml"));
+                    Main.getStage().setScene(new Scene(root,745, 547));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                MainTemplateController.centerPath.set("homePage");
+            }
+        });
         MainTemplateController.centerPath.set("homePage");
     }
 
