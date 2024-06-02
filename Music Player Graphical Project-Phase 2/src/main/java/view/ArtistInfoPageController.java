@@ -100,9 +100,8 @@ public class ArtistInfoPageController implements Initializable
                 {
                     numberOfAudios++;
                     numberOfTotalPlays += music.getNumberOfPlays();
-                    AudioInListController audioInListController=new AudioInListController();
                     AudioInListController.setAudio(music);
-                    audioInListController.setTxt_audioNumber(new Text(Integer.toString(numberOfAudios)));
+                    AudioInListController.setAudioNumber(numberOfAudios);
                     HBox audioInList= null;
                     try {
                         audioInList = FXMLLoader.load(AudioInListController.class.getResource("/graphic/musicplayergraphicalprojectphase2/audioInList.fxml"));

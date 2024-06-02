@@ -14,6 +14,7 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class SignUpPageController {
@@ -73,7 +74,7 @@ public class SignUpPageController {
     void signUpBtn_clicked(MouseEvent event) {
         if(txtField_userName.getText().isEmpty()||txtField_password.getText().isEmpty()||txtField_firstAndLastName.getText().isEmpty()|| txtField_email.getText().isEmpty()|| txtField_phoneNumber.getText().isEmpty()|| datePicker_birthDate.getValue()==null)
         {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText(null);
             alert.setContentText("You should fill all the fields.");
@@ -90,6 +91,7 @@ public class SignUpPageController {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Success");
                     alert.setHeaderText(null);
+                    Main.setCenterNodesHistory(new ArrayList<>());
                     alert.setContentText("Signup successful. You have been rewarded $50 of credit!");
                     Main.setLoggedIn(true);
                     Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
@@ -108,7 +110,7 @@ public class SignUpPageController {
                 }
                 else if(result.equals("This username is already taken."))
                 {
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Error");
                     alert.setHeaderText(null);
                     alert.setContentText("This username is already taken.");
@@ -118,7 +120,7 @@ public class SignUpPageController {
                 }
                 else if(result.equals("This email is already taken."))
                 {
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Error");
                     alert.setHeaderText(null);
                     alert.setContentText("This email is already taken.");
@@ -128,7 +130,7 @@ public class SignUpPageController {
                 }
             }
             catch (InvalidFormatException e) {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error");
                 alert.setHeaderText(null);
                 alert.setContentText(e.getMessage());
@@ -138,7 +140,7 @@ public class SignUpPageController {
             }
         } else
         {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText(null);
             alert.setContentText("Only listeners can sign up currently!");

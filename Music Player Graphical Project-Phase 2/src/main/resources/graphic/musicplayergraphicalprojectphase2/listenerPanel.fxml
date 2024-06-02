@@ -163,7 +163,7 @@
                                                       </Label>
                                                    </children>
                                                 </HBox>
-                                                <HBox prefHeight="30.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                <HBox fx:id="HBox_premiumExpirationDate" prefHeight="30.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                                    <children>
                                                       <Label prefHeight="30.0" prefWidth="221.0" text="Premium expiration date:" textFill="WHITE">
                                                          <font>

@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import model.DataBase;
@@ -25,6 +26,7 @@ public class AllAudiosListController implements Initializable {
         for(Audio audio: DataBase.getDataBase().getAudiosList())
         {
             AudioInListController.setAudio(audio);
+            AudioInListController.setAudioNumber(audioNumber++);
             Parent audioInList;
             try {
                 audioInList = FXMLLoader.load(AudioInListController.class.getResource("/graphic/musicplayergraphicalprojectphase2/audioInList.fxml"));

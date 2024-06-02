@@ -1,10 +1,7 @@
 package view;
 
-import graphic.musicplayergraphicalprojectphase2.Main;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -13,14 +10,17 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import model.audio.Audio;
 
-import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class AudioInListController implements Initializable
 {
     private static Audio audio;
     private static boolean numOfLikes;
+    private static ArrayList<Audio> audiosList;
+    private static int audioNumber;
+
     @FXML
     private ImageView imgView_PlayOrPauseInList;
 
@@ -45,22 +45,26 @@ public class AudioInListController implements Initializable
     @FXML
     void PlayOrPauseInListBtn_Clicked(MouseEvent event)
     {
-        if(!PlayBarController.getAudio().equals(audio))  //Not playing
+        if(PlayBarController.getAudio()==null||!PlayBarController.getAudio().equals(audio))  //Not playing
         {
             imgView_PlayOrPauseInList.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePause.png"));
             PlayBarController.setAudio(audio);
+            MainTemplateController.setAudio(audio);
             MainTemplateController.bottomPath.set("playBar");
             PlayBarController.togglePlayPause();
         }
         else   //Playing
         {
             imgView_PlayOrPauseInList.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePlay.png"));
+            PlayBarController.setAudio(audio);
+            MainTemplateController.setAudio(audio);
             PlayBarController.togglePlayPause();
         }
     }
 
     @FXML
-    void audioNameTxt_clicked(MouseEvent event) {
+    void audioNameTxt_clicked(MouseEvent event)
+    {
         AudioPlayPageController.setAudio(audio);
         MainTemplateController.centerPath.set("audioPlayPage");
     }
@@ -85,6 +89,7 @@ public class AudioInListController implements Initializable
         rectangle_AudioCover.setFill(new ImagePattern(audio.getCover()));
         txt_artistName.setText(audio.getArtistName());
         txt_audioName.setText(audio.getAudioName());
+        txt_audioNumber.setText(String.valueOf(audioNumber));
         if(isNumOfLikes())
             txt_audioNumberOfPlaysOrLikes.setText(String.valueOf(audio.getNumberOfLikes()));
         else
@@ -114,5 +119,21 @@ public class AudioInListController implements Initializable
 
     public static void setNumOfLikes(boolean numOfPlaysOrLikes) {
         AudioInListController.numOfLikes = numOfPlaysOrLikes;
+    }
+
+    public static ArrayList<Audio> getAudiosList() {
+        return audiosList;
+    }
+
+    public static void setAudiosList(ArrayList<Audio> audiosList) {
+        AudioInListController.audiosList = audiosList;
+    }
+
+    public static int getAudioNumber() {
+        return audioNumber;
+    }
+
+    public static void setAudioNumber(int audioNumber) {
+        AudioInListController.audioNumber = audioNumber;
     }
 }

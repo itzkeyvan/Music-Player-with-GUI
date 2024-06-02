@@ -33,9 +33,11 @@ public class SearchPageController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        int audioNumber=1;
         for(Audio audio:ListenerController.getListenerController().searchInAudios(searchedTerm))
         {
             AudioInListController.setAudio(audio);
+            AudioInListController.setAudioNumber(audioNumber++);
             HBox audioInList= null;
             try {
                 audioInList = FXMLLoader.load(AudioInListController.class.getResource("/graphic/musicplayergraphicalprojectphase2/audioInList.fxml"));

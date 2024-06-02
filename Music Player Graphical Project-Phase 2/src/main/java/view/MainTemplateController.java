@@ -123,7 +123,12 @@ public class MainTemplateController implements Initializable, GeneralOperations 
             try {
                 Parent parent = FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/" + newValue + ".fxml"));
                 Main.getCenterNodesHistory().add(new SimpleStringProperty(newValue));
+                Main.setCurrentCenterNode(new SimpleStringProperty(newValue));
                 BorderPane_mainTemplate.setCenter(parent);
+                if(Main.getCenterNodesHistory().size()>=1)
+                {
+                    imgView_Back.setDisable(false);
+                }
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -187,8 +192,16 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     @FXML
     void homeBtn_Clicked(MouseEvent event)
     {
-        HBox_Search.setVisible(false);
-        MainTemplateController.centerPath.set("homePage");
+        if(!Main.isLoggedIn())
+        {
+            HBox_Search.setVisible(false);
+            MainTemplateController.centerPath.set("notLoggedInBackground");
+        }
+        else
+        {
+            HBox_Search.setVisible(false);
+            MainTemplateController.centerPath.set("homePage");
+        }
     }
 
     @FXML
@@ -299,7 +312,7 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     private boolean atEndOfMedia = false;
 
     private void setupMediaPlayer() {
-        Media media = new Media(getAudio().getAudioURL());
+        Media media = new Media(AudioInListController.getAudio().getAudioURL());
         mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setOnReady(() -> {
             Duration totalDuration = mediaPlayer.getTotalDuration();
@@ -423,7 +436,14 @@ public class MainTemplateController implements Initializable, GeneralOperations 
     public void backTo()
     {
         if(Main.getCenterNodesHistory().size()>1)
-            MainTemplateController.centerPath.set(String.valueOf(Main.getCenterNodesHistory().get(Main.getCenterNodesHistory().indexOf(Main.getCurrentCenterNode())-1)));
+        {
+            for (int i = Main.getCenterNodesHistory().size()-1; i >=0; i--)
+            {
+                if(Main.getCenterNodesHistory().get(i).equals(Main.getCurrentCenterNode()))
+                    MainTemplateController.centerPath.set(String.valueOf(Main.getCenterNodesHistory().get(i-1)));
+
+            }
+        }
     }
 
     @Override
@@ -434,6 +454,7 @@ public class MainTemplateController implements Initializable, GeneralOperations 
         alert.setHeaderText(null);
         alert.setContentText("Logged out successfully.");
         Main.setLoggedIn(false);
+        Main.setCenterNodesHistory(new ArrayList<>());
         Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
         alertStage.getIcons().add(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Tick.png"));
         alert.showAndWait().ifPresent(response -> {
@@ -444,10 +465,9 @@ public class MainTemplateController implements Initializable, GeneralOperations 
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-                MainTemplateController.centerPath.set("homePage");
+                MainTemplateController.centerPath.set("notLoggedInBackground");
             }
         });
-        MainTemplateController.centerPath.set("homePage");
     }
 
     @Override

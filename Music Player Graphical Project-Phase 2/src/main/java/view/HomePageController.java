@@ -44,9 +44,8 @@ public class HomePageController implements Initializable
                     }
             for(Audio audio:al)
             {
-                AudioInListController audioInListController=new AudioInListController();
                 AudioInListController.setAudio(audio);
-                audioInListController.setTxt_audioNumber(new Text(Integer.toString(audioNumber++)));
+                AudioInListController.setAudioNumber(audioNumber++);
                 HBox audioInList= null;
                 try {
                     audioInList = FXMLLoader.load(AudioInListController.class.getResource("/graphic/musicplayergraphicalprojectphase2/audioInList.fxml"));
@@ -61,9 +60,8 @@ public class HomePageController implements Initializable
             lbl_homePageHboxLabel.setText("Audios for you");
             for(Audio audio: ListenerController.getListenerController().getSuggestedAudios())
             {
-                AudioInListController audioInListController=new AudioInListController();
                 AudioInListController.setAudio(audio);
-                audioInListController.setTxt_audioNumber(new Text(Integer.toString(audioNumber++)));
+                AudioInListController.setAudioNumber(audioNumber++);
                 HBox audioInList = null;
                 try {
                     audioInList = FXMLLoader.load(AudioInListController.class.getResource("/graphic/musicplayergraphicalprojectphase2/audioInList.fxml"));

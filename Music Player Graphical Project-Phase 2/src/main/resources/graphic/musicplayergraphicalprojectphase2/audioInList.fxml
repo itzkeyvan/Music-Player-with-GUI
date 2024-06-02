@@ -13,9 +13,9 @@
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="418.0" spacing="5.0">
          <children>
-            <Label maxHeight="32.0" maxWidth="36.0" minWidth="32.0" prefHeight="36.0" prefWidth="32.0" stylesheets="@LabelButtonShineStyle.css" text="Label">
+            <Label maxHeight="32.0" maxWidth="36.0" minWidth="32.0" onMouseClicked="#PlayOrPauseInListBtn_Clicked" prefHeight="36.0" prefWidth="32.0" stylesheets="@LabelButtonShineStyle.css" text="Label">
                <graphic>
-                  <ImageView fx:id="imgView_PlayOrPauseInList" fitHeight="29.0" fitWidth="31.0" onMouseClicked="#PlayOrPauseInListBtn_Clicked" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgView_PlayOrPauseInList" fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@PngAndJpg/WhitePlay.png" />
                      </image>

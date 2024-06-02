@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
@@ -63,6 +64,9 @@ public class ListenerPanelController implements Initializable
     private Label lbl_PremiumExpirationDate;
 
     @FXML
+    private HBox HBox_premiumExpirationDate;
+
+    @FXML
     private Label lbl_PremiumPlan;
 
     @FXML
@@ -99,7 +103,7 @@ public class ListenerPanelController implements Initializable
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < ListenerController.getListenerController().getListener().getFavouriteGenres().size(); i++)
         {
-            sb.append(ListenerController.getListenerController().getListener().getFavouriteGenres().get(i));
+            sb.append(ListenerController.getListenerController().getListener().getFavouriteGenres().get(i).getGenreName());
             if(i==ListenerController.getListenerController().getListener().getFavouriteGenres().size() - 1)
                 break;
             sb.append(", ");
@@ -109,13 +113,14 @@ public class ListenerPanelController implements Initializable
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-M-d");
         if(ListenerController.getListenerController().getListener().getPremiumPlan()==null)
         {
-            lbl_PremiumExpirationDate.setVisible(false);
+            HBox_premiumExpirationDate.setVisible(false);
             lbl_PremiumPlan.setText("Not premium");
         }
         else
         {
+            HBox_premiumExpirationDate.setVisible(true);
             lbl_PremiumExpirationDate.setText(dateFormat.format(ListenerController.getListenerController().getListener().getSubscriptionExpirationDate()));
-            lbl_PremiumPlan.setText(ListenerController.getListenerController().getListener().getPremiumPlan().name());
+            lbl_PremiumPlan.setText(ListenerController.getListenerController().getListener().getPremiumPlan().getPlanName());
         }
         lbl_UserName.setText(ListenerController.getListenerController().getListener().getUserName());
         for(Playlist playlist:ListenerController.getListenerController().getListener().getPlaylistsList())

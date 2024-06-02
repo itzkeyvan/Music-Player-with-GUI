@@ -17,6 +17,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class LoginPageController {
 
@@ -50,6 +51,7 @@ public class LoginPageController {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Success");
                 alert.setHeaderText(null);
+                Main.setCenterNodesHistory(new ArrayList<>());
                 alert.setContentText("Logged in as a listener.");
                 Main.setLoggedIn(true);
                 Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
@@ -69,7 +71,7 @@ public class LoginPageController {
         }
         catch (WrongPasswordException|UserNotFoundException e)
         {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText(null);
             alert.setContentText(e.getMessage());

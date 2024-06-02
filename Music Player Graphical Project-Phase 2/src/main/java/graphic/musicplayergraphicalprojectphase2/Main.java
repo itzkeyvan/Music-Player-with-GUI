@@ -2,7 +2,6 @@ package graphic.musicplayergraphicalprojectphase2;
 
 import com.mpatric.mp3agic.ID3v2;
 import com.mpatric.mp3agic.Mp3File;
-import controller.ListenerController;
 import controller.PodcasterController;
 import controller.SingerController;
 import exceptions.InvalidFormatException;
@@ -12,12 +11,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.Genre;
 import model.userAccount.ArtistType;
-import model.userAccount.Listener;
-import view.HomePageController;
 import view.MainTemplateController;
 
 import java.io.ByteArrayInputStream;
@@ -30,8 +26,9 @@ public class Main extends Application
 {
     static private Stage stage;
     static private ArrayList<StringProperty> centerNodesHistory=new ArrayList<>();
-    static private String currentCenterNode;
+    static private StringProperty currentCenterNode;
     static private boolean loggedIn = false;
+
     @Override
     public void start(Stage stage) throws IOException
     {
@@ -39,7 +36,7 @@ public class Main extends Application
         setStage(stage);
         Image logo=new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SpotifyLogo.png");
         Parent root=FXMLLoader.load(MainTemplateController.class.getResource("/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml"));
-        MainTemplateController.centerPath.set("homePage");
+        MainTemplateController.centerPath.set("notLoggedInBackground");
         Scene scene = new Scene(root, 745, 547);
         getStage().setTitle("Music Player");
         getStage().getIcons().add(logo);
@@ -112,11 +109,11 @@ public class Main extends Application
         Main.centerNodesHistory = centerNodesHistory;
     }
 
-    public static String getCurrentCenterNode() {
+    public static StringProperty getCurrentCenterNode() {
         return currentCenterNode;
     }
 
-    public static void setCurrentCenterNode(String currentCenterNode) {
+    public static void setCurrentCenterNode(StringProperty currentCenterNode) {
         Main.currentCenterNode = currentCenterNode;
     }
 

@@ -113,16 +113,16 @@ public class AudioPlayPageController implements Initializable
             lbl_LyricsOrBio.setText("Caption");
             txt_LyricsOrBio.setText(podcast.getCaption());
         }
-        PlayBarController.getMediaPlayer().statusProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue == MediaPlayer.Status.PLAYING&&PlayBarController.getAudio().equals(audio))  //Media is playing
-            {
-                imageViewBtn_PlayOrPause.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/GreenPause.png"));
-            }
-            else
-            {
-                imageViewBtn_PlayOrPause.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/GreenPlay.png"));
-            }
-        });
+//        PlayBarController.getMediaPlayer().statusProperty().addListener((observable, oldValue, newValue) -> {
+//            if (newValue == MediaPlayer.Status.PLAYING&&PlayBarController.getAudio().equals(audio))  //Media is playing
+//            {
+//                imageViewBtn_PlayOrPause.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/GreenPause.png"));
+//            }
+//            else
+//            {
+//                imageViewBtn_PlayOrPause.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/GreenPlay.png"));
+//            }
+//        });
         if(ListenerController.getListenerController().getListener().getLikedAudios().containsKey(audio)&&ListenerController.getListenerController().getListener().getLikedAudios().get(audio).equals(false)) //not liked
             imageViewBtn_Like.setImage(new Image("file:src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/NotLiked.png"));
         else  //liked
