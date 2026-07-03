@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04f3f40a-f36a-4d95-9c64-72181eda5750" name="Changes" comment="Finish the project, without audio assets in this stage" />
+    <list default="true" id="04f3f40a-f36a-4d95-9c64-72181eda5750" name="Changes" comment="Finish the project, without audio assets in this stage">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="364" />
+    <option name="cachedIndexableFilesCount" value="377" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,7 +76,10 @@
       <workItem from="1783086930265" duration="99000" />
       <workItem from="1783088889632" duration="3763000" />
       <workItem from="1783094863008" duration="213000" />
-      <workItem from="1783095650561" duration="656000" />
+      <workItem from="1783095650561" duration="857000" />
+      <workItem from="1783096626034" duration="210000" />
+      <workItem from="1783096854347" duration="624000" />
+      <workItem from="1783098475023" duration="2644000" />
     </task>
     <task id="LOCAL-00001" summary="Finish the project, without audio assets in this stage">
       <option name="closed" value="true" />
