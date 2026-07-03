@@ -50,25 +50,25 @@ public class Main extends Application
     public static void main(String[] args) throws Exception {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         try {
-//            SingerController.getSingerController().signUp("VibeTracks", "vibeTRackssdas21!", "Vibe Tracks", "vibetracks@gmail.com", "09122334455", dateFormat.parse("1988-04-05"), "Vibe Tracks Artist Biography", ArtistType.SINGER,new Image("file:src/main/resources/audios/Vibe Tracks/pp.png"));
-//            SingerController.getSingerController().newAlbum("Vibing");
-//            SingerController.getSingerController().publishMusic("Universal", dateFormat.parse("2015-10-23"),Genre.POP,"Universal Music Lyrics","src/main/resources/audios/Vibe Tracks/Universal.mp3",new Image("file:src/main/resources/audios/Vibe Tracks/Universal.png"),"Vibe Tracks_Vibing");
-//            SingerController.getSingerController().publishMusic("Sugar", dateFormat.parse("2015-11-20"),Genre.POP,"Sugar Music Lyrics","src/main/resources/audios/Vibe Tracks/Sugar.mp3",new Image("file:src/main/resources/audios/Vibe Tracks/Sugar.png"),"Vibe Tracks_Vibing");
-//            SingerController.getSingerController().logout();
-//
-//            SingerController.getSingerController().signUp("OtisMcDonald", "otisMcDonald2020!", "Otis McDonald", "otismcdonald@gmail.com", "09125224248", dateFormat.parse("1990-10-25"), "Otis McDonald Artist Biography", ArtistType.SINGER,new Image("file:src/main/resources/audios/Otis McDonald/Otis McDonald.png"));
-//            SingerController.getSingerController().newAlbum("After Hours");
-//            SingerController.getSingerController().publishMusic("Otis McDonald", dateFormat.parse("2018-10-20"),Genre.HIPHOP,"Otis McDonald Music Lyrics","src/main/resources/audios/Otis McDonald/Otis McDonald.mp3",new Image("file:src/main/resources/audios/Otis McDonald/Otis McDonald.png"),"Otis McDonald_After Hours");
-//            SingerController.getSingerController().logout();
-//
-//            SingerController.getSingerController().signUp("SilentPartner", "SiLenTpartnEr122!", "Silent Partner", "silentpartner@gmail.com", "09122344232", dateFormat.parse("1995-02-12"), "Silent Partner Artist Biography", ArtistType.SINGER,new Image("file:src/main/resources/audios/Silent Partner/pp.png"));
-//            SingerController.getSingerController().newAlbum("Jazzination");
-//            SingerController.getSingerController().publishMusic("Chances", dateFormat.parse("2018-02-04"),Genre.JAZZ,"Chances Music Lyrics","src/main/resources/audios/Silent Partner/Chances.mp3",new Image("file:src/main/resources/audios/Silent Partner/Chances.png"),"Silent Partner_Jazzination");
-//            SingerController.getSingerController().logout();
-//
-//            PodcasterController.getPodcasterController().signUp("NastelBom", "nastelBom2452!", "Nastel Bom", "nastelbom@gmail.com", "09123249582", dateFormat.parse("1992-02-05"), "Nastel Bom Podcaster Biography", ArtistType.PODCASTER,new Image("file:src/main/resources/audios/NastelBom/pp.png"));
-//            PodcasterController.getPodcasterController().publishPodcast("Podcast", dateFormat.parse("2024-02-18"),Genre.SOCIETY,"Podcast Caption","src/main/resources/audios/NastelBom/Podcast.mp3",new Image("file:src/main/resources/audios/NastelBom/Podcast.png"));
-//            PodcasterController.getPodcasterController().logout();
+            SingerController.getSingerController().signUp("VibeTracks", "vibeTRackssdas21!", "Vibe Tracks", "vibetracks@gmail.com", "09122334455", dateFormat.parse("1988-04-05"), "Vibe Tracks Artist Biography", ArtistType.SINGER,new Image("file:src/main/resources/audios/Vibe Tracks/pp.png"));
+            SingerController.getSingerController().newAlbum("Vibing");
+            SingerController.getSingerController().publishMusic("Universal", dateFormat.parse("2015-10-23"),Genre.POP,"Universal Music Lyrics","src/main/resources/audios/Vibe Tracks/Universal.mp3",new Image("file:src/main/resources/audios/Vibe Tracks/Universal.png"),"Vibe Tracks_Vibing");
+            SingerController.getSingerController().publishMusic("Sugar", dateFormat.parse("2015-11-20"),Genre.POP,"Sugar Music Lyrics","src/main/resources/audios/Vibe Tracks/Sugar.mp3",new Image("file:src/main/resources/audios/Vibe Tracks/Sugar.png"),"Vibe Tracks_Vibing");
+            SingerController.getSingerController().logout();
+
+            SingerController.getSingerController().signUp("OtisMcDonald", "otisMcDonald2020!", "Otis McDonald", "otismcdonald@gmail.com", "09125224248", dateFormat.parse("1990-10-25"), "Otis McDonald Artist Biography", ArtistType.SINGER,new Image("file:src/main/resources/audios/Otis McDonald/Otis McDonald.png"));
+            SingerController.getSingerController().newAlbum("After Hours");
+            SingerController.getSingerController().publishMusic("Otis McDonald", dateFormat.parse("2018-10-20"),Genre.HIPHOP,"Otis McDonald Music Lyrics","src/main/resources/audios/Otis McDonald/Otis McDonald.mp3",new Image("file:src/main/resources/audios/Otis McDonald/Otis McDonald.png"),"Otis McDonald_After Hours");
+            SingerController.getSingerController().logout();
+
+            SingerController.getSingerController().signUp("SilentPartner", "SiLenTpartnEr122!", "Silent Partner", "silentpartner@gmail.com", "09122344232", dateFormat.parse("1995-02-12"), "Silent Partner Artist Biography", ArtistType.SINGER,new Image("file:src/main/resources/audios/Silent Partner/pp.png"));
+            SingerController.getSingerController().newAlbum("Jazzination");
+            SingerController.getSingerController().publishMusic("Chances", dateFormat.parse("2018-02-04"),Genre.JAZZ,"Chances Music Lyrics","src/main/resources/audios/Silent Partner/Chances.mp3",new Image("file:src/main/resources/audios/Silent Partner/Chances.png"),"Silent Partner_Jazzination");
+            SingerController.getSingerController().logout();
+
+            PodcasterController.getPodcasterController().signUp("NastelBom", "nastelBom2452!", "Nastel Bom", "nastelbom@gmail.com", "09123249582", dateFormat.parse("1992-02-05"), "Nastel Bom Podcaster Biography", ArtistType.PODCASTER,new Image("file:src/main/resources/audios/NastelBom/pp.png"));
+            PodcasterController.getPodcasterController().publishPodcast("Podcast", dateFormat.parse("2024-02-18"),Genre.SOCIETY,"Podcast Caption","src/main/resources/audios/NastelBom/Podcast.mp3",new Image("file:src/main/resources/audios/NastelBom/Podcast.png"));
+            PodcasterController.getPodcasterController().logout();
 
             ListenerController.getListenerController().signUp("test", "testPass2024!", "Test Account", "test@gmail.com", "09022222222", dateFormat.parse("2005-01-01"));
             String[] genres = {"Pop", "Hiphop", "Jazz", "Rock"};
