@@ -1,0 +1,23 @@
+.toggle-button {
+    -fx-background-color: #0e8f38;
+    -fx-text-fill: #9a9a9a;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px;
+    -fx-border-color: #0e8f38;
+}
+
+.toggle-button:hover {
+    -fx-background-color: #1ED760;
+    -fx-text-fill: #dfdfdf;
+    -fx-border-color: #1ED760;
+    -fx-cursor: hand;
+}
+
+.toggle-button:selected {
+    -fx-background-color: #1ED760;
+    -fx-text-fill: white;
+    -fx-border-color: #1ED760;
+    -fx-cursor: hand;
+}

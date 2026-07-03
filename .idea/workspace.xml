@@ -1,11 +1,262 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="04f3f40a-f36a-4d95-9c64-72181eda5750" name="Changes" comment="" />
+    <list default="true" id="04f3f40a-f36a-4d95-9c64-72181eda5750" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI - Screenshots/Artist Info Page.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI - Screenshots/Artists Page.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI - Screenshots/Audio Play Page.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI - Screenshots/Audios Page.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI - Screenshots/Home Page.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI - Screenshots/Library Page.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI - Screenshots/Search Page.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI - Screenshots/Sign up Page.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI - Screenshots/Welcome Page.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/graphic/musicplayergraphicalprojectphase2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/AllAudiosListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/ArtistPreviewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/AudioInListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/AudioPlayPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/ExplorePremiumPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/HomePageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/MainTemplateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/PlayBarController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/PlayListAudiosController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/PlayListPreviewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/ReportPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/audios/NastelBom/Podcast.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/audios/NastelBom/Podcast.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/audios/NastelBom/pp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/audios/Otis McDonald/Otis McDonald.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/audios/Otis McDonald/Otis McDonald.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/audios/Silent Partner/Chances.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/audios/Silent Partner/Chances.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/audios/Silent Partner/pp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/audios/Vibe Tracks/Sugar.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/audios/Vibe Tracks/Sugar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/audios/Vibe Tracks/Universal.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/audios/Vibe Tracks/Universal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/audios/Vibe Tracks/pp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/LikeButtonStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/MenuButtonStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PlayBarSliderStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/AppLogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/volume-off.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/volume-playing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/explorePremiumPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/notLoggedInBackground.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/controller/ArtistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/controller/ListenerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/controller/ListenerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/controller/PodcasterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/controller/PodcasterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/controller/SingerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/controller/SingerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/exceptions/FreeAccountLimitException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/exceptions/FreeAccountLimitException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/exceptions/InvalidFormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/exceptions/InvalidFormatException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/exceptions/LackOfCreditException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/exceptions/LackOfCreditException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/exceptions/failedLoginExceptions/FailedLoginException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/exceptions/failedLoginExceptions/FailedLoginException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/exceptions/failedLoginExceptions/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/exceptions/failedLoginExceptions/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/exceptions/failedLoginExceptions/WrongPasswordException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/exceptions/failedLoginExceptions/WrongPasswordException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/graphic/musicplayergraphicalprojectphase2/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/Genre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/PremiumPlans.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/PremiumPlans.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/Report.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/audio/Audio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/audio/Audio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/audio/AudioType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/audio/AudioType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/audio/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/audio/Music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/audio/Podcast.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/audio/Podcast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/interfaces/GeneralOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/interfaces/GeneralOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/userAccount/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/userAccount/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/userAccount/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/userAccount/Artist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/userAccount/ArtistType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/userAccount/ArtistType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/userAccount/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/userAccount/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/userAccount/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/userAccount/UserAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/userAccount/UserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/userAccount/UserType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/userAccount/artist/Podcaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/userAccount/artist/Podcaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/userAccount/artist/Singer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/userAccount/artist/Singer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/userAccount/listener/FreeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/userAccount/listener/FreeListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/model/userAccount/listener/PremiumListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/userAccount/listener/PremiumListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/AllAudiosListController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/ArtistInfoPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/ArtistInfoPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/ArtistPreviewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/ArtistsPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/ArtistsPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/AudioInListController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/AudioPlayPageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/CreateNewPlayListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/CreateNewPlayListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/ExplorePremiumPageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/FavouriteGenresPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/FavouriteGenresPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/HomePageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/ListenerPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/ListenerPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/LoginPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/MainTemplateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/PlayBarController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/PlayListAudiosController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/PlayListPreviewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/ReportPageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/SearchPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/SearchPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/java/view/SignUpPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/view/SignUpPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Adele/Hello.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Adele/Hello.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Adele/When We Were Young.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Adele/pp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Adele/wwwy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Billie joe armstrong/American Idiot.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Billie joe armstrong/Boulevard Of Broken Dreams.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Billie joe armstrong/cover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Billie joe armstrong/pp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Ed Sheeran/Perfect.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Ed Sheeran/Shape Of You.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Ed Sheeran/p.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Ed Sheeran/pp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Ed Sheeran/soy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Hossein Aura/Hope.MP3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Hossein Aura/Real happiness.MP3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Hossein Aura/in.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Hossein Aura/pp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Kendrick lamar/DNA..mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Kendrick lamar/HUMBLE..mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Kendrick lamar/dna.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Kendrick lamar/humble.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Kendrick lamar/pp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Morteza Hossein/How to have a healthy lifestyle.MP3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Morteza Hossein/pic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/audios/Morteza Hossein/pp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/Artists.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/artists.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/AudioProgressBarStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/GreenButtonStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/GreenButtonStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/HboxStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/HboxStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/ImageViewButtonStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/ImageViewButtonStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/LabelButtonShineStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/LabelButtonShineStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/LabelButtonStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/LabelButtonStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/MenuButtonStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/Background.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/Background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/Exit.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/Exit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/AddToPlayList.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/AddToPlayList.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Error.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Error.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/GreenPause.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/GreenPause.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/GreenPlay.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/GreenPlay.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Liked.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Liked.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Next.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Next.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/NotLiked.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/NotLiked.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Pause.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Pause.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Play.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Play.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Previous.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Previous.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/Tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/defaultAudioCover.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayBar/defaultAudioCover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayList/Delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayList/Duration.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/PlayList/Duration.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/Premium/BronzePremium.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/Premium/BronzePremium.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/Premium/GoldPremium.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/Premium/GoldPremium.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/Premium/SilverPremium.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/Premium/SilverPremium.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SideBar/Artist.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SideBar/Artist.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SideBar/Audio.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SideBar/Audio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SideBar/Home.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SideBar/Home.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SideBar/Library.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SideBar/Library.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SideBar/Playlist.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SideBar/Playlist.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SideBar/Search.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SideBar/Search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SideBar/SideBarPlayList.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SideBar/SideBarPlayList.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/SpotifyLogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/TopBar/Back.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/TopBar/Back.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/TopBar/Search.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/TopBar/Search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePause.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePause.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePlay.png" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/PngAndJpg/WhitePlay.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/ScrollPaneStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/ScrollPaneStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/SideBarStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/SideBarStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/TableViewStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/TableViewStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/TextFieldStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/TextFieldStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/ToggleButtonStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/ToggleButtonStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/TopBarStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/TopBarStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/allAudiosList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/allAudiosList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/artistInfoPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/artistInfoPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/artistPreview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/artistPreview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/audioInList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/audioInList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/audioPlayPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/audioPlayPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/createNewPlayListPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/createNewPlayListPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/explorePremiumPage.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/favouriteGenresPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/favouriteGenresPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/homePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/homePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/listenerPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/listenerPanel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/loginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/loginPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/mainTemplate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/notLoggedInBackground.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/playBar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/playBar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/playListAudios.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/playListAudios.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/playListPreview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/playListPreview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/reportPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/reportPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/searchPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/searchPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music Player Graphical Project-Phase 2/src/main/resources/graphic/musicplayergraphicalprojectphase2/signUpPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/resources/graphic/musicplayergraphicalprojectphase2/signUpPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/Spotify Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/Spotify Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/controller/ArtistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/controller/ListenerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/controller/ListenerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/controller/PodcasterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/controller/PodcasterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/controller/SingerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/controller/SingerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/Genre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/PremiumPlans.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/PremiumPlans.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/Report.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/audio/Audio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/audio/Audio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/audio/AudioType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/audio/AudioType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/audio/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/audio/Music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/audio/Podcast.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/audio/Podcast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/userAccount/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/userAccount/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/userAccount/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/userAccount/Artist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/userAccount/ArtistType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/userAccount/ArtistType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/userAccount/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/userAccount/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/userAccount/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/userAccount/UserAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/userAccount/UserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/userAccount/UserType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/userAccount/artist/Podcaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/userAccount/artist/Podcaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/userAccount/artist/Singer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/model/userAccount/artist/Singer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/userAccount/listener/FreeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/userAccount/listener/FreeListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/model/userAccount/listener/PremiumListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 2 - GUI/src/main/java/model/userAccount/listener/PremiumListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/view/AccountView.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/view/AccountView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/view/AdminView.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/view/AdminView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/view/ListenerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/view/ListenerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/view/PodcasterView.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/view/PodcasterView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotify Project/src/view/SingerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phase 1 - CLI/src/view/SingerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstproject-musicplayer-phase1-itzkeyvan.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mpproj/src/Main.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="377" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -13,25 +264,46 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2fxR6DeGuIuS9I2Y6dVaStcWLCd" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Programming/Projects/Java/IntelliJ IDEA/Projects/Music Player - AP&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -42,10 +314,26 @@
       <updated>1714740564992</updated>
       <workItem from="1714740566098" duration="45000" />
       <workItem from="1714741364844" duration="42000" />
+      <workItem from="1782498774549" duration="66000" />
+      <workItem from="1783086009216" duration="878000" />
+      <workItem from="1783086930265" duration="99000" />
+      <workItem from="1783088889632" duration="3763000" />
+      <workItem from="1783094863008" duration="213000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

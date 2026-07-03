@@ -1,0 +1,34 @@
+.spotify-slider {
+    -fx-padding: 6 0 6 0;
+}
+
+.spotify-slider .track {
+    -fx-background-color: #535353;
+    -fx-background-insets: 0;
+    -fx-background-radius: 2px;
+    -fx-pref-height: 4px;
+    -fx-max-height: 4px;
+    -fx-cursor: hand;
+}
+
+.spotify-slider .thumb {
+    -fx-background-color: #ffffff;
+    -fx-background-insets: 0;
+    -fx-background-radius: 50%;
+    -fx-pref-width: 12px;
+    -fx-pref-height: 12px;
+    -fx-padding: 6px;
+    -fx-opacity: 0;
+    -fx-cursor: hand;
+}
+
+.spotify-slider:hover .thumb {
+    -fx-opacity: 1;
+    -fx-cursor: hand;
+}
+
+.spotify-slider .thumb:hover,
+.spotify-slider .thumb:pressed {
+    -fx-background-color: #1DB954;
+    -fx-cursor: hand;
+}

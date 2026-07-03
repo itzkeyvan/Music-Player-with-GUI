@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="530.0" minWidth="790.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #444345;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SignUpPageController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="10.399999618530273" layoutY="10.399999618530273" prefHeight="400.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label prefHeight="52.0" prefWidth="766.0" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font name="Gotham-Bold" size="29.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" prefHeight="340.0" prefWidth="770.0" spacing="8.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="590.0" spacing="10.0" stylesheets="@TextFieldStyle.css">
+                     <children>
+                        <HBox alignment="CENTER" minHeight="39.0" prefHeight="74.0" prefWidth="284.0" spacing="5.0">
+                           <children>
+                              <Label alignment="CENTER" lineSpacing="5.0" prefHeight="39.0" prefWidth="107.0" text="Username:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtField_userName" prefHeight="0.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="164.0" layoutY="10.0" minHeight="39.0" prefHeight="74.0" prefWidth="284.0" spacing="5.0">
+                           <children>
+                              <Label alignment="CENTER" lineSpacing="5.0" prefHeight="39.0" prefWidth="89.0" text="Password:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtField_password" prefHeight="0.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="2.0" right="2.0" />
+                     </padding>
+                  </HBox>
+                  <VBox alignment="CENTER_LEFT" stylesheets="@TextFieldStyle.css">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="590.0" spacing="10.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" minHeight="39.0" prefHeight="46.0" prefWidth="555.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" lineSpacing="5.0" prefHeight="39.0" prefWidth="186.0" text="First and Last Name:" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gotham-Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtField_firstAndLastName" prefHeight="26.0" prefWidth="244.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="590.0" spacing="10.0" stylesheets="@TextFieldStyle.css">
+                     <children>
+                        <HBox alignment="CENTER" minHeight="39.0" prefHeight="46.0" prefWidth="295.0" spacing="5.0">
+                           <children>
+                              <Label alignment="CENTER" lineSpacing="5.0" prefHeight="39.0" prefWidth="57.0" text="Email:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtField_email" prefHeight="26.0" prefWidth="193.0" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="164.0" layoutY="10.0" minHeight="39.0" prefHeight="74.0" prefWidth="284.0" spacing="5.0">
+                           <children>
+                              <Label alignment="CENTER" lineSpacing="5.0" prefHeight="39.0" prefWidth="145.0" text="Phone Number:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtField_phoneNumber" prefHeight="26.0" prefWidth="150.0" promptText="09XXXXXXXXX" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="287.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="46.0" prefWidth="412.0" spacing="10.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" minHeight="39.0" prefHeight="46.0" prefWidth="563.0" spacing="5.0">
+                                 <children>
+                                    <Label alignment="CENTER" lineSpacing="5.0" prefHeight="39.0" prefWidth="118.0" text="Birth Date:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="datePicker_birthDate" prefHeight="26.0" prefWidth="194.0" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BASELINE_LEFT">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="46.0" prefWidth="561.0" spacing="10.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="566.0" spacing="5.0">
+                                 <children>
+                                    <Label alignment="CENTER" lineSpacing="5.0" prefHeight="39.0" prefWidth="80.0" text="I'm a:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <RadioButton fx:id="radioBtn_listener" mnemonicParsing="false" prefHeight="22.0" prefWidth="87.0" selected="true" text="Listener" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="role" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="radioBtn_singer" mnemonicParsing="false" text="Singer" textFill="WHITE" toggleGroup="$role">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="radioBtn_podcaster" mnemonicParsing="false" text="Podcaster" textFill="WHITE" toggleGroup="$role">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox fx:id="hBox_bio" alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="176.0" prefHeight="58.0" prefWidth="579.0" spacing="10.0" visible="false">
+                     <children>
+                        <Label alignment="CENTER" lineSpacing="5.0" prefHeight="76.0" prefWidth="84.0" text="Bio:" textFill="WHITE">
+                           <font>
+                              <Font name="Gotham-Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="txtArea_Bio" prefHeight="49.0" prefWidth="486.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label fx:id="lblBtn_SingUp" alignment="CENTER" minHeight="34.0" minWidth="107.0" onMouseClicked="#signUpBtn_clicked" prefHeight="34.0" prefWidth="107.0" stylesheets="@LabelButtonStyle.css" text="Sign up">
+               <font>
+                  <Font name="Gotham-Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

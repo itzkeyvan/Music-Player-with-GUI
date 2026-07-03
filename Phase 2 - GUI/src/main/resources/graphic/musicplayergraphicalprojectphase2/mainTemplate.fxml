@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="682.0" prefWidth="944.0" style="-fx-background-color: #42413e;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainTemplateController">
+   <children>
+      <BorderPane fx:id="BorderPane_mainTemplate" minHeight="400.0" minWidth="700.0" prefHeight="533.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane minHeight="346.0" minWidth="150.0" prefHeight="530.0" prefWidth="154.0" style="-fx-background-color: #2b2b27;" BorderPane.alignment="CENTER">
+               <stylesheets>
+                  <URL value="@SideBarStyle.css" />
+               </stylesheets>
+               <children>
+                  <HBox layoutY="4.800000190734863" prefHeight="530.0" prefWidth="155.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="530.0" prefWidth="150.0" spacing="5.0">
+                           <children>
+                              <VBox alignment="CENTER" fillWidth="false" prefHeight="135.0" prefWidth="150.0" spacing="10.0">
+                                 <children>
+                                    <HBox fx:id="btn_home" alignment="CENTER" maxHeight="52.0" maxWidth="140.0" minHeight="52.0" minWidth="140.0" onMouseClicked="#homeBtn_Clicked" prefHeight="52.0" prefWidth="150.0" spacing="10.0" styleClass="hbox-container">
+                                       <children>
+                                          <ImageView fitHeight="48.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                                             <image>
+                                                <Image url="@PngAndJpg/SideBar/Home.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="83.0" prefWidth="78.0" styleClass="label" text="Home">
+                                             <font>
+                                                <Font name="Gotham-Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="1.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox fx:id="btn_search" alignment="CENTER" maxHeight="52.0" maxWidth="140.0" minHeight="52.0" minWidth="140.0" onMouseClicked="#searchBtn_Clicked" prefHeight="52.0" prefWidth="140.0" spacing="10.0" styleClass="hbox-container">
+                                       <children>
+                                          <ImageView fitHeight="37.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                                             <image>
+                                                <Image url="@PngAndJpg/SideBar/Search.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="69.0" prefWidth="126.0" styleClass="label" text="Search">
+                                             <font>
+                                                <Font name="Gotham-Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="7.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" spacing="10.0">
+                                 <children>
+                                    <HBox fx:id="btn_library" alignment="CENTER" maxHeight="52.0" maxWidth="140.0" minHeight="52.0" minWidth="140.0" onMouseClicked="#libraryBtn_Clicked" prefHeight="52.0" prefWidth="140.0" spacing="10.0" styleClass="hbox-container">
+                                       <children>
+                                          <ImageView fitHeight="40.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                                             <image>
+                                                <Image url="@PngAndJpg/SideBar/Library.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="69.0" prefWidth="126.0" styleClass="label" text="Library">
+                                             <font>
+                                                <Font name="Gotham-Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox fx:id="btn_audios" alignment="CENTER" maxHeight="52.0" maxWidth="140.0" minHeight="52.0" minWidth="140.0" onMouseClicked="#audiosBtn_Clicked" prefHeight="52.0" prefWidth="140.0" spacing="10.0" styleClass="hbox-container">
+                                       <children>
+                                          <ImageView fitHeight="42.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                                             <image>
+                                                <Image url="@PngAndJpg/SideBar/Audio.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="69.0" prefWidth="126.0" styleClass="label" text="Audios">
+                                             <font>
+                                                <Font name="Gotham-Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox fx:id="btn_artists" alignment="CENTER" maxHeight="52.0" maxWidth="140.0" minHeight="52.0" minWidth="140.0" onMouseClicked="#artistsBtn_Clicked" prefHeight="52.0" prefWidth="140.0" spacing="10.0" styleClass="hbox-container">
+                                       <children>
+                                          <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                                             <image>
+                                                <Image url="@PngAndJpg/SideBar/Artist.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="69.0" prefWidth="126.0" styleClass="label" text="Artists">
+                                             <font>
+                                                <Font name="Gotham-Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="7.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </opaqueInsets>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="centerPane" style="-fx-background-color: #444345;" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <AnchorPane prefHeight="39.0" prefWidth="746.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="57.6" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="81.0" prefWidth="746.0" style="-fx-background-color: #2b2b27;" stylesheets="@TopBarStyle.css">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="378.0" spacing="10.0" AnchorPane.leftAnchor="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <ImageView fx:id="imgView_Back" fitHeight="47.0" fitWidth="63.0" onMouseClicked="#BackButton_Clicked" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@PngAndJpg/TopBar/Back.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <Separator orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
+                                    <HBox fx:id="HBox_Search" alignment="CENTER" prefHeight="60.0" prefWidth="397.0" visible="false">
+                                       <children>
+                                          <ImageView fx:id="imgView_Search" fitHeight="50.0" fitWidth="47.0" onMouseClicked="#searchImgViewBtn_clicked" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+                                             <image>
+                                                <Image url="@PngAndJpg/TopBar/Search.png" />
+                                             </image>
+                                          </ImageView>
+                                          <TextField fx:id="textField_Search" focusTraversable="false" prefHeight="34.0" prefWidth="266.0" promptText="What do you want to play?" styleClass="text-field">
+                                             <font>
+                                                <Font name="Gotham-Bold" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="54.0" prefWidth="229.0" spacing="3.0" AnchorPane.rightAnchor="10.0">
+                                 <children>
+                                    <Label fx:id="lblBtn_Login" alignment="CENTER" minHeight="26.0" minWidth="82.0" onMouseClicked="#loginBtn_clicked" prefHeight="28.0" prefWidth="89.0" text="Login">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblBtn_SignUp" alignment="CENTER" minHeight="26.0" minWidth="82.0" onMouseClicked="#signUpBtn_clicked" prefHeight="26.0" prefWidth="82.0" text="Sign Up">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblBtn_Logout" alignment="CENTER" minHeight="26.0" minWidth="82.0" onMouseClicked="#logoutBtn_clicked" prefHeight="26.0" prefWidth="80.0" text="Logout">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="46.0" prefWidth="55.0">
+                                       <graphic>
+                                          <HBox alignment="CENTER">
+                                             <children>
+                                                <ImageView fx:id="imgViewBtn_Exit" fitHeight="37.0" fitWidth="36.0" onMouseClicked="#exitImgViewBtn_Clicked" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@PngAndJpg/Exit.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </graphic>
+                                       <tooltip>
+                                          <Tooltip opacity="0.8" text="Exit App">
+                                             <font>
+                                                <Font name="Gotham-Bold" size="12.0" />
+                                             </font>
+                                          </Tooltip>
+                                       </tooltip>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <Separator prefHeight="0.0" prefWidth="700.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></Separator>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane fx:id="bottomPane" prefHeight="94.0" prefWidth="1150.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
+         </bottom></BorderPane>
+   </children>
+</AnchorPane>

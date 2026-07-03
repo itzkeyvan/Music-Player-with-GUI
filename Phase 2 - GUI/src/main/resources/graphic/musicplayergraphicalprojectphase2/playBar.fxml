@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="94.0" prefWidth="1150.0" style="-fx-background-color: black;" stylesheets="@PlayBarSliderStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PlayBarController">
+   <children>
+      <!-- Left section: Album cover and song info -->
+      <HBox alignment="CENTER_LEFT" layoutX="9.6" prefHeight="104.0" prefWidth="625.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="131.0" prefWidth="351.0" spacing="5.0">
+               <children>
+                  <Rectangle fx:id="rectangle_audioCover" arcHeight="15.0" arcWidth="15.0" fill="DODGERBLUE" height="76.0" stroke="BLACK" strokeType="INSIDE" width="77.0" />
+                  <VBox prefHeight="68.0" prefWidth="378.0">
+                     <children>
+                        <Label fx:id="lbl_audioName" onMouseClicked="#audioNameLbl_Clicked" onMouseEntered="#audioNameLbl_mouseEntered" onMouseExited="#audioNameLbl_mouseExited" prefHeight="40.0" prefWidth="316.0" textFill="WHITE">
+                           <font>
+                              <Font name="Gotham-Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_artistName" layoutX="10.0" layoutY="10.0" onMouseClicked="#artistNameLbl_Clicked" onMouseEntered="#artistNameLbl_mouseEntered" onMouseExited="#artistNameLbl_mouseExited" prefHeight="45.0" prefWidth="451.0" textFill="#eaeaea">
+                           <font>
+                              <Font name="Gotham-Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+
+      <!-- Center section: Playback controls -->
+      <HBox alignment="CENTER" pickOnBounds="false" prefHeight="94.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" fillWidth="false" prefHeight="73.0" prefWidth="383.0">
+                     <children>
+                        <!-- Playback buttons -->
+                        <HBox alignment="CENTER" prefHeight="54.0" prefWidth="430.0" spacing="8.0" stylesheets="@ImageViewButtonStyle.css">
+                           <children>
+                              <ImageView fx:id="btn_previous" fitHeight="36.0" fitWidth="36.0" onMouseClicked="#previousBtn_clicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@PngAndJpg/PlayBar/Previous.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="btn_playORpause" fitHeight="50.0" fitWidth="50.0" layoutX="377.0" layoutY="16.0" onKeyPressed="#playORpause_keyPressed" onMouseClicked="#playORpauseBtn_clicked" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="btn_next" fitHeight="36.0" fitWidth="36.0" onMouseClicked="#nextBtn_clicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@PngAndJpg/PlayBar/Next.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+
+                        <!-- Progress bar -->
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="486.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="lbl_elapsedTime" alignment="CENTER_RIGHT" contentDisplay="CENTER" minWidth="45.0" prefHeight="20.0" prefWidth="70.0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Slider fx:id="slider_audioProgressBar" prefHeight="41.0" prefWidth="303.0" styleClass="spotify-slider" />
+                              <Label fx:id="lbl_audioTotalTime" contentDisplay="CENTER" minHeight="20.0" minWidth="45.0" prefHeight="20.0" prefWidth="79.0" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+
+      <!-- Right section: Volume controls -->
+      <HBox alignment="CENTER_RIGHT" prefHeight="96.0" prefWidth="145.0" spacing="5.0" style="-fx-padding: 2 0 0 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="94.0" prefWidth="145.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="92.0" prefWidth="31.0" stylesheets="@ImageViewButtonStyle.css">
+                     <children>
+                        <ImageView fx:id="imgView_VolumeIcon" fitHeight="24.0" fitWidth="38.0" onMouseClicked="#volumeIconClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@PngAndJpg/PlayBar/volume-playing.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Slider fx:id="slider_volume" max="1.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" styleClass="spotify-slider" value="1.0" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="2.0" />
+         </padding>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets left="5.0" />
+   </padding>
+</AnchorPane>

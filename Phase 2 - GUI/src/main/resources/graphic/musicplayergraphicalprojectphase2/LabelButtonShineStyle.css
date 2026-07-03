@@ -1,0 +1,24 @@
+.label {
+    -fx-opacity: 0.5;
+    -fx-border-width: 2;
+    -fx-border-radius: 50;
+    -fx-spacing: 10;
+}
+
+.label:hover {
+    -fx-opacity: 1.0;
+    -fx-border-width: 3;
+    -fx-cursor: hand;
+}
+
+.label:hover .label {
+    -fx-underline: true;
+    -fx-background-color: #989898;
+    -fx-cursor: hand;
+}
+
+.label.selected {
+    -fx-opacity: 1.0;
+    -fx-border-width: 3;
+    -fx-cursor: hand;
+}

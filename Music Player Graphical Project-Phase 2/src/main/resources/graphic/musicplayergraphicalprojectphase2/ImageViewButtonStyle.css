@@ -1,7 +1,0 @@
-.image-view {
-    -fx-opacity: 0.5;
-}
-
-.image-view:hover{
-    -fx-opacity: 1.0;
-}

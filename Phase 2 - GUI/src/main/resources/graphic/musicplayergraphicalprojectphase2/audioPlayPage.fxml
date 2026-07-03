@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="530.0" prefWidth="790.0" style="-fx-background-color: #444345;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AudioPlayPageController">
+   <children>
+      <VBox alignment="CENTER" layoutX="6.4" layoutY="2.4" prefHeight="524.0" prefWidth="781.0" spacing="10.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="2.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="194.0" prefWidth="758.0">
+               <children>
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="194.0" prefWidth="782.0" spacing="20.0">
+                     <children>
+                        <Rectangle fx:id="rectangle_AudioCover" arcHeight="15.0" arcWidth="15.0" fill="DODGERBLUE" height="190.0" stroke="BLACK" strokeType="INSIDE" width="190.0" />
+                        <VBox alignment="CENTER" prefHeight="160.0" prefWidth="562.0" spacing="5.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="16.0" prefWidth="565.0">
+                                 <children>
+                                    <Label fx:id="lbl_AudioType" textFill="WHITE">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Text fx:id="txt_AudioName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="567.7366945743561">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="36.0" />
+                                 </font>
+                              </Text>
+                              <TextFlow prefHeight="104.0" prefWidth="378.0">
+                                 <children>
+                                    <Text fx:id="txt_artistName" fill="WHITE" onMouseClicked="#artistName_Clicked" onMouseEntered="#artistName_MouseEntered" onMouseExited="#artistName_MouseExited" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="377.3367004394531">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" | " wrappingWidth="377.3367004394531">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="txt_Genre" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </TextFlow>
+                              <TextFlow prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text fx:id="txt_ReleaseDate" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="377.3367004394531">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" | " wrappingWidth="377.3367004394531">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="txt_AudioLength" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="377.3367004394531">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" | " wrappingWidth="377.3367004394531">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="txt_NumberOfTotalPlays" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="377.3367004394531">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" total play(s)" wrappingWidth="377.3367004394531">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" | " wrappingWidth="377.3367004394531">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="txt_NumberOfTotalLikes" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="377.3367004394531">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" total like(s)" wrappingWidth="377.3367004394531">
+                                       <font>
+                                          <Font name="Gotham-Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="756.0">
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="742.0" spacing="10.0" stylesheets="@ImageViewButtonStyle.css">
+                     <children>
+                        <Label stylesheets="@ImageViewButtonStyle.css">
+                           <graphic>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <ImageView fx:id="imageViewBtn_PlayOrPause" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#PlayOrPauseBtn_Clicked" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </HBox>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip contentDisplay="CENTER" opacity="0.8" text="Play/Pause">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="12.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" stylesheets="@LikeButtonStyle.css">
+                           <graphic>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <ImageView fx:id="imageViewBtn_Like" fitHeight="45.0" fitWidth="41.0" onMouseClicked="#LikeBtn_Clicked" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </HBox>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip contentDisplay="CENTER" opacity="0.8" text="Like/Undo Like">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="12.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip>
+                        </Label>
+                        <MenuButton fx:id="menuBtn_AddToPlayList" mnemonicParsing="false" popupSide="BOTTOM" prefHeight="42.0" prefWidth="220.0" stylesheets="@MenuButtonStyle.css" text="Add to playList" textFill="WHITE">
+                           <items>
+                           </items>
+                           <font>
+                              <Font name="Gotham-Bold" size="12.0" />
+                           </font>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" spacing="6.0">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+               <children>
+                  <HBox alignment="CENTER">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="26.0" prefWidth="779.0">
+                           <children>
+                              <Label fx:id="lbl_LyricsOrBio" prefHeight="26.0" prefWidth="746.0" textFill="WHITE">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="146.0" prefWidth="566.0">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="146.0" prefWidth="762.0" stylesheets="@ScrollPaneStyle.css">
+                           <content>
+                              <Text fx:id="txt_LyricsOrBio" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="739.7366943359375">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="15.0" />
+                                 </font>
+                              </Text>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

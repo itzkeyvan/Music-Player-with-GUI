@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="530.0" prefWidth="790.0" style="-fx-background-color: #444345;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ExplorePremiumPageController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="11.2" layoutY="10.399999618530273" prefHeight="521.0" prefWidth="769.0" spacing="10.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label prefHeight="54.0" prefWidth="743.0" text="Premium" textFill="WHITE">
+               <font>
+                  <Font name="Gotham-Bold" size="29.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <VBox alignment="CENTER" prefHeight="438.0" prefWidth="769.0" spacing="40.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="65.0" prefWidth="618.0" text="Pick your plan" textFill="#02e446">
+                     <font>
+                        <Font name="Gotham-Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="40.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="283.0" prefWidth="769.0" spacing="10.0">
+                           <children>
+                              <Label fx:id="lblBtn_bronzePlan" alignment="CENTER" minHeight="54.0" onMouseClicked="#bronzePlanLblBtn_Clicked" prefHeight="54.0" prefWidth="618.0" style="-fx-border-color: #C9B037;" stylesheets="@LabelButtonShineStyle.css" text="Bronze : 30 days for 5$" textFill="#c9b037">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblBtn_silverPlan" alignment="CENTER" minHeight="54.0" onMouseClicked="#silverPlanLblBtn_Clicked" prefHeight="51.0" prefWidth="618.0" style="-fx-border-color: #c4c4c4;" stylesheets="@LabelButtonShineStyle.css" text="Silver : 60 days for 9$" textFill="#c4c4c4">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblBtn_goldPlan" alignment="CENTER" minHeight="54.0" onMouseClicked="#goldPlanLblBtn_Clicked" prefHeight="51.0" prefWidth="618.0" style="-fx-border-color: #fcec16;" stylesheets="@LabelButtonShineStyle.css" text="Gold : 180 days for 14$" textFill="#fcec16">
+                                 <font>
+                                    <Font name="Gotham-Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Button fx:id="btn_purchase" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#purchaseBtn_Clicked" prefHeight="40.0" prefWidth="147.0" stylesheets="@GreenButtonStyle.css" text="Purchase">
+                           <font>
+                              <Font name="Gotham-Bold" size="19.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

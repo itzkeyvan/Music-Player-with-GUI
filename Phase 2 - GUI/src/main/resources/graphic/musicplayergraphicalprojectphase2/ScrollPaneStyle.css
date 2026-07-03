@@ -1,0 +1,35 @@
+/* ScrollPane Style */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* ScrollBar Style */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical {
+    -fx-padding: 0.25em 0.15em 0.25em 0.15em; /* Adjust padding */
+}
+
+.scroll-bar:horizontal {
+    -fx-padding: 0.15em 0.25em 0.15em 0.25em; /* Adjust padding */
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #707070; /* Thumb color */
+    -fx-background-radius: 10px; /* Rounded corners */
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #b1b1b1; /* Thumb color on hover */
+    -fx-cursor: hand;
+}
